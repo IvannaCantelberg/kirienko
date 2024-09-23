@@ -6,7 +6,7 @@
     <div class="f-h-section">
         <h2 class="text-4xl">Projects</h2>
         <article class="flex gap-16 justify-between my-20">
-            <Project v-for="(project, index) in projectsData" :key="index"  :image="project.image" :title="project.title" class="hover:shadow-2xl transition-all"/>
+            <Project v-for="(project, index) in projectsData" :key="index"  :image="project.image" :title="project.title"/>
         </article>
     </div>
 
