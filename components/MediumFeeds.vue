@@ -22,7 +22,7 @@ console.log(feeds)
 }
 
 .card:hover {
-  border-color: #fff;
+  border-color: var(--color-border-contrast);
 }
 
 .card /deep/ .arrow-icon {

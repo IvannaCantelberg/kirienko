@@ -37,20 +37,20 @@ figure:hover .frame {
   visibility: visible;
 }
 
-
- /deep/ .line-vertical, /deep/ .line-horizontal {
-            stroke-dasharray: 100; 
-            stroke-dashoffset: 100;
-        }
+/deep/ .line-vertical,
+/deep/ .line-horizontal {
+  stroke-dasharray: 100;
+  stroke-dashoffset: 100;
+}
 
 /* On hover, animate the lines being drawn */
 figure:hover /deep/ .line-vertical,
 figure:hover /deep/ .line-horizontal {
-    stroke-dashoffset: 0;
-    transition: stroke-dashoffset 0.6s  cubic-bezier(0.4, 0, 0.2, 1), stroke 150ms  cubic-bezier(0.4, 0, 0.2, 1);
-    
+  stroke-dashoffset: 0;
+  transition:
+    stroke-dashoffset 0.6s cubic-bezier(0.4, 0, 0.2, 1),
+    stroke 150ms cubic-bezier(0.4, 0, 0.2, 1);
 }
-
 
 .frame {
   stroke: var(--color-border-contrast);
@@ -58,18 +58,15 @@ figure:hover /deep/ .line-horizontal {
   top: -50px;
   left: -50px;
   transform: rotate(0);
-  transition: transform 150ms  cubic-bezier(0.4, 0, 0.2, 1);
+  transition: transform 150ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.frame.reversed {       
-    position: absolute;
-    right: -50px;
-    bottom: -50px;
-    top: initial;
-    left: inherit;
-    transform: rotate(180deg);
+.frame.reversed {
+  position: absolute;
+  right: -50px;
+  bottom: -50px;
+  top: initial;
+  left: inherit;
+  transform: rotate(180deg);
 }
-
-
-
 </style>

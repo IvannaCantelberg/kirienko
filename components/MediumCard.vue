@@ -63,6 +63,6 @@ const cleanContent = (htmlText: string): string => {
   bottom: 15px;
   right: 20px;
 
-  fill: #c2c2c2;
+  fill: var(--color-border-contrast);
 }
 </style>
