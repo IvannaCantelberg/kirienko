@@ -1,18 +1,24 @@
 <template>
   <section class="main-container">
-   <article class="f-h-section flex items-center">
-    <UserCompliment />
+   <article class="f-h-section -mt-40 flex">
+    <div class="flex items-center">
+        <UserCompliment />
+    </div>
    </article>
-    <div class="f-h-section">
+    <div id="projects" class="f-h-section mb-40">
         <h2 class="text-4xl">Projects</h2>
         <article class="flex gap-16 justify-between my-20">
             <Project v-for="(project, index) in projectsData" :key="index"  :image="project.image" :title="project.title"/>
         </article>
     </div>
 
-   <div>
+   <div id="about_us">
         <h2 class="text-4xl">Blog</h2>
         <MediumFeeds class="my-20"/>
+    </div>
+
+    <div id="contact" class="f-h-section">
+        <h2 class="text-4xl">Contact</h2>
     </div>
     
     
@@ -46,6 +52,6 @@ const projectsData  = ref(projectSource)
     }
 
     .f-h-section {
-        min-height: calc(100vh - 100px);
+        min-height: calc(100vh);
     }
 </style>
