@@ -1,16 +1,16 @@
 <template>
   <a :href="article.link" target="_blank">
-    <figure class="grid grid-cols-4">
+    <figure class="grid grid-row-2 gap-8">
       <div
         :style="{ backgroundImage: `url(${getThumbnail(article.content)})` }"
-        class="image img-style rounded-md col-span-1"
+        class="image img-style"
       ></div>
-      <figcaption class="flex flex-col justify-between col-span-3 p-10 relative">
+      <figcaption class="grid grid-row-3 gap-8 mx-5 mb-8">
         <h2 class="text-2xl font-extrabold">{{ article.title }}</h2>
         <p class="text-sm line-clamp-4">
           {{ cleanContent(article.description) }}
         </p>
-        <IconArrowRight class="arrow-icon" />
+        <span class="text-sm text-right font-extrabold">Read more</span>
       </figcaption>
     </figure>
   </a>
@@ -47,21 +47,22 @@ const cleanContent = (htmlText: string): string => {
 .image {
   object-fit: fill;
   object-position: center;
-  width: 200px;
-  height: 200px;
+  /* width: 200px; */
+  height: 230px;
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
 }
 
 .img-style {
-  border: 2px solid #fff;
+  /* border: 2px solid #fff; */
 }
 
 .arrow-icon {
-  position: absolute;
-  bottom: 15px;
-  right: 20px;
+  position: relative;
+  bottom: 50%;
+  left: 90%;
+
 
   fill: var(--color-border-contrast);
 }

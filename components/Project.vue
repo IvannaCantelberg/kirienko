@@ -1,7 +1,9 @@
 <template>
   <figure class="hover:shadow-2xl transition-all relative">
     <FigureFrame class="frame" />
-    <img :src="image" :alt="title" />
+    <NuxtLink :to="`projects/${id}`">
+      <img :src="image" :alt="title" />
+    </NuxtLink>
     <FigureFrame class="frame reversed" />
   </figure>
 </template>
@@ -12,20 +14,22 @@ import FigureFrame from '~/components/icons/FigureFrame.vue'
 defineProps<{
   image: string
   title: string
+  id: number
 }>()
 </script>
+
 <style scoped>
 figure {
   /* border: 1px solid var(--color-border-contrast); */
-  filter: grayscale(1);
+  /* filter: grayscale(1); */
   transform: scale(1);
   z-index: 1;
 }
 
 figure:hover {
   cursor: pointer;
-  filter: grayscale(0);
-  transform: scale(1.03);
+  /* filter: grayscale(0); */
+  transform: scale(1.15);
   z-index: 2;
 }
 

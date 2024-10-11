@@ -118,7 +118,9 @@ const _inlineRuntimeConfig = {
           "code": "en",
           "alias": "EN",
           "name": "English",
-          "icon": "en"
+          "icon": "en",
+          "isCatchallLocale": true,
+          "language": "en-US"
         },
         {
           "code": "nl",

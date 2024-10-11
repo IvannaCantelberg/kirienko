@@ -1,0 +1,31 @@
+<template>
+  <svg
+    data-v-02281a80=""
+    xmlns="http://www.w3.org/2000/svg"
+    class="section-frame"
+    width="200"
+    height="150"
+  >
+    <line
+      x1="100"
+      y1="0"
+      x2="100"
+      y2="150"
+      stroke="inherit"
+      stroke-width="2"
+      class="line-vertical"
+    ></line>
+    <line
+      x1="0"
+      y1="30"
+      x2="200"
+      y2="30"
+      stroke="inherit"
+      stroke-width="2"
+      class="line-horizontal"
+    ></line>
+  </svg>
+</template>
+<style>
+/* Initial state for the lines: hidden (not drawn) */
+</style>

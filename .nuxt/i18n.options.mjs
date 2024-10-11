@@ -45,7 +45,9 @@ export const nuxtI18nOptions = {
       "code": "en",
       "alias": "EN",
       "name": "English",
-      "icon": "en"
+      "icon": "en",
+      "isCatchallLocale": true,
+      "language": "en-US"
     },
     {
       "code": "nl",
@@ -97,6 +99,8 @@ export const normalizedLocales = [
     "alias": "EN",
     "name": "English",
     "icon": "en",
+    "isCatchallLocale": true,
+    "language": "en-US",
     "files": []
   },
   {

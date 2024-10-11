@@ -8,11 +8,13 @@
 
   --vt-c-light: #f3f3f2;
 
-  --vt-c-contrast: #87d5f3d4;
+  --vt-c-contrast: #ABE1FF;
 
   --vt-c-black: #181818;
   --vt-c-black-soft: #222222;
   --vt-c-black-mute: #282828;
+
+  --vt-c-dark: #0C0F13;
 
   --vt-c-indigo: #2c3e50;
 
@@ -32,10 +34,12 @@
   --color-background: var(--vt-c-light);
   --color-background-soft: var(--vt-c-white-soft);
   --color-background-mute: var(--vt-c-white-mute);
+  --color-background-contrast: var(--vt-c-contrast);
+  --color-background-dark: var(--vt-c-dark);
 
-  --color-border: var(--vt-c-divider-light-2);
+  --color-border: var(--vt-c-light);
   --color-border-hover: var(--vt-c-divider-light-1);
-  --color-border-contrast: var(--vt-c-contrast);
+  --color-border-contrast: var(--vt-c-black);
   --color-heading: var(--vt-c-text-light-1);
   --color-text: var(--vt-c-text-light-1);
 
@@ -95,4 +99,13 @@ body {
 
 html {
   scroll-behavior: smooth;
+}
+
+
+.btn-link {
+  display: inline-flex;
+  padding: 6px 16px;
+  line-height: 1.8;
+  background: white;
+  border-radius: 20px;
 }

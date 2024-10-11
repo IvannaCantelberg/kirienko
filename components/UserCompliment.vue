@@ -1,6 +1,6 @@
 <template>
   <div class="flex flex-col gap-20 items-center">
-    <UserAvatar />
+    <!-- <UserAvatar /> -->
     <p class="description">
       {{ $t('compliment') }}
     </p>

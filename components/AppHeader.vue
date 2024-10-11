@@ -1,21 +1,21 @@
 <template>
-  <header class="px-[15vw] py-16">
+  <header class="px-[15vw] py-16 bg-header">
     <!-- <p>{{ $t('welcome') }}</p> -->
-    <div class="flex justify-between">
-      <div class="flex gap-5">
-        <a href="#projects" class="nav-link">Projects</a>
-        <a href="#about_us" class="nav-link">About Us</a>
-        <a href="#contact" class="nav-link">Contact</a>
-      </div>
-      <div class="flex gap-5 items-center">
+    <div class="flex justify-between ">
+        <div  class="flex gap-5">
+            <a href="#projects" class="nav-link">Projects</a>
+            <a href="#about_us" class="nav-link">About Us</a>
+            <a href="#contact" class="nav-link">Contact</a>
+        </div>
+      <div  class="flex  gap-5 items-center">
         <NuxtLink
-          v-for="locale in locales"
-          :key="locale.code"
-          :to="switchLocalePath(locale.code)"
-          class="lang-link transition-all"
-        >
-          {{ locale.alias }}
-        </NuxtLink>
+        v-for="locale in locales"
+        :key="locale.code"
+        :to="switchLocalePath(locale.code)"
+        class="lang-link transition-all"
+      >
+        {{ locale.alias }}
+      </NuxtLink>
       </div>
     </div>
   </header>
@@ -26,9 +26,13 @@ const { locales } = useI18n()
 const switchLocalePath = useSwitchLocalePath()
 </script>
 <style scoped>
+.bg-header {
+background-color: var(--color-background-contrast);
+}
 header {
   line-height: 1.5;
   /* box-shadow: -8px 3px 40px #87d5f361; */
+   
 }
 
 .router-link-active.lang-link {
@@ -36,29 +40,28 @@ header {
   border: 1px solid var(--color-border-contrast);
 }
 
-.lang-link,
-a {
+.lang-link, a {
   padding: 8px;
   /* border: 1px solid; */
   line-height: normal;
   /* border-radius: 5px; */
 }
 
-.router-link-active.lang-link::after,
-.router-link-active.lang-link::before {
-  content: none;
+.router-link-active.lang-link::after, .router-link-active.lang-link::before {
+    content: none;
 }
 
 .nav-link {
-  position: relative;
+position: relative;
   display: inline-block;
   text-decoration: none;
   font-size: 16px;
   /* color: inherit; */
   border-bottom: 1px solid transparent; /* Initial transparent border */
   border-radius: 5px;
-  transition: all 0.4s ease-out;
+    transition: all 0.4s ease-out;
 }
+
 
 .nav-link::after {
   content: '';
@@ -77,8 +80,8 @@ a {
 }
 
 .nav-link:hover::after {
-  transform: scaleX(1); /* Draw the top and bottom borders */
-  transition-delay: 0.2s; /* Delay for sequential effect */
+   transform: scaleX(1); /* Draw the top and bottom borders */
+    transition-delay: 0.2s; /* Delay for sequential effect */
 }
 
 .lang-link {
@@ -89,7 +92,7 @@ a {
   /* color: inherit; */
   border: 1px solid transparent; /* Initial transparent border */
   border-radius: 5px;
-  transition: all 0.4s ease-out;
+    transition: all 0.4s ease-out;
 }
 
 /* Top and bottom borders */

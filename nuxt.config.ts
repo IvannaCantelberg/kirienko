@@ -12,7 +12,9 @@ export default defineNuxtConfig({
         code: 'en',
         alias: 'EN',
         name: 'English', 
-        icon: 'en'
+        icon: 'en', 
+        iso: 'en-US', 
+        isCatchallLocale: true
       },
      
       {
