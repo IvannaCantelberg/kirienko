@@ -14,7 +14,12 @@
         <div class="container-space">
             <div id="projects" class="f-h-section my-40">
                 <h1 class="text-8xl text-center uppercase mb-10">Projects</h1>
-                <h3 class="text-xl text-center"> Text from Tatjana about projects . 2-3 lines of text </h3>
+                <h3 class="text-xl text-center"> 
+                    My canvases are sewn by women in Ukraine, made from unused remnants from curtain shops. 
+                    Since the invasion, my art has taken on a new dimension, as everything now revolves around: 
+                    everyone does what they can, and everyone plays their role. 
+                    Art has become a powerful means for me to contribute.
+                 </h3>
                 <article class="flex gap-16 justify-between my-28">
                     <Project v-for="(project, index) in projectsData" :key="index" :id="project.id" :image="project.image" :title="project.title"/>
                 </article>
