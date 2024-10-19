@@ -1,5 +1,6 @@
 /* color palette from <https://github.com/vuejs/theme> */
 @import url('https://fonts.googleapis.com/css2?family=Comfortaa:wght@300..700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
 
 :root {
   --vt-c-white: #ffffff;
@@ -17,6 +18,10 @@
   --vt-c-dark: #0C0F13;
 
   --vt-c-indigo: #2c3e50;
+
+  --vt-c-accent-1: #EDEDA6;
+  --vt-c-accent-2: #ABE1FF;
+  --vt-c-secondary: #737373;
 
   --vt-c-divider-light-1: rgba(60, 60, 60, 0.29);
   --vt-c-divider-light-2: rgba(60, 60, 60, 0.12);
@@ -36,12 +41,18 @@
   --color-background-mute: var(--vt-c-white-mute);
   --color-background-contrast: var(--vt-c-contrast);
   --color-background-dark: var(--vt-c-dark);
+  --color-background-accent-1: var(--vt-c-accent-1);
 
   --color-border: var(--vt-c-light);
   --color-border-hover: var(--vt-c-divider-light-1);
-  --color-border-contrast: var(--vt-c-black);
+  --color-border-accent-1: var(--vt-c-accent-1);
+  --color-border-accent-2: var(--vt-c-accent-2);
   --color-heading: var(--vt-c-text-light-1);
-  --color-text: var(--vt-c-text-light-1);
+  --color-text: var(--vt-c-dark);
+  --color-text-light: var(--vt-c-white-soft);
+  --color-text-secondary: var(--vt-c-secondary);
+  --color-text-accent-1: var(--vt-c-accent-1);
+  --color-text-accent-2: var(--vt-c-accent-2);
 
   --section-gap: 160px;
 }
@@ -101,6 +112,15 @@ html {
   scroll-behavior: smooth;
 }
 
+.title {
+  font-family:
+      'Roboto',
+      sans-serif;
+}
+
+.text-secondary {
+  color: var(--color-text-secondary);
+}
 
 .btn-link {
   display: inline-flex;

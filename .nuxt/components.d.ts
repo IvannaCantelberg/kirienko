@@ -2,7 +2,12 @@
 import type { DefineComponent, SlotsType } from 'vue'
 type IslandComponent<T extends DefineComponent> = T & DefineComponent<{}, {refresh: () => Promise<void>}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, SlotsType<{ fallback: { error: unknown } }>>
 interface _GlobalComponents {
-      'AppHeader': typeof import("../components/AppHeader.vue")['default']
+      'AppBanner': typeof import("../components/AppBanner.vue")['default']
+    'AppBlog': typeof import("../components/AppBlog.vue")['default']
+    'AppCompliment': typeof import("../components/AppCompliment.vue")['default']
+    'AppContact': typeof import("../components/AppContact.vue")['default']
+    'AppHeader': typeof import("../components/AppHeader.vue")['default']
+    'AppProjects': typeof import("../components/AppProjects.vue")['default']
     'MediumCard': typeof import("../components/MediumCard.vue")['default']
     'MediumFeeds': typeof import("../components/MediumFeeds.vue")['default']
     'Project': typeof import("../components/Project.vue")['default']
@@ -40,7 +45,12 @@ interface _GlobalComponents {
     'Body': typeof import("../node_modules/nuxt/dist/head/runtime/components")['Body']
     'NuxtIsland': typeof import("../node_modules/nuxt/dist/app/components/nuxt-island")['default']
     'NuxtRouteAnnouncer': IslandComponent<typeof import("../node_modules/nuxt/dist/app/components/server-placeholder")['default']>
-      'LazyAppHeader': typeof import("../components/AppHeader.vue")['default']
+      'LazyAppBanner': typeof import("../components/AppBanner.vue")['default']
+    'LazyAppBlog': typeof import("../components/AppBlog.vue")['default']
+    'LazyAppCompliment': typeof import("../components/AppCompliment.vue")['default']
+    'LazyAppContact': typeof import("../components/AppContact.vue")['default']
+    'LazyAppHeader': typeof import("../components/AppHeader.vue")['default']
+    'LazyAppProjects': typeof import("../components/AppProjects.vue")['default']
     'LazyMediumCard': typeof import("../components/MediumCard.vue")['default']
     'LazyMediumFeeds': typeof import("../components/MediumFeeds.vue")['default']
     'LazyProject': typeof import("../components/Project.vue")['default']
@@ -84,7 +94,12 @@ declare module 'vue' {
   export interface GlobalComponents extends _GlobalComponents { }
 }
 
+export const AppBanner: typeof import("../components/AppBanner.vue")['default']
+export const AppBlog: typeof import("../components/AppBlog.vue")['default']
+export const AppCompliment: typeof import("../components/AppCompliment.vue")['default']
+export const AppContact: typeof import("../components/AppContact.vue")['default']
 export const AppHeader: typeof import("../components/AppHeader.vue")['default']
+export const AppProjects: typeof import("../components/AppProjects.vue")['default']
 export const MediumCard: typeof import("../components/MediumCard.vue")['default']
 export const MediumFeeds: typeof import("../components/MediumFeeds.vue")['default']
 export const Project: typeof import("../components/Project.vue")['default']
@@ -122,7 +137,12 @@ export const Html: typeof import("../node_modules/nuxt/dist/head/runtime/compone
 export const Body: typeof import("../node_modules/nuxt/dist/head/runtime/components")['Body']
 export const NuxtIsland: typeof import("../node_modules/nuxt/dist/app/components/nuxt-island")['default']
 export const NuxtRouteAnnouncer: IslandComponent<typeof import("../node_modules/nuxt/dist/app/components/server-placeholder")['default']>
+export const LazyAppBanner: typeof import("../components/AppBanner.vue")['default']
+export const LazyAppBlog: typeof import("../components/AppBlog.vue")['default']
+export const LazyAppCompliment: typeof import("../components/AppCompliment.vue")['default']
+export const LazyAppContact: typeof import("../components/AppContact.vue")['default']
 export const LazyAppHeader: typeof import("../components/AppHeader.vue")['default']
+export const LazyAppProjects: typeof import("../components/AppProjects.vue")['default']
 export const LazyMediumCard: typeof import("../components/MediumCard.vue")['default']
 export const LazyMediumFeeds: typeof import("../components/MediumFeeds.vue")['default']
 export const LazyProject: typeof import("../components/Project.vue")['default']

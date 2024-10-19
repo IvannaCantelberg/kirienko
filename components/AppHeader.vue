@@ -1,5 +1,5 @@
 <template>
-  <header class="px-[15vw] py-16 bg-header">
+  <header class="px-[15vw] py-8 bg-header text-white">
     <!-- <p>{{ $t('welcome') }}</p> -->
     <div class="flex justify-between ">
         <div  class="flex gap-5">
@@ -16,6 +16,7 @@
       >
         {{ locale.alias }}
       </NuxtLink>
+      <button type="button" class="btn-signup ml-10">Newsletters Sign Up <i>&#8594;</i></button>
       </div>
     </div>
   </header>
@@ -27,24 +28,27 @@ const switchLocalePath = useSwitchLocalePath()
 </script>
 <style scoped>
 .bg-header {
-background-color: var(--color-background-contrast);
+  backdrop-filter: blur(40px) brightness(0.95);
+  /* background-color: var(--color-background-dark); */
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+
+  z-index: 10;
 }
 header {
-  line-height: 1.5;
-  /* box-shadow: -8px 3px 40px #87d5f361; */
-   
+  line-height: 1.5;   
 }
 
 .router-link-active.lang-link {
-  color: var(--color-border-contrast);
-  border: 1px solid var(--color-border-contrast);
+  color: var(--color-text-accent-1);
+  border: 1px solid var(--color-background-accent-1);
 }
 
 .lang-link, a {
   padding: 8px;
-  /* border: 1px solid; */
   line-height: normal;
-  /* border-radius: 5px; */
 }
 
 .router-link-active.lang-link::after, .router-link-active.lang-link::before {
@@ -52,11 +56,11 @@ header {
 }
 
 .nav-link {
-position: relative;
+  position: relative;
   display: inline-block;
   text-decoration: none;
   font-size: 16px;
-  /* color: inherit; */
+  line-height: 2.5;
   border-bottom: 1px solid transparent; /* Initial transparent border */
   border-radius: 5px;
     transition: all 0.4s ease-out;
@@ -70,7 +74,7 @@ position: relative;
   left: 0;
   height: 100%;
   width: 100%;
-  border-bottom: 1px solid var(--color-border-contrast);
+  border-bottom: 1px solid var(--color-border-accent-1);
   border-left: none;
   border-right: none;
   z-index: -1;
@@ -103,7 +107,7 @@ position: relative;
   left: 0;
   height: 100%;
   width: 100%;
-  border: 1px solid var(--color-border-contrast);
+  border: 1px solid var(--color-border-accent-1);
   border-radius: 5px;
   border-left: none;
   border-right: none;
@@ -121,7 +125,7 @@ position: relative;
   left: 0;
   height: 100%;
   width: 100%;
-  border: 1px solid var(--color-border-contrast);
+  border: 1px solid var(--color-border-accent-1);
   border-radius: 5px;
   border-top: none;
   border-bottom: none;
@@ -140,4 +144,12 @@ position: relative;
 .lang-link:hover::after {
   transform: scaleY(1); /* Draw the left and right borders */
 }
+
+.btn-signup {
+  background-color: var(--color-border-accent-1);
+  color: var(--color-text);
+  padding: 15px 20px;
+  border-radius: 20px;
+}
+
 </style>

@@ -1,0 +1,15 @@
+<template>
+    <div id="blog" class="f-h-section py-40">
+        <h1 class="title text-8xl text-center uppercase mb-10">Blog</h1>
+        <h3 class="text-sm text-center px-20"> {{ $t('blog_intro') }} </h3>
+        <MediumFeeds class="my-20"/>
+    </div>
+</template>
+
+<script setup lang="ts">
+import MediumFeeds from '~/components/MediumFeeds.vue';
+</script>
+
+<style>
+
+</style>

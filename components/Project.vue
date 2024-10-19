@@ -1,20 +1,34 @@
 <template>
-  <figure class="hover:shadow-2xl transition-all relative">
+  <figure class="hover:shadow-xl transition-all relative ">
     <FigureFrame class="frame" />
     <NuxtLink :to="`projects/${id}`">
-      <img :src="image" :alt="title" />
+      <!-- <img :src="image" :alt="title" /> -->
+        <!-- <div :style="{ 'background-image': 'url(' + image + ')' }" class="bg-image bg-project-image">
+          <div class="text-xs content p-4">
+            <p>{{description}}</p>
+          </div>
+        </div>     -->
+
+        <div class="relative overflow-hidden">
+          <img :src="image" :alt="title" />
+          <div class="text-base text-white content p-4 transition-all  delay-100">
+            <p>{{description}}</p>
+          </div>
+        </div>
+
     </NuxtLink>
     <FigureFrame class="frame reversed" />
   </figure>
 </template>
 
 <script lang="ts" setup>
-import FigureFrame from '~/components/icons/FigureFrame.vue'
+import FigureFrame from '~/components/icons/FigureFrame.vue';
 
 defineProps<{
   image: string
   title: string
-  id: number
+  id: number, 
+  description: string
 }>()
 </script>
 
@@ -26,6 +40,33 @@ figure {
   z-index: 1;
 }
 
+
+figure .content {
+    position: absolute;
+}
+
+figure:hover .content {
+      transform: translateY(-100%);
+}
+
+figure:hover .content:before {
+    content: '';
+     position: relative;
+     display: block;
+    background-image: url(/img/project-content.png);
+    background-image: linear-gradient(180deg, #abe1ff00, #abe1ffa3, #6ecbffa6, #7cc5efd1, #00a4ff);
+    width: 100%;
+    height: 250px;
+    
+    transform: translateY(100%) scale(2.5);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    z-index: -1;
+   
+}
+
+
 figure:hover {
   cursor: pointer;
   /* filter: grayscale(0); */
@@ -33,11 +74,11 @@ figure:hover {
   z-index: 2;
 }
 
-figure .frame {
+figure .frame, figure .content {
   visibility: hidden;
 }
 
-figure:hover .frame {
+figure:hover .frame, figure:hover .content {
   visibility: visible;
 }
 
@@ -57,7 +98,7 @@ figure:hover /deep/ .line-horizontal {
 }
 
 .frame {
-  stroke: var(--color-border-contrast);
+  stroke: var(--color-border-accent-2);
   position: absolute;
   top: -50px;
   left: -50px;
@@ -73,4 +114,12 @@ figure:hover /deep/ .line-horizontal {
   left: inherit;
   transform: rotate(180deg);
 }
+
+
+.bg-project-image {
+  max-width: 600px;
+  max-height: 600px;
+}
+
+
 </style>
