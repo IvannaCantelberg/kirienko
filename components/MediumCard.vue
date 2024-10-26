@@ -5,7 +5,7 @@
         class="image img-style"></div>
       <figcaption class="grid grid-row-3 gap-4 lg:gap-8 mx-5 mb-8">
         <h2 class="text-lg lg:text-2xl font-extrabold">{{ article.title }}</h2>
-        <p class="text-xs lg:text-sm line-clamp-4">
+        <p class="text-md line-clamp-4">
           {{ cleanContent(article.description) }}
         </p>
         <span class="text-sm text-right font-extrabold">Read more</span>

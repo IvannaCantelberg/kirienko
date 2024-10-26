@@ -1,12 +1,12 @@
 <template>
-  <figure class="hover:shadow-xl transition-all relative ">
+  <figure class="hover:shadow-xl transition-all relative w-full">
     <FigureFrame class="frame hidden xl:block" />
     <NuxtLink :to="`projects/${id}`">
-        <div class="relative overflow-hidden">
-          <img :src="image" :alt="title" />
+        <div class="relative overflow-hidden bg-project-image min-h-[600px] " :style="{backgroundImage: `url(${image})`}">
+          <!-- <img :src="image" :alt="title" /> -->
           
-          <div class="text-xs lg:text-base text-white content p-4 transition-all  delay-100">
-            <h3 class="text-3xl  text-white content-title">{{  title  }}</h3>
+          <div class="text-base text-white content p-4">
+            <h3 class="text-3xl text-white stroke-white content-title underline">{{  title  }} <i> <IconArrowRight class="inline xl:w-9 xl:h-9"/> </i></h3>
             <p class="line-clamp-4">{{description}}</p>
           </div>
         </div>
@@ -18,6 +18,7 @@
 
 <script lang="ts" setup>
 import FigureFrame from '~/components/icons/FigureFrame.vue';
+import IconArrowRight from '~/components/icons/IconArrowRight.vue';
 
 defineProps<{
   image: string
@@ -37,11 +38,12 @@ figure {
 
 .content-title {
     visibility: visible;
-    transform: translateY(-150%);
+    transform: translateY(-100%);
     position: absolute;
-    top: 0;
-    text-shadow: #000 0 2px 3px;
+    bottom: 0;
+    /* text-shadow: #000 0 2px 3px; */
     transition: 0.6s 1.6s cubic-bezier(0.215, 0.61, 0.355, 1);
+    transition-property: transform;
 }
 
 figure:hover {
@@ -54,10 +56,15 @@ figure:hover {
 
 figure .content {
     position: absolute;
+    bottom: 0;
+
+    transition: 0.6s 1.6s cubic-bezier(0.215, 0.61, 0.355, 1);
+    transition-property: translateY;
+    /* transform: translateY(100%); */
 }
 
 figure:hover .content {
-      transform: translateY(-100%);
+      transform: translateY(0);
 }
 
 figure:hover .content-title {
@@ -126,6 +133,12 @@ figure:hover /deep/ .line-horizontal {
   transform: rotate(180deg);
 }
 
+.bg-project-image {
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
 
 @media (max-width: 800px) {
   figure:hover {
@@ -139,11 +152,11 @@ figure:hover /deep/ .line-horizontal {
  }
 
   figure .content {
-      transform: translateY(-100%);
+      transform: translateY(0);
+      bottom: 0;
   }
 
   figure .content-title {
-    transform: translateY(-50%);
     position: relative;
   }
  
