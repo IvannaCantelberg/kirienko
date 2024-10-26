@@ -1,7 +1,7 @@
 <template>
-<div id="projects" class="f-h-section my-40">
+<div id="projects" class="my-40">
     <div class="flex flex-col">
-        <h1 class="title text-6xl lg:text-8xl text-center uppercase mb-10">Projects</h1>
+        <h1 class="title text-6xl lg:text-8xl text-center uppercase mb-5">Projects</h1>
         <h3 class="text-secondary text-xs lg:text-sm text-right max-w-[900px] self-end"> 
             These canvases are sewn by women in Ukraine, made from unused remnants from curtain shops. 
             Since the invasion, my art has taken on a new dimension, as everything now revolves around: everyone does what they can, and everyone plays their role.

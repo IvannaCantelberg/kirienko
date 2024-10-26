@@ -1,7 +1,7 @@
 <template>
-    <div id="contact" class="f-h-section text-white p-10 lg:p-16 2xl:p-40 ">
+    <div id="contact" class="text-white p-10 lg:p-16 2xl:p-40 ">
        
-        <div class=" grid grid-cols-1 gap-10 md:gap-0 md:grid-cols-2 h-[85vh]">
+        <div class=" grid grid-cols-1 gap-10 md:gap-0 md:grid-cols-2">
             <div class="flex gap-10 md:gap-0 flex-col justify-evenly">
                 <div>
                     <h2 class="title text-6xl uppercase mb-10">Contact</h2>    

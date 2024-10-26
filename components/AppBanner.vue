@@ -1,8 +1,10 @@
 <template>
-    <article class="flex">
-        <div :style="{ 'background-image': 'url(' + '/img/kirienko-profile-1.png' + '), radial-gradient(circle, rgb(17 27 36) 0%, rgb(11 18 26) 50%, rgb(11 18 26) 60%, rgb(8 13 17) 85%, rgb(8 13 17) 100%);' }" 
+    <article class="flex relative">
+        
+        <div style="background-image: url('/img/kirienko-profile-1.png'), radial-gradient(circle, rgb(17 27 36) 0%, rgb(11 18 26) 50%, rgb(11 18 26) 60%, rgb(8 13 17) 85%, rgb(8 13 17) 100%);" 
             class="bg-profile-image bg-image  pr-[8%]">
-            <div class="text-white text-right mt-52 flex flex-col items-end">
+
+            <div class="text-white text-right flex flex-col items-end">
                 <h2 class="text-xl xl:text-3xl mb-10"> I am <a href="http://" class="text-4xl xl:text-6xl text-accent-2 underline pl-5 "> Tatjana Kirienko <i> <IconArrowRight class="inline xl:w-9 xl:h-9"/> </i></a> </h2> 
                 <h2 class=" text-xl xl:text-2xl max-w-[550px]"> a textile artist in Arnhem, the Netherlands, with Ukrainian roots. </h2>
             </div>
@@ -25,7 +27,7 @@ import IconArrowRight from '~/components/icons/IconArrowRight.vue'
 
 @media (max-width: 1200px) {
     .bg-image {
-        background-position: right;
+        background-position: right bottom;
     }
 
 }
@@ -39,13 +41,12 @@ import IconArrowRight from '~/components/icons/IconArrowRight.vue'
 
 .bg-profile-image {
     width: 100vw;
-    height:  calc(100vh);
-
-
+    max-height: calc(100vh);
     display: flex;
     flex-direction: column;
     align-items: end;
-    gap: 30%;
+    min-height: 920px;
+    justify-content: space-evenly;
 }
 
 .text-accent-2 {

@@ -4,8 +4,10 @@
     <NuxtLink :to="`projects/${id}`">
         <div class="relative overflow-hidden">
           <img :src="image" :alt="title" />
+          
           <div class="text-xs lg:text-base text-white content p-4 transition-all  delay-100">
-            <p>{{description}}</p>
+            <h3 class="text-3xl  text-white content-title">{{  title  }}</h3>
+            <p class="line-clamp-4">{{description}}</p>
           </div>
         </div>
 
@@ -33,17 +35,20 @@ figure {
   z-index: 1;
 }
 
+.content-title {
+    visibility: visible;
+    transform: translateY(-150%);
+    position: absolute;
+    top: 0;
+    text-shadow: #000 0 2px 3px;
+    transition: 0.6s 1.6s cubic-bezier(0.215, 0.61, 0.355, 1);
+}
+
 figure:hover {
   cursor: pointer;
   /* filter: grayscale(0); */
   transform: scale(1.15);
   z-index: 2;
-}
-
-@media (max-width: 800px) {
-  figure:hover {
-    transform: none;
-  }
 }
 
 
@@ -55,7 +60,12 @@ figure:hover .content {
       transform: translateY(-100%);
 }
 
-figure:hover .content:before {
+figure:hover .content-title {
+  /* transform: translateY(0); */
+  position: relative;
+}
+
+figure .content:before {
     content: '';
      position: relative;
      display: block;
@@ -115,5 +125,31 @@ figure:hover /deep/ .line-horizontal {
   left: inherit;
   transform: rotate(180deg);
 }
+
+
+@media (max-width: 800px) {
+  figure:hover {
+    transform: none;
+  }
+}
+
+@media (hover: none) {
+ figure .content:before, figure .content {
+  visibility: visible;
+ }
+
+  figure .content {
+      transform: translateY(-100%);
+  }
+
+  figure .content-title {
+    transform: translateY(-50%);
+    position: relative;
+  }
+ 
+}
+
+
+
 
 </style>

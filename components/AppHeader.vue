@@ -19,6 +19,13 @@
       <button type="button" class="btn-signup ml-10">Newsletters Sign Up <i>&#8594;</i></button>
       </div>
     </div>
+
+
+    <dialog>
+      <button autofocus open>Close</button>
+      <p>This modal dialog has a groovy backdrop!</p>
+    </dialog>
+
   </header>
 </template>
 

@@ -26,11 +26,7 @@
         <AppContact />
     </section>
 
-    
-    
-    
-
-   </main>
+</main>
   
 </template>
 <script setup lang="ts">
@@ -50,7 +46,19 @@ useSeoMeta({
   twitterCard: 'summary_large_image',
 })
 
+// const dialog = document.querySelector("dialog");
+// const showButton = document.querySelector("dialog + button");
+// const closeButton = document.querySelector("dialog button");
 
+// "Show the dialog" button opens the dialog modally
+// showButton.addEventListener("click", () => {
+//   dialog.showModal();
+// });
+
+// // "Close" button closes the dialog
+// closeButton.addEventListener("click", () => {
+//   dialog.close();
+// });
 
 
 </script>
@@ -94,4 +102,15 @@ useSeoMeta({
     }
 
     
+::backdrop {
+  background-image: linear-gradient(
+    45deg,
+    magenta,
+    rebeccapurple,
+    dodgerblue,
+    green
+  );
+  opacity: 0.75;
+}
+
 </style>
