@@ -1,23 +1,16 @@
 <template>
   <figure class="hover:shadow-xl transition-all relative ">
-    <FigureFrame class="frame" />
+    <FigureFrame class="frame hidden xl:block" />
     <NuxtLink :to="`projects/${id}`">
-      <!-- <img :src="image" :alt="title" /> -->
-        <!-- <div :style="{ 'background-image': 'url(' + image + ')' }" class="bg-image bg-project-image">
-          <div class="text-xs content p-4">
-            <p>{{description}}</p>
-          </div>
-        </div>     -->
-
         <div class="relative overflow-hidden">
           <img :src="image" :alt="title" />
-          <div class="text-base text-white content p-4 transition-all  delay-100">
+          <div class="text-xs lg:text-base text-white content p-4 transition-all  delay-100">
             <p>{{description}}</p>
           </div>
         </div>
 
     </NuxtLink>
-    <FigureFrame class="frame reversed" />
+    <FigureFrame class="frame reversed hidden xl:block" />
   </figure>
 </template>
 
@@ -38,6 +31,19 @@ figure {
   /* filter: grayscale(1); */
   transform: scale(1);
   z-index: 1;
+}
+
+figure:hover {
+  cursor: pointer;
+  /* filter: grayscale(0); */
+  transform: scale(1.15);
+  z-index: 2;
+}
+
+@media (max-width: 800px) {
+  figure:hover {
+    transform: none;
+  }
 }
 
 
@@ -67,12 +73,7 @@ figure:hover .content:before {
 }
 
 
-figure:hover {
-  cursor: pointer;
-  /* filter: grayscale(0); */
-  transform: scale(1.15);
-  z-index: 2;
-}
+
 
 figure .frame, figure .content {
   visibility: hidden;
@@ -114,12 +115,5 @@ figure:hover /deep/ .line-horizontal {
   left: inherit;
   transform: rotate(180deg);
 }
-
-
-.bg-project-image {
-  max-width: 600px;
-  max-height: 600px;
-}
-
 
 </style>

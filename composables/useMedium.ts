@@ -3,7 +3,7 @@ import type { IMediumFeed } from "~/types/medium";
 const MEDIUM_FEEDS_URL: string = 'https://api.rss2json.com/v1/api.json?rss_url=https://medium.com/@tatjanakirienko/feed';
 
 export const useMedium = () => {
-    const count: number = 3;
+    const count: number = 4;
     const getFeeds = async() => {
         const data  = await useFetch(MEDIUM_FEEDS_URL)
         .then((result) => {

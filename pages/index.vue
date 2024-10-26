@@ -58,8 +58,20 @@ useSeoMeta({
 <style scoped>
 
     .container-space {
-        max-width: calc(100% - 30vw);
+        max-width: calc(100% - 20vw);
         margin: auto;
+    }
+
+    @media (min-width: 1200px ) and (max-width: 1600px) {
+        .container-space {
+            max-width: calc(100% - 15vw);
+        }
+    }
+
+    @media  (max-width: 1199px) {
+        .container-space {
+            max-width: calc(100% - 10vw);
+        }
     }
     
     .main-container {

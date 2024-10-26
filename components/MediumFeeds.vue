@@ -1,6 +1,6 @@
 <template>
   <article class="grid justify-items-center">
-    <div class="grid grid-cols-3 gap-10 mb-20">
+    <div class="grid sm:grid-cols-2 xl:grid-cols-4  gap-10 mb-20">
       <MediumCard
         v-for="feed in feeds"
         :key="feed.title"
@@ -24,20 +24,12 @@ console.log(feeds)
 
 <style scoped>
 .card {
-  /* border: 2px solid; */
-  background-color: white
+  background-color: white;
 }
 
-.card:hover {
-  /* border-color: var(--color-border-contrast); */
-}
 
 .card /deep/ .arrow-icon {
   visibility: hidden;
-
-  /* transition-property: visibility;
-    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-    transition-duration: 150ms; */
 }
 
 .card:hover /deep/ .arrow-icon {

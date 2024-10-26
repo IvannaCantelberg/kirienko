@@ -1,15 +1,21 @@
 <template>
 <div id="projects" class="f-h-section my-40">
     <div class="flex flex-col">
-        <h1 class="title text-8xl text-center uppercase mb-10">Projects</h1>
-        <h3 class="text-secondary text-base text-right max-w-[900px] self-end"> 
+        <h1 class="title text-6xl lg:text-8xl text-center uppercase mb-10">Projects</h1>
+        <h3 class="text-secondary text-xs lg:text-sm text-right max-w-[900px] self-end"> 
             These canvases are sewn by women in Ukraine, made from unused remnants from curtain shops. 
             Since the invasion, my art has taken on a new dimension, as everything now revolves around: everyone does what they can, and everyone plays their role.
             Art has become a powerful means for me to contribute.
         </h3>
     </div>
-    <article class="flex gap-16 justify-between my-28">
-        <Project v-for="(project, index) in projectsData" :key="index" :id="project.id" :image="project.image" :title="project.title" :description="project.description" />
+    <article class="flex flex-col lg:flex-row gap-10 xl:gap-16 lg:justify-between items-center my-28 mx-auto lg:max-w-[1350px]">
+        <Project 
+            v-for="(project, index) in projectsData" 
+            :key="index" :id="project.id" 
+            :image="project.image" 
+            :title="project.title" 
+            :description="project.description" 
+            class="max-w-[600px]"/>
     </article>    
 </div>
 

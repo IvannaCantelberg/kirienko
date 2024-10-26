@@ -1,5 +1,5 @@
 <template>
-  <header class="px-[15vw] py-8 bg-header text-white">
+  <header class="px-[5vw] lg:px-[15vw] py-8 bg-header text-white">
     <!-- <p>{{ $t('welcome') }}</p> -->
     <div class="flex justify-between ">
         <div  class="flex gap-5">
