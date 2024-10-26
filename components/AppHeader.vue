@@ -2,31 +2,29 @@
   <header class="px-[5vw] xl:px-[15vw] py-8 bg-header text-white">
     <!-- <p>{{ $t('welcome') }}</p> -->
     <div class="flex justify-between items-center text-2xl xl:text-xl">
-        <div  class="flex gap-5">
-            <a href="#projects" class="nav-link">Projects</a>
-            <a href="#case" class="nav-link">Case</a>
-            <a href="#blog" class="nav-link">Blog</a>
-            <a href="#contact" class="nav-link">Contact</a>
-        </div>
-      <div  class="flex  gap-5 items-center">
+      <div class="flex gap-5">
+        <a href="#projects" class="nav-link">Projects</a>
+        <a href="#case" class="nav-link">Case</a>
+        <a href="#blog" class="nav-link">Blog</a>
+        <a href="#contact" class="nav-link">Contact</a>
+      </div>
+      <div class="flex gap-5 items-center">
         <NuxtLink
-        v-for="locale in locales"
-        :key="locale.code"
-        :to="switchLocalePath(locale.code)"
-        class="lang-link transition-all"
-      >
-        {{ locale.alias }}
-      </NuxtLink>
-      <button type="button" class="btn-signup ml-10">Newsletters Sign Up <i>&#8594;</i></button>
+          v-for="locale in locales"
+          :key="locale.code"
+          :to="switchLocalePath(locale.code)"
+          class="lang-link transition-all"
+        >
+          {{ locale.alias }}
+        </NuxtLink>
+        <button type="button" class="btn-signup ml-10">Newsletters Sign Up <i>&#8594;</i></button>
       </div>
     </div>
-
 
     <dialog>
       <button autofocus open>Close</button>
       <p>This modal dialog has a groovy backdrop!</p>
     </dialog>
-
   </header>
 </template>
 
@@ -46,7 +44,7 @@ const switchLocalePath = useSwitchLocalePath()
   z-index: 10;
 }
 header {
-  line-height: 1.5;   
+  line-height: 1.5;
 }
 
 .router-link-active.lang-link {
@@ -54,13 +52,15 @@ header {
   border: 1px solid var(--color-background-accent-1);
 }
 
-.lang-link, a {
+.lang-link,
+a {
   padding: 8px;
   /* line-height: normal; */
 }
 
-.router-link-active.lang-link::after, .router-link-active.lang-link::before {
-    content: none;
+.router-link-active.lang-link::after,
+.router-link-active.lang-link::before {
+  content: none;
 }
 
 .nav-link {
@@ -71,9 +71,8 @@ header {
   /* line-height: 2.5; */
   border-bottom: 1px solid transparent; /* Initial transparent border */
   border-radius: 5px;
-    transition: all 0.4s ease-out;
+  transition: all 0.4s ease-out;
 }
-
 
 .nav-link::after {
   content: '';
@@ -92,8 +91,8 @@ header {
 }
 
 .nav-link:hover::after {
-   transform: scaleX(1); /* Draw the top and bottom borders */
-    transition-delay: 0.2s; /* Delay for sequential effect */
+  transform: scaleX(1); /* Draw the top and bottom borders */
+  transition-delay: 0.2s; /* Delay for sequential effect */
 }
 
 .lang-link {
@@ -104,7 +103,7 @@ header {
   /* color: inherit; */
   border: 1px solid transparent; /* Initial transparent border */
   border-radius: 5px;
-    transition: all 0.4s ease-out;
+  transition: all 0.4s ease-out;
 }
 
 /* Top and bottom borders */
@@ -159,5 +158,4 @@ header {
   padding: 15px 20px;
   border-radius: 20px;
 }
-
 </style>

@@ -2,28 +2,32 @@
   <figure class="hover:shadow-xl transition-all relative w-full">
     <FigureFrame class="frame hidden xl:block" />
     <NuxtLink :to="`projects/${id}`">
-        <div class="relative overflow-hidden bg-project-image min-h-[600px] " :style="{backgroundImage: `url(${image})`}">
-          <!-- <img :src="image" :alt="title" /> -->
-          
-          <div class="text-xl text-white content p-4">
-            <h3 class="text-3xl text-white stroke-white content-title underline">{{  title  }} <i> <IconArrowRight class="inline xl:w-9 xl:h-9"/> </i></h3>
-            <p class="line-clamp-4">{{description}}</p>
-          </div>
-        </div>
+      <div
+        class="relative overflow-hidden bg-project-image min-h-[600px]"
+        :style="{ backgroundImage: `url(${image})` }"
+      >
+        <!-- <img :src="image" :alt="title" /> -->
 
+        <div class="text-xl text-white content p-4">
+          <h3 class="text-3xl text-white stroke-white content-title underline">
+            {{ title }} <i> <IconArrowRight class="inline xl:w-9 xl:h-9" /> </i>
+          </h3>
+          <p class="line-clamp-4">{{ description }}</p>
+        </div>
+      </div>
     </NuxtLink>
     <FigureFrame class="frame reversed hidden xl:block" />
   </figure>
 </template>
 
 <script lang="ts" setup>
-import FigureFrame from '~/components/icons/FigureFrame.vue';
-import IconArrowRight from '~/components/icons/IconArrowRight.vue';
+import FigureFrame from '~/components/icons/FigureFrame.vue'
+import IconArrowRight from '~/components/icons/IconArrowRight.vue'
 
 defineProps<{
   image: string
   title: string
-  id: number, 
+  id: number
   description: string
 }>()
 </script>
@@ -37,13 +41,13 @@ figure {
 }
 
 .content-title {
-    visibility: visible;
-    transform: translateY(-100%);
-    position: absolute;
-    bottom: 0;
-    /* text-shadow: #000 0 2px 3px; */
-    transition: 0.6s 1.6s cubic-bezier(0.215, 0.61, 0.355, 1);
-    transition-property: transform;
+  visibility: visible;
+  transform: translateY(-100%);
+  position: absolute;
+  bottom: 0;
+  /* text-shadow: #000 0 2px 3px; */
+  transition: 0.6s 1.6s cubic-bezier(0.215, 0.61, 0.355, 1);
+  transition-property: transform;
 }
 
 figure:hover {
@@ -53,18 +57,17 @@ figure:hover {
   z-index: 2;
 }
 
-
 figure .content {
-    position: absolute;
-    bottom: 0;
+  position: absolute;
+  bottom: 0;
 
-    transition: 0.6s 1.6s cubic-bezier(0.215, 0.61, 0.355, 1);
-    transition-property: translateY;
-    /* transform: translateY(100%); */
+  transition: 0.6s 1.6s cubic-bezier(0.215, 0.61, 0.355, 1);
+  transition-property: translateY;
+  /* transform: translateY(100%); */
 }
 
 figure:hover .content {
-      transform: translateY(0);
+  transform: translateY(0);
 }
 
 figure:hover .content-title {
@@ -73,30 +76,28 @@ figure:hover .content-title {
 }
 
 figure .content:before {
-    content: '';
-     position: relative;
-     display: block;
-    background-image: url(/img/project-content.png);
-    background-image: linear-gradient(180deg, #abe1ff00, #abe1ffa3, #6ecbffa6, #7cc5efd1, #00a4ff);
-    width: 100%;
-    height: 250px;
-    
-    transform: translateY(100%) scale(2.5);
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    z-index: -1;
-   
+  content: '';
+  position: relative;
+  display: block;
+  background-image: url(/img/project-content.png);
+  background-image: linear-gradient(180deg, #abe1ff00, #abe1ffa3, #6ecbffa6, #7cc5efd1, #00a4ff);
+  width: 100%;
+  height: 250px;
+
+  transform: translateY(100%) scale(2.5);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  z-index: -1;
 }
 
-
-
-
-figure .frame, figure .content {
+figure .frame,
+figure .content {
   visibility: hidden;
 }
 
-figure:hover .frame, figure:hover .content {
+figure:hover .frame,
+figure:hover .content {
   visibility: visible;
 }
 
@@ -134,11 +135,10 @@ figure:hover /deep/ .line-horizontal {
 }
 
 .bg-project-image {
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
 }
-
 
 @media (max-width: 800px) {
   figure:hover {
@@ -147,22 +147,18 @@ figure:hover /deep/ .line-horizontal {
 }
 
 @media (hover: none) {
- figure .content:before, figure .content {
-  visibility: visible;
- }
+  figure .content:before,
+  figure .content {
+    visibility: visible;
+  }
 
   figure .content {
-      transform: translateY(0);
-      bottom: 0;
+    transform: translateY(0);
+    bottom: 0;
   }
 
   figure .content-title {
     position: relative;
   }
- 
 }
-
-
-
-
 </style>

@@ -1,3 +1,3 @@
 <template>
-<img src="/icons/Facebook.png" alt="Facebook icon" />
+  <img src="/icons/Facebook.png" alt="Facebook icon" />
 </template>

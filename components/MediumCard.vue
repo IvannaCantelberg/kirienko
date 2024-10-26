@@ -1,8 +1,10 @@
 <template>
   <a :href="article.link" target="_blank">
     <figure class="grid grid-row-2 gap-8">
-      <div :style="{ backgroundImage: `url(${getThumbnail(article.content)})` }"
-        class="image img-style"></div>
+      <div
+        :style="{ backgroundImage: `url(${getThumbnail(article.content)})` }"
+        class="image img-style"
+      ></div>
       <figcaption class="grid grid-row-3 gap-4 lg:gap-8 mx-5 mb-8">
         <h2 class="text-lg lg:text-2xl font-extrabold">{{ article.title }}</h2>
         <p class="text-md line-clamp-4">
@@ -59,7 +61,6 @@ const cleanContent = (htmlText: string): string => {
   position: relative;
   bottom: 50%;
   left: 90%;
-
 
   fill: var(--color-border-contrast);
 }
