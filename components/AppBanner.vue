@@ -5,8 +5,8 @@
             class="bg-profile-image bg-image  pr-[8%]">
 
             <div class="text-white text-right flex flex-col items-end">
-                <h2 class="text-2xl xl:text-3xl mb-10"> I am <a href="http://" class="text-5xl xl:text-6xl text-accent-2 underline pl-5 "> Tatjana Kirienko <i> <IconArrowRight class="inline xl:w-9 xl:h-9"/> </i></a> </h2> 
-                <h2 class=" text-2xl xl:text-2xl max-w-[550px]"> a textile artist in Arnhem, the Netherlands, with Ukrainian roots. </h2>
+                <h2 class="text-3xl mb-10"> I am <a href="http://" class="text-5xl xl:text-6xl text-accent-2 underline pl-5 "> Tatjana Kirienko <i> <IconArrowRight class="inline xl:w-9 xl:h-9"/> </i></a> </h2> 
+                <h2 class=" text-2xl max-w-[550px]"> a textile artist in Arnhem, the Netherlands, with Ukrainian roots. </h2>
             </div>
             <h3 class="text-white text-2xl max-w-[550px] text-right ellipse-right">
                     Here you will find my Ukrainian art projects and details how you can participate with loving intention and creativity. 

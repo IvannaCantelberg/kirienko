@@ -5,7 +5,7 @@
         <div class="relative overflow-hidden bg-project-image min-h-[600px] " :style="{backgroundImage: `url(${image})`}">
           <!-- <img :src="image" :alt="title" /> -->
           
-          <div class="text-base text-white content p-4">
+          <div class="text-xl text-white content p-4">
             <h3 class="text-3xl text-white stroke-white content-title underline">{{  title  }} <i> <IconArrowRight class="inline xl:w-9 xl:h-9"/> </i></h3>
             <p class="line-clamp-4">{{description}}</p>
           </div>

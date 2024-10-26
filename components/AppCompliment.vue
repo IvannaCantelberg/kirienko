@@ -1,8 +1,8 @@
 <template>
-    <article class="w-full">
+    <article id="case" class="w-full py-40">
         <div class="flex flex-col mb-10">
             <h1 class="title text-6xl mb-10 uppercase">Kunst tijdens oorlog? </h1>
-            <h3 class="text-secondary text-lg text-right max-w-[900px] self-end"> 
+            <h3 class="text-secondary text-xl text-right max-w-[900px] self-end"> 
                 To introduce ‘why and for whom’ these projects exist, and to explain the role of art, even, or perhaps even more so during wartime, 
             I’d like to share this (shortened) message exchange from Pasha 
             </h3>

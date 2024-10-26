@@ -1,10 +1,11 @@
 <template>
-  <header class="px-[5vw] lg:px-[15vw] py-8 bg-header text-white">
+  <header class="px-[5vw] xl:px-[15vw] py-8 bg-header text-white">
     <!-- <p>{{ $t('welcome') }}</p> -->
-    <div class="flex justify-between ">
+    <div class="flex justify-between items-center text-2xl xl:text-xl">
         <div  class="flex gap-5">
             <a href="#projects" class="nav-link">Projects</a>
-            <a href="#about_us" class="nav-link">About Us</a>
+            <a href="#case" class="nav-link">Case</a>
+            <a href="#blog" class="nav-link">Blog</a>
             <a href="#contact" class="nav-link">Contact</a>
         </div>
       <div  class="flex  gap-5 items-center">
@@ -55,7 +56,7 @@ header {
 
 .lang-link, a {
   padding: 8px;
-  line-height: normal;
+  /* line-height: normal; */
 }
 
 .router-link-active.lang-link::after, .router-link-active.lang-link::before {
@@ -66,8 +67,8 @@ header {
   position: relative;
   display: inline-block;
   text-decoration: none;
-  font-size: 16px;
-  line-height: 2.5;
+  /* font-size: 16px; */
+  /* line-height: 2.5; */
   border-bottom: 1px solid transparent; /* Initial transparent border */
   border-radius: 5px;
     transition: all 0.4s ease-out;

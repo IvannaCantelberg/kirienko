@@ -5,7 +5,7 @@
             <div class="flex gap-10 md:gap-0 flex-col justify-evenly">
                 <div>
                     <h2 class="title text-6xl uppercase mb-10">Contact</h2>    
-                    <p class="text-lg max-w-[260px] mb-4">Send me a note to get the conversation started</p>
+                    <p class="text-xl max-w-[260px] mb-4">Send me a note to get the conversation started</p>
                     <p class="text-sm">* mandatory fields</p>
                 </div>
 
@@ -13,11 +13,11 @@
                     <div class="my-10 border-y py-8 px-8 max-w-[300px]">
                     <div class="mb-6">
                         <h3 class="title text-3xl mb-4">Email</h3>
-                        <a href="mailto:tatajana.kirienko@gmail.com" class="ml-5">tatajana.kirienko@gmail.com</a>
+                        <a href="mailto:tatajana.kirienko@gmail.com" class="text-lg ml-5">tatajana.kirienko@gmail.com</a>
                     </div>
                     <div>
                         <h3 class="title text-3xl mb-4">Location</h3>
-                        <a href="https://g.co/kgs/srHZJYq" target="_blank" class="ml-5">Open Google Maps</a>
+                        <a href="https://g.co/kgs/srHZJYq" target="_blank" class="text-lg ml-5">Open Google Maps</a>
                     </div>        
                     </div>
 
@@ -37,21 +37,21 @@
                     <form class="flex flex-col">
                         <div class="grid gap-6 mb-10">
                             <div>
-                                <label for="name" class="block mb-2 text-md font-medium">Name *</label>
+                                <label for="name" class="block mb-2 text-lg font-medium">Name *</label>
                                 <input type="text" id="name" class="border text-sm rounded-sm block w-full p-2.5 bg-white bg-opacity-10 border-gray-600 placeholder-gray-400 text-white focus:ring-blue-500 focus:border-blue-500" placeholder="John Doe" required />
                             </div>
                             <div>
-                                <label for="fiemailrst_name" class="block mb-2 text-md font-medium">Email *</label>
+                                <label for="fiemailrst_name" class="block mb-2 text-lg font-medium">Email *</label>
                                 <input type="email" id="email" class="border text-sm rounded-sm block w-full p-2.5 bg-white bg-opacity-10 border-gray-600 placeholder-gray-400 text-white focus:ring-blue-500 focus:border-blue-500" placeholder="" required />
                             </div>
                             <div>
-                                <label for="message" class="block mb-2 text-md font-medium">Message *</label>
+                                <label for="message" class="block mb-2 text-lg font-medium">Message *</label>
                                 <textarea rows="5" id="message" class="border text-sm rounded-sm block w-full p-2.5 bg-white bg-opacity-10 border-gray-600 placeholder-gray-400 text-white focus:ring-blue-500 focus:border-blue-500" placeholder="Type your message here.." required />
                             </div>
                             <div class="flex items-start mb-6">
                                 <label class="block text-gray-500">
                                 <input class="mr-2 leading-tight " type="checkbox">
-                                <span class="ms-2 text-md font-medium text-gray-300">
+                                <span class="ms-2 text-lg font-medium text-gray-300">
                                     Subscribe for newsletters
                                 </span>
                             </label>

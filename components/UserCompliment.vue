@@ -4,7 +4,7 @@
       <!-- <div class="w-[50px] h-[50px] rounded-full bg-contrast"></div> -->
       <div class=" bg-contrast p-5 max-w-[90%] min-w-[300px] flex flex-col gap-3 rounded-lg">
         <div class="title">Pasha:</div>
-        <p class="text-md">We’ve returned from the battlefield, taking a rest for 3-4 days.</p>
+        <p class="text-base">We’ve returned from the battlefield, taking a rest for 3-4 days.</p>
         <div class="self-end text-secondary">23:29</div>
       </div>
     </div>
@@ -13,7 +13,7 @@
       <!-- <div class="w-[50px] h-[50px] rounded-full bg-slate-100"></div> -->
       <div class="bg-slate-100 p-5 max-w-[90%] min-w-[300px] flex flex-col gap-3 rounded-lg">
         <div class="title">Tanja:</div>
-        <p class="text-md">How did it go?</p>
+        <p class="text-base">How did it go?</p>
         <div class="self-end text-secondary">23:29</div>
       </div>
     </div>
