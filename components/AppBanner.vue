@@ -1,5 +1,6 @@
 <template>
   <article class="flex relative">
+    <div style="background-image: url('/img/ellipse.png')" class="bg-image bg-cover absolute  right-0 lg:size-1/2 2xl:size-full xl:visible invisible"></div>
     <div
       style="
         background-image: url('/img/kirienko-profile1.png'),
@@ -12,7 +13,7 @@
             rgb(8 13 17) 100%
           );
       "
-      class="bg-profile-image bg-image px-2 lg:pr-[8%]"
+      class="bg-profile-image bg-image px-2 lg:pr-[8%] size-full"
     >
       <div class="text-white text-right flex flex-col items-end">
         <h2 class="text-xl lg:text-3xl mb-10">
