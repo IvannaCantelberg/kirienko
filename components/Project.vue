@@ -3,14 +3,14 @@
     <FigureFrame class="frame hidden xl:block" />
     <NuxtLink :to="`projects/${id}`">
       <div
-        class="relative overflow-hidden bg-project-image min-h-[600px]"
+        class="relative overflow-hidden bg-project-image min-h-[320px] lg:min-h-[600px] 2xl:min-h-[700px]"
         :style="{ backgroundImage: `url(${image})` }"
       >
         <!-- <img :src="image" :alt="title" /> -->
 
-        <div class="text-xl text-white content p-4">
-          <h3 class="text-3xl text-white stroke-white content-title underline">
-            {{ title }} <i> <IconArrowRight class="inline xl:w-9 xl:h-9" /> </i>
+        <div class="text-base lg:text-xl 2xl:text-2xl text-white content p-4">
+          <h3 class="text-xl lg:text-3xl 2xl:text-5xl text-white stroke-white content-title underline">
+            {{ title }} <i> <IconArrowRight class="inline xl:size-9" /> </i>
           </h3>
           <p class="line-clamp-4">{{ description }}</p>
         </div>

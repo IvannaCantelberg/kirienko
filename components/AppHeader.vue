@@ -1,8 +1,8 @@
 <template>
   <header class="px-[5vw] xl:px-[15vw] py-8 bg-header text-white">
     <!-- <p>{{ $t('welcome') }}</p> -->
-    <div class="flex justify-between items-center text-2xl xl:text-xl">
-      <div class="flex gap-5">
+    <div class="flex justify-between items-center text-2xl xl:text-xl ">
+      <div class="flex gap-5 title">
         <a href="#projects" class="nav-link">Projects</a>
         <a href="#case" class="nav-link">Case</a>
         <a href="#blog" class="nav-link">Blog</a>
@@ -13,7 +13,7 @@
           v-for="locale in locales"
           :key="locale.code"
           :to="switchLocalePath(locale.code)"
-          class="lang-link transition-all"
+          class="lang-link transition-all title"
         >
           {{ locale.alias }}
         </NuxtLink>

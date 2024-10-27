@@ -1,8 +1,8 @@
 <template>
-  <div id="projects" class="py-40">
+  <div id="projects" class="py-20 lg:py-40">
     <div class="flex flex-col">
-      <h1 class="title text-6xl lg:text-8xl text-center uppercase mb-10">Projects</h1>
-      <h3 class="text-secondary text-xl text-right xl:max-w-[950px] self-end">
+      <h1 class="title text-5xl lg:text-8xl text-center uppercase mb-5 lg:mb-10">Projects</h1>
+      <h3 class="text-secondary text-base lg:text-xl 2xl:text-2xl text-right xl:max-w-[950px] 2xl:max-w-[70%] self-end">
         These canvases are sewn by women in Ukraine, made from unused remnants from curtain shops.
         Since the invasion, my art has taken on a new dimension, as everything now revolves around:
         everyone does what they can, and everyone plays their role. Art has become a powerful means
@@ -10,7 +10,7 @@
       </h3>
     </div>
     <article
-      class="flex flex-col lg:flex-row gap-10 xl:gap-28 lg:justify-between items-center my-28 mx-auto lg:max-w-[1350px]"
+      class="flex flex-col lg:flex-row gap-10 xl:gap-28 lg:justify-between items-center my-10 lg:my-28 mx-auto xl:max-w-screen-xl 2xl:max-w-screen-2xl"
     >
       <Project
         v-for="(project, index) in projectsData"

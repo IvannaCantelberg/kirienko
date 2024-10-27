@@ -48,7 +48,7 @@
       </div>
       <div>
         <h3 class="title text-4xl mb-4">Have a question ?</h3>
-        <h3 class="title text-4xl mb-4">Want to join to the project?</h3>
+        <h3 class="title text-4xl mb-10">Want to join to the project?</h3>
 
         <div class="bg-white bg-opacity-10 p-10 sm:p-5 lg:py-16 lg:px-14 my-5 lg:m-14">
           <form class="flex flex-col">
