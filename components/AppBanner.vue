@@ -42,7 +42,7 @@ import IconArrowRight from '~/components/icons/IconArrowRight.vue'
   background-position: center bottom;
 }
 
-@media (max-width: 1420px) {
+@media (min-width: 1420px) {
   .bg-image {
     background-position: left bottom;
   }
