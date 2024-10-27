@@ -11,7 +11,7 @@
      </section>
 
      <section class="relative">
-        <div style="background-image: url('/img/petrykivkadetail.jpg')" class="bg-image absolute size-full -z-10 filter  opacity-10"></div>
+        <div style="background-image: url('/img/petrykivkadetail.png')" class="bg-image bg-cover absolute size-full -z-10 filter  opacity-10"></div>
         <div class="container-space">    
             <AppCompliment />        
         </div>         
