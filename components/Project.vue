@@ -3,7 +3,7 @@
     <FigureFrame class="frame hidden xl:block" />
     <NuxtLink :to="`projects/${id}`">
       <div
-        class="relative overflow-hidden bg-project-image min-h-[320px] lg:min-h-[600px] 2xl:min-h-[700px]"
+        class="relative overflow-hidden bg-project-image min-h-[320px] lg:min-h-[480px] xl:min-h-[600px]"
         :style="{ backgroundImage: `url(${image})` }"
       >
         <!-- <img :src="image" :alt="title" /> -->
