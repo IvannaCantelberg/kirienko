@@ -1,0 +1,30 @@
+{
+      "welcome": "Welcome", 
+      "banner": {
+        "1": "I am", 
+        "2": "Tatjana Kirienko", 
+        "3": "a textile artist in Arnhem, the Netherlands, with Ukrainian roots.", 
+        "4": "Here you will find my ${1} Ukrainian art projects and details how you can participate with loving intention and creativity. "
+      },
+      "compliment": [
+        {
+            "name": "Pasha", 
+            "message": "We zijn terug van het strijdveld, even rust nemen voor 3-4 dagen.", 
+            "time": "23:46"
+        }, 
+        {
+            "name": "Tanja", 
+            "message": "Hoe ging het? 🙏 Waar ben je? Ik wil gewoon zeggen dat ik trots ben op jou en jullie allen.", 
+            "time": "23:49"
+        }, 
+        {
+            "name": "Pasha", 
+            "message": "Rust goed uit.'Toen ik je post op Facebook las, waarin je kunstenaars uitnodigde om zich bij jouw werk aan te sluiten, rolden de tranen over mijn wangen. Ik kan nog steeds niet begrijpen hoe je zoiets kunt creëren – op zo'n afstand – zonder het te zien, maar het toch zo goed te begrijpen. Ik ben misschien geen creatief persoon, maar ik droom ervan om jouw werk en jouw bijdrage aan Oekraïne te delen met mensen die weten hoe ze van het leven, de wereld, en het land moeten houden. Als het niet voor alles wat nu gebeurt was, zou ik nooit de waarde, schoonheid, en betekenis van het leven zo hebben begrepen. Dankjewel, Tanja! Je hebt mijn ogen geopend – misschien wel twee ogen.' Dit is het grootste compliment dat we ooit hebben ontvangen. En er zal geen grotere zijn. `", 
+            "time": "23:58"
+        }
+      ], 
+       "blog": {
+        "title": "Blog",
+        "intro": "Since the very first morning of the invasion, I have been writing about the lives of four women and their loved ones in Ukraine. These stories show how the war affects their everyday lives. By focusing on the personal, the larger context becomes tangible. It’s important that these people are heard and seen—this is my contribution. Through my blog, I share their experiences, and along with the artwork 'Life Force,' I am available as a speaker to tell the stories behind the war. I raise money for these women so that they can use it where it is most needed—from pasta to cruise missiles. Their voice, their choice."
+      }
+}

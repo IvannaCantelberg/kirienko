@@ -59,7 +59,7 @@
                   type="text"
                   id="name"
                   class="border text-sm rounded-sm block w-full p-2.5 bg-white bg-opacity-10 border-gray-600 placeholder-gray-400 text-white focus:ring-blue-500 focus:border-blue-500"
-                  placeholder="John Doe"
+                  placeholder="Fill in your name..."
                   required
                 />
               </div>
@@ -69,7 +69,7 @@
                   type="email"
                   id="email"
                   class="border text-sm rounded-sm block w-full p-2.5 bg-white bg-opacity-10 border-gray-600 placeholder-gray-400 text-white focus:ring-blue-500 focus:border-blue-500"
-                  placeholder=""
+                  placeholder="Fill in your name..."
                   required
                 />
               </div>

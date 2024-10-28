@@ -17,18 +17,17 @@
     >
       <div class="text-white text-right flex flex-col items-end">
         <h2 class="text-xl lg:text-3xl mb-10">
-          I am
+          {{ $t('banner.1') }}
           <a href="http://" class="text-3xl lg:text-5xl xl:text-6xl text-accent-2 underline pl-5">
-            Tatjana Kirienko <i> <IconArrowRight class="inline xl:size-9" /> </i
+             {{ $t('banner.2') }} <i> <IconArrowRight class="inline xl:size-9" /> </i
           ></a>
         </h2>
         <h2 class="text-xl lg:text-2xl max-w-[550px]">
-          a textile artist in Arnhem, the Netherlands, with Ukrainian roots. 
+          {{ $t('banner.3') }}
         </h2>
       </div>
       <h3 class="text-white text-xl lg:text-2xl max-w-[550px] text-right ellipse-right">
-        Here you will find my Ukrainian art projects and details how you can participate with loving
-        intention and creativity. 
+        {{ $t('banner.4') }}
       </h3>
     </div>
   </article>

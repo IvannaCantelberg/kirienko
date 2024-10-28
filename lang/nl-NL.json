@@ -1,0 +1,30 @@
+{
+      "welcome": "Groetjes", 
+      "banner": {
+        "1": "Ik ben", 
+        "2": "Tatjana Kirienko", 
+        "3": "textielkunstenares in Arnhem, Nederland met Oekraïense roots.", 
+        "4": "Op deze website vind je mijn Oekraïense kunstprojecten en hoe je zelf, met liefdevolle intentie en creativiteit, kunt deelnemen."
+      },
+      "compliment": [
+        {
+            "name": "Pasha", 
+            "message": "We’ve returned from the battlefield, taking a rest for 3-4 days.", 
+            "time": "23:46"
+        }, 
+        {
+            "name": "Tanja", 
+            "message": "How did it go? 🙏 Where are you? I just want to say that I am proud of you and all of you.", 
+            "time": "23:49"
+        }, 
+        {
+            "name": "Pasha", 
+            "message": " Rest well. 'When I read your post on Facebook, where you invited artists to join your work, tears rolled down my cheeks. I still can’t understand how you can create something like this – from such a distance – without seeing it, but still understanding it so deeply. I may not be a creative person, but I dream of sharing your work and your contribution to Ukraine with people who know how to love life, the world, and the land. If it weren’t for everything that’s happening now, I would never have understood the value, beauty, and meaning of life. Thank you, Tanja! You’ve opened my eyes – maybe even both eyes.' This is the greatest compliment we’ve ever received. And there won’t be a greater one. ", 
+            "time": "23:58"
+        }
+      ], 
+      "blog": {
+        "title": "Blog",
+        "intro": "Al vanaf de eerste ochtend van de invasie schrijf ik over het leven van vier vrouwen en hun naasten in Oekraïne. Deze verhalen laten zien hoe deze oorlog hun dagelijks leven beïnvloedt. Door in te zoomen op het persoonlijke, wordt het grotere geheel voelbaar. Het is belangrijk dat deze mensen gehoord en gezien worden—dit is mijn bijdrage. Met mijn blog deel ik hun ervaringen, en samen met het kunstwerk Life Force ben ik beschikbaar als spreker om de verhalen achter de oorlog te vertellen. Ik zamel geld in voor deze vrouwen, zodat zij het kunnen besteden waar het het meest nodig is—van macaroni tot kruisraket. Hun stem, hun keuzes."
+      }
+}
