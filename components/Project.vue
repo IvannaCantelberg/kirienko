@@ -1,7 +1,7 @@
 <template>
   <figure class="hover:shadow-xl transition-all relative w-full">
     <FigureFrame class="frame hidden xl:block" />
-    <NuxtLink :to="`projects/${id}`">
+    <NuxtLink :to="`projects/${link}`">
       <div
         class="relative overflow-hidden bg-project-image min-h-[320px] lg:min-h-[480px] xl:min-h-[600px]"
         :style="{ backgroundImage: `url(${image})` }"
@@ -27,7 +27,7 @@ import IconArrowRight from '~/components/icons/IconArrowRight.vue'
 defineProps<{
   image: string
   title: string
-  id: number
+  link: string
   description: string
 }>()
 </script>

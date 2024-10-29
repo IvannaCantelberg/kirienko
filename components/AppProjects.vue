@@ -28,7 +28,7 @@ import Project from '~/components/Project.vue'
 
 const projectSource = [
   {
-    id: 1,
+    link: 'with-love',
     image: '/img/Olena.webp',
     title: 'Тканина Надії',
     description: `This is a participatory art project in which anyone who wants to can contribute based on the belief 
@@ -36,7 +36,7 @@ const projectSource = [
         Together, we continue to envision the future of Ukraine as we love it, even for those who cannot do so temporarily... `
   },
   {
-    id: 2,
+    link: 'life-force',
     image: '/img/LifeForce.webp',
     title: 'Картина Життя',
     description: `Life Force, one of my works, captures my feelings and insights surrounding the invasion. 

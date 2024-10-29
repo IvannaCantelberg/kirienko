@@ -47,20 +47,6 @@ useSeoMeta({
   twitterCard: 'summary_large_image',
 })
 
-// const dialog = document.querySelector("dialog");
-// const showButton = document.querySelector("dialog + button");
-// const closeButton = document.querySelector("dialog button");
-
-// "Show the dialog" button opens the dialog modally
-// showButton.addEventListener("click", () => {
-//   dialog.showModal();
-// });
-
-// // "Close" button closes the dialog
-// closeButton.addEventListener("click", () => {
-//   dialog.close();
-// });
-
 
 </script>
 
@@ -98,9 +84,7 @@ useSeoMeta({
         background-color: var(--color-background-contrast);
     }
 
-    .bg-dark {
-         background-color: var(--color-background-dark);
-    }
+    
 
     
 ::backdrop {
