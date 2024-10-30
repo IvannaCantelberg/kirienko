@@ -1,8 +1,13 @@
 <template>
    <main>
+    
      <section class="mt-40">
+        <div>
+            <button type="button" onclick="window.history.back(-1)" class="btn-link shadow-sm mt-10">Go back</button>
+        </div>
         <LifeForceCarousel />
     </section> 
+     
     <h1 class="title text-6xl text-center">Life Force</h1>
 
      <section class="flex flex-col items-center my-24">
