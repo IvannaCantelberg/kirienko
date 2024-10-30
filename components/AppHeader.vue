@@ -2,7 +2,7 @@
   <header class="px-[5vw] xl:px-[15vw] py-8 bg-header text-white">
     <!-- <p>{{ $t('welcome') }}</p> -->
     <div class="flex justify-between items-center text-2xl xl:text-xl ">
-      <div class="flex gap-5 title">
+      <div class="hidden lg:flex gap-5 title ">
         <a href="#projects" class="nav-link">Projects</a>
         <a href="#case" class="nav-link">Case</a>
         <a href="#blog" class="nav-link">Blog</a>
@@ -17,7 +17,7 @@
         >
           {{ locale.alias }}
         </NuxtLink>
-        <button type="button" class="btn-signup ml-10">Newsletters Sign Up <i>&#8594;</i></button>
+        <!-- <button type="button" class="btn-signup ml-10">Newsletters Sign Up <i>&#8594;</i></button> -->
       </div>
     </div>
 

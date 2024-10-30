@@ -124,6 +124,10 @@ html {
   color: var(--color-text-secondary);
 }
 
+.text-accent-2 {
+  color: var(--color-text-accent-2);
+}
+
 .btn-link {
   display: inline-flex;
   padding: 6px 16px;

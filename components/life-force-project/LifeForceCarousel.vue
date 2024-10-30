@@ -1,12 +1,16 @@
 <template>
   <article class="py-20">
-    <el-carousel :interval="4000" type="card" height="50vh" :cardScale="0.7"  class="mb-20 relative">
+    <el-carousel :interval="6000"  type="card" height="600px" :cardScale="0.5"  class="mb-20 relative" >
         <el-carousel-item v-for="item in images" :key="item">
          <div :style="{ backgroundImage: `url(${item})` }" class="bg-image bg-cover bg-no-repeat bg-center absolute  right-0 size-full "></div>
         </el-carousel-item>
     </el-carousel>
 
-    <h1 class="title text-6xl text-center">Life Force</h1>
+    <!-- <el-carousel height="600px">
+       <el-carousel-item v-for="item in images" :key="item">
+         <div :style="{ backgroundImage: `url(${item})` }" class="bg-image bg-cover bg-no-repeat bg-center absolute  right-0 size-full "></div>
+        </el-carousel-item>
+    </el-carousel> -->    
   </article>
 </template>
 
