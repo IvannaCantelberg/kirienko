@@ -15,7 +15,7 @@
       <Project
         v-for="(project, index) in projectsData"
         :key="index"
-        :id="project.id"
+        :link="project.link"
         :image="project.image"
         :title="project.title"
         :description="project.description"

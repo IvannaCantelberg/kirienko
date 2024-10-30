@@ -34,8 +34,9 @@ const switchLocalePath = useSwitchLocalePath()
 </script>
 <style scoped>
 .bg-header {
-  backdrop-filter: blur(40px) brightness(0.95);
-  /* background-color: var(--color-background-dark); */
+  backdrop-filter: blur(10px);
+  background-color: rgb(12 15 19 / 40%);
+  box-shadow: 0px 0px 30px 0px rgba(24, 24, 24, 0.5);
   position: fixed;
   top: 0;
   left: 0;
