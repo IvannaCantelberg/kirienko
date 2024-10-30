@@ -1,10 +1,27 @@
 <template>
-  <el-carousel :interval="4000" type="card" height="200px">
-    <el-carousel-item v-for="item in 6" :key="item">
-      <h3 text="2xl" justify="center">{{ item }}</h3>
-    </el-carousel-item>
-  </el-carousel>
+  <main>
+    <section class="min-h-[85vh] relative pt-10">
+        <div style="background-image: url('/img/Olena.webp')" class="bg-image bg-cover bg-center absolute size-full ">
+            <div class="size-full bg-gray-500 bg-opacity-55 bg-blend-color-burn flex flex-col items-center justify-center" >
+                <figure class="shadow-white shadow-2xl">
+                    <div
+                        class="relative bg-project-image bg-cover size-[320px] lg:size-[480px] xl:size-[600px] "
+                        style="background-image: url('/img/Olena.webp')">              
+                    </div>
+                </figure>
+            </div>
+        </div>
+    </section>
+     <section class="min-h-[100vh]">
+        <ProjectTimeline />
+     </section>
+
+  </main>
 </template>
+<script lang="ts" setup>
+    import ProjectTimeline from '~/components/with-love-project/ProjectTimeline.vue';
+</script>
+
 
 <style scoped>
 .el-carousel__item h3 {

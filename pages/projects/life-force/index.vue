@@ -128,16 +128,11 @@
             Go Fund
           <IconArrowRight />
         </a>
-     </section>
-
-    <section class="bg-dark">
-        <AppContact />
-    </section>
+     </section>    
 </main>
 </template>
 
 <script setup lang="ts">
-import AppContact from '~/components/AppContact.vue'; 
 import LifeForceCarousel from '~/components/life-force-project/LifeForceCarousel.vue';
 import FigureFrame from '~/components/icons/FigureFrame.vue'
 import IconArrowRight from '~/components/icons/IconArrowRight.vue'
