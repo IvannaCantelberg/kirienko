@@ -30,7 +30,7 @@ const projectSource = [
   {
     link: 'with-love',
     image: '/img/Olena.webp',
-    title: 'Тканина Надії',
+    title: 'With Love',
     description: `This is a participatory art project in which anyone who wants to can contribute based on the belief 
         that the intention put into the craft is of great value. Each participant adds something to the design, which is ultimately divided into small pieces.  
         Together, we continue to envision the future of Ukraine as we love it, even for those who cannot do so temporarily... `
@@ -38,7 +38,7 @@ const projectSource = [
   {
     link: 'life-force',
     image: '/img/LifeForce.webp',
-    title: 'Картина Життя',
+    title: 'Life Force',
     description: `Life Force, one of my works, captures my feelings and insights surrounding the invasion. 
         This canvas is available by invitation as a source of strength for Ukrainians and for events and exhibitions to 
         keep attention on the situation in Ukraine alive...`
