@@ -1,6 +1,9 @@
 <template>
   <article class="flex relative">
-    <div style="background-image: url('/img/ellipse.png')" class="bg-image bg-cover absolute  right-0 lg:size-1/2 2xl:size-full xl:visible invisible"></div>
+    <div
+      style="background-image: url('/img/ellipse.png')"
+      class="bg-image bg-cover absolute right-0 lg:size-1/2 2xl:size-full xl:visible invisible"
+    ></div>
     <div
       style="
         background-image: url('/img/kirienko-profile1.png'),
@@ -19,16 +22,17 @@
         <h2 class="text-xl lg:text-3xl mb-10">
           {{ $t('banner.1') }}
           <a href="http://" class="text-3xl lg:text-5xl xl:text-6xl text-accent-2 underline pl-5">
-             {{ $t('banner.2') }} <i> <IconArrowRight class="inline xl:size-9" /> </i
+            {{ $t('banner.2') }} <i> <IconArrowRight class="inline xl:size-9" /> </i
           ></a>
         </h2>
         <h2 class="text-xl lg:text-2xl max-w-[550px]">
           {{ $t('banner.3') }}
         </h2>
       </div>
-      <h3 class="text-white text-xl lg:text-2xl max-w-[550px] text-right ellipse-right">
-        {{ $t('banner.4') }}
-      </h3>
+      <h3
+        class="text-white text-xl lg:text-2xl max-w-[550px] text-right ellipse-right"
+        v-html="$t('banner.4')"
+      ></h3>
     </div>
   </article>
 </template>
@@ -61,5 +65,11 @@ import IconArrowRight from '~/components/icons/IconArrowRight.vue'
 .text-accent-2 {
   color: var(--color-text-accent-2);
   stroke: var(--color-text-accent-2);
+}
+
+mark {
+  background-color: var(--color-text-accent-2);
+  color: var(--color-text-white);
+  padding: 4px;
 }
 </style>

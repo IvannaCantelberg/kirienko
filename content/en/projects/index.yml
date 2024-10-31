@@ -1,0 +1,23 @@
+sectionTitle: Projects
+description: |
+            These canvases are sewn by women in Ukraine, made from unused remnants from curtain shops. 
+            Since the invasion, my art has taken on a new dimension, as everything now revolves around: everyone does what they can, and everyone plays their role. 
+            Art has become a powerful means for me to contribute.
+
+projects:
+  - 
+    title: Life Force
+    link: life-force
+    image: '/img/LifeForce.webp'
+    description: |
+        Life Force, one of my works, captures my feelings and insights surrounding the invasion. 
+        This canvas is available by invitation as a source of strength for Ukrainians and for events and exhibitions to 
+        keep attention on the situation in Ukraine alive...
+  - 
+    title: With Love
+    link: with-love
+    image: '/img/Olena.webp'    
+    description: |
+        This is a participatory art project in which anyone who wants to can contribute based on the belief 
+        that the intention put into the craft is of great value. Each participant adds something to the design, which is ultimately divided into small pieces.  
+        Together, we continue to envision the future of Ukraine as we love it, even for those who cannot do so temporarily... 

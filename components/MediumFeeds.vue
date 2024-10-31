@@ -8,18 +8,27 @@
         class="card hover:shadow-xl transition-all"
       />
     </div>
-    <a
-      href="https://medium.com/@tatjanakirienko"
-      target="_blank"
-      class="btn-link content-center hover:shadow-xl transition-all"
-      >Visit Medium to read more
-      <IconArrowRight />
-    </a>
+
+    <ContentQuery :path="`/${locale}/blog`" find="one">
+      <template #default="{ data }">
+        <a
+          href="https://medium.com/@tatjanakirienko"
+          target="_blank"
+          class="btn-link content-center hover:shadow-xl transition-all"
+          >  {{ data['readMore'] }}
+          <IconArrowRight />
+        </a>
+      </template>
+    </ContentQuery>
+
+    
   </article>
 </template>
 <script setup lang="ts">
 import MediumCard from '~/components/MediumCard.vue'
-import IconArrowRight from '~/components/icons/IconArrowRight.vue'
+import IconArrowRight from '~/components/icons/IconArrowRight.vue'; 
+import { useI18n } from 'vue-i18n'
+const { locale } = useI18n()
 
 const { getFeeds } = useMedium()
 const feeds = await getFeeds()

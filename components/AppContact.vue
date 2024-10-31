@@ -12,8 +12,8 @@
           <div class="my-10 border-y py-8 px-8 max-w-[300px]">
             <div class="mb-6">
               <h3 class="title text-3xl mb-4">Email</h3>
-              <a href="mailto:tatajana.kirienko@gmail.com" class="text-lg ml-5"
-                >tatajana.kirienko@gmail.com</a
+              <a href="mailto:tatajanakirienko@gmail.com" class="text-lg ml-5"
+                >tatajanakirienko@gmail.com</a
               >
             </div>
             <div>

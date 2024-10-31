@@ -1,51 +1,41 @@
 <template>
   <div id="projects" class="py-20 lg:py-40">
-    <div class="flex flex-col">
-      <h1 class="title text-5xl lg:text-8xl text-center uppercase mb-5 lg:mb-10">Projects</h1>
-      <h3 class="text-secondary text-base lg:text-xl 2xl:text-2xl text-right xl:max-w-[950px] 2xl:max-w-[70%] self-end">
-        These canvases are sewn by women in Ukraine, made from unused remnants from curtain shops.
-        Since the invasion, my art has taken on a new dimension, as everything now revolves around:
-        everyone does what they can, and everyone plays their role. Art has become a powerful means
-        for me to contribute.
-      </h3>
-    </div>
-    <article
-      class="flex flex-col lg:flex-row gap-10 xl:gap-28 lg:justify-between items-center my-10 lg:my-28 mx-auto xl:max-w-screen-xl 2xl:max-w-screen-2xl"
-    >
-      <Project
-        v-for="(project, index) in projectsData"
-        :key="index"
-        :link="project.link"
-        :image="project.image"
-        :title="project.title"
-        :description="project.description"
-      />
-    </article>
+    <ContentQuery :path="`/${locale}/projects`" find="one">
+      <template #default="{ data }">
+        <div class="flex flex-col">
+          <h1 class="title text-5xl lg:text-8xl text-center uppercase mb-5 lg:mb-10">
+            {{ data['sectionTitle'] }}
+          </h1>
+          <h3
+            class="text-secondary text-base lg:text-xl 2xl:text-2xl text-right xl:max-w-[950px] 2xl:max-w-[70%] self-end"
+          >
+            {{ data['description'] }}
+          </h3>
+        </div>
+        <article
+          class="flex flex-col lg:flex-row gap-10 xl:gap-28 lg:justify-between items-center my-10 lg:my-28 mx-auto xl:max-w-screen-xl 2xl:max-w-screen-2xl"
+        >
+          <Project
+            v-for="(project, index) in data['projects']"
+            :key="index"
+            :link="project.link"
+            :image="project.image"
+            :title="project.title"
+            :description="project.description"
+          />
+        </article>
+      </template>
+      <template #not-found>
+        <p>No authors found.</p>
+      </template>
+    </ContentQuery>
   </div>
 </template>
 <script setup lang="ts">
 import Project from '~/components/Project.vue'
+import { useI18n } from 'vue-i18n'
+const { locale } = useI18n()
 
-const projectSource = [
-  {
-    link: 'with-love',
-    image: '/img/Olena.webp',
-    title: 'With Love',
-    description: `This is a participatory art project in which anyone who wants to can contribute based on the belief 
-        that the intention put into the craft is of great value. Each participant adds something to the design, which is ultimately divided into small pieces.  
-        Together, we continue to envision the future of Ukraine as we love it, even for those who cannot do so temporarily... `
-  },
-  {
-    link: 'life-force',
-    image: '/img/LifeForce.webp',
-    title: 'Life Force',
-    description: `Life Force, one of my works, captures my feelings and insights surrounding the invasion. 
-        This canvas is available by invitation as a source of strength for Ukrainians and for events and exhibitions to 
-        keep attention on the situation in Ukraine alive...`
-  }
-]
-
-const projectsData = ref(projectSource)
 </script>
 
 <style></style>

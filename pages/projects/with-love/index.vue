@@ -1,5 +1,9 @@
 <template>
   <main>
+    <AppHeader >
+        <a href="/" class="nav-link">Main Page</a>
+        <a href="#contact" class="nav-link">Contact</a>
+    </AppHeader>
     <section class="min-h-[85vh] relative mt-10">
         <div style="background-image: url('/img/Olena.webp')" class="bg-image bg-cover bg-center absolute size-full ">
             <div class="size-full bg-gray-500 bg-opacity-55 bg-blend-color-burn flex flex-col items-center justify-center" >

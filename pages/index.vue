@@ -1,5 +1,11 @@
 <template>
    <main>
+    <AppHeader >
+        <a href="#projects" class="nav-link">Projects</a>
+        <a href="#case" class="nav-link">Case</a>
+        <a href="#blog" class="nav-link">Blog</a>
+        <a href="#contact" class="nav-link">Contact</a>
+    </AppHeader>
      <section class="bg-dark">
         <AppBanner />
     </section>
@@ -22,11 +28,6 @@
             <AppBlog />
         </div>
     </section>
-
-    <section class="bg-dark">
-        <AppContact />
-    </section>
-
 </main>
   
 </template>
@@ -35,7 +36,7 @@ import AppBanner from '~/components/AppBanner.vue';
 import AppProjects from '~/components/AppProjects.vue';
 import AppCompliment from '~/components/AppCompliment.vue';
 import AppBlog from '~/components/AppBlog.vue';
-import AppContact from '~/components/AppContact.vue'; 
+import AppHeader from '~/components/AppHeader.vue'; 
 
 
 useSeoMeta({

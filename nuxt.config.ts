@@ -2,7 +2,7 @@
 export default defineNuxtConfig({
   compatibilityDate: '2024-04-03',
   devtools: { enabled: true },
-  modules: ['@nuxtjs/tailwindcss', '@nuxt/eslint', '@nuxtjs/i18n', '@element-plus/nuxt'], 
+  modules: ['@nuxtjs/tailwindcss', '@nuxt/eslint', '@nuxtjs/i18n', '@nuxt/content', '@element-plus/nuxt'], 
   tailwindcss: {
     cssPath: '~/assets/css/tailwind.css',
   }, 
@@ -34,9 +34,24 @@ export default defineNuxtConfig({
         file: 'ua-UA.json'
       }
     ],
-
+    vueI18n: './i18n.config.ts',
     lazy: false,
-    langDir: 'lang',
-    defaultLocale: 'en'
-}
+    langDir: 'lang/',
+    defaultLocale: 'en', 
+    compilation: {
+      strictMessage: false,
+    },
+  }, 
+  content: {
+    // Content module options, if needed
+    // For example, you can enable markdown rendering
+    markdown: {
+      remarkPlugins: [
+        // Add any remark plugins here
+      ],
+      rehypePlugins: [
+        // Add any rehype plugins here
+      ]
+    }
+  }
 })

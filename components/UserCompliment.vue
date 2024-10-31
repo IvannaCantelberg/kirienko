@@ -4,7 +4,9 @@
       <!-- <div class="w-[50px] h-[50px] rounded-full bg-contrast"></div> -->
       <div class="bg-contrast p-5 max-w-[95%] min-w-[310px] flex flex-col gap-3 rounded-lg">
         <div class="title">Pasha:</div>
-        <p class="text-base 2xl:text-lg">We’ve returned from the battlefield, taking a rest for 3-4 days.</p>
+        <p class="text-base 2xl:text-lg">
+          We’ve returned from the battlefield, taking a rest for 3-4 days.
+        </p>
         <div class="self-end text-secondary">23:29</div>
       </div>
     </div>

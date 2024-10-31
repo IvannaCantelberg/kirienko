@@ -1,13 +1,11 @@
 <template>
   <header class="px-[5vw] xl:px-[15vw] py-8 bg-header text-white">
     <!-- <p>{{ $t('welcome') }}</p> -->
-    <div class="flex justify-end lg:justify-between items-center text-2xl xl:text-xl ">
-      <div class="hidden lg:flex gap-5 title ">
-        <a href="#projects" class="nav-link">Projects</a>
-        <a href="#case" class="nav-link">Case</a>
-        <a href="#blog" class="nav-link">Blog</a>
-        <a href="#contact" class="nav-link">Contact</a>
+    <div class="flex justify-end lg:justify-between items-center text-2xl xl:text-xl">
+      <div class="hidden lg:flex gap-8 title">
+        <slot />
       </div>
+
       <div class="flex gap-5 items-center">
         <NuxtLink
           v-for="locale in locales"

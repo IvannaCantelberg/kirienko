@@ -1,6 +1,9 @@
 <template>
    <main>
-    
+    <AppHeader >
+        <a href="/" class="nav-link">Main Page</a>
+        <a href="#contact" class="nav-link">Contact</a>
+    </AppHeader>
      <section class="mt-40">
         <div>
             <button type="button" onclick="window.history.back(-1)" class="btn-link shadow-sm mt-10">Go back</button>
