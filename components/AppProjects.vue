@@ -26,7 +26,7 @@
         </article>
       </template>
       <template #not-found>
-        <p>No authors found.</p>
+        <p>No project found.</p>
       </template>
     </ContentQuery>
   </div>
@@ -35,7 +35,6 @@
 import Project from '~/components/Project.vue'
 import { useI18n } from 'vue-i18n'
 const { locale } = useI18n()
-
 </script>
 
 <style></style>
