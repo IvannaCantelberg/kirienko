@@ -44,6 +44,7 @@
   --color-background-contrast-lighter: var(--vt-c-contrast-400);
   --color-background-dark: var(--vt-c-dark);
   --color-background-accent-1: var(--vt-c-accent-1);
+  --color-background-accent-2: var(--vt-c-accent-2);
 
   --color-border: var(--vt-c-light);
   --color-border-hover: var(--vt-c-divider-light-1);
@@ -145,4 +146,5 @@ html {
 
 .bg-dark {
   background-color: var(--color-background-dark);
+  color: var(--color-text-light);
 }

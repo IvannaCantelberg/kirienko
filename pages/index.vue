@@ -2,7 +2,7 @@
    <main>
     <AppHeader >
         <a href="#projects" class="nav-link">Projects</a>
-        <a href="#case" class="nav-link">Case</a>
+        <a href="#case" class="nav-link">Compliment</a>
         <a href="#blog" class="nav-link">Blog</a>
         <a href="#contact" class="nav-link">Contact</a>
     </AppHeader>
@@ -97,6 +97,39 @@ useSeoMeta({
     green
   );
   opacity: 0.75;
+}
+
+
+.nav-link {
+  position: relative;
+  display: inline-block;
+  text-decoration: none;
+  /* font-size: 16px; */
+  /* line-height: 2.5; */
+  border-bottom: 1px solid transparent; /* Initial transparent border */
+  border-radius: 5px;
+  transition: all 0.4s ease-out;
+}
+
+.nav-link::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  border-bottom: 1px solid var(--color-border-accent-1);
+  border-left: none;
+  border-right: none;
+  z-index: -1;
+  transform-origin: left;
+  transform: scaleX(0);
+  transition: transform 0.4s ease-out;
+}
+
+.nav-link:hover::after {
+  transform: scaleX(1); /* Draw the top and bottom borders */
+  transition-delay: 0.2s; /* Delay for sequential effect */
 }
 
 </style>

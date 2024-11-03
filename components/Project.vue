@@ -44,9 +44,12 @@ figure {
 
 .content-title {
   visibility: visible;
-  transform: translateY(-100%);
+  transform: translateY(-40%);
   position: absolute;
   bottom: 0;
+  padding: 8px;
+  background-color: var(--color-background-accent-2);
+  display: inline-block;
   /* text-shadow: #000 0 2px 3px; */
   transition: 0.6s 1.6s cubic-bezier(0.215, 0.61, 0.355, 1);
   transition-property: transform;

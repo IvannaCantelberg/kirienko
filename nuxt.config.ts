@@ -10,7 +10,7 @@ export default defineNuxtConfig({
      locales: [
       {
         code: 'en',
-        alias: 'English',
+        alias: 'EN',
         name: 'English', 
         icon: 'en', 
         iso: 'en-US', 

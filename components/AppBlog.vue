@@ -13,7 +13,7 @@
         <p>No data found.</p>
       </template>
     </ContentQuery>
-    <!-- <MediumFeeds class="my-10 lg:my-28" /> -->
+    <MediumFeeds class="my-10 lg:my-28" />
   </div>
 </template>
 
