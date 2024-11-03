@@ -3,7 +3,7 @@
     <div class="flex gap-8 justify-between items-center text-2xl xl:text-xl">
       <div class="flex gap-8 items-center">
         <a href="/">
-          <img src="/logo.png" alt="Logo icon" class="size-16 xl:size-20" />
+          <img src="/logo.png" alt="Logo icon" class="size-16 xl:size-16" />
         </a>
         <div class="hidden lg:flex gap-8 title">
           <slot />
