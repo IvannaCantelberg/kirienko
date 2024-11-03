@@ -16,9 +16,6 @@
             </div>
         </div>
     </section>
-     <div>
-        <button type="button" onclick="window.history.back(-1)" class="btn-link shadow-sm mt-10">Go back</button>
-    </div>
      <section class="">
        
         <ProjectTimeline />
