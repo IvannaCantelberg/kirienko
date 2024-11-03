@@ -7,14 +7,8 @@
       </div>
 
       <div class="flex gap-5 items-center">
-        <NuxtLink
-          v-for="locale in locales"
-          :key="locale.code"
-          :to="switchLocalePath(locale.code)"
-          class="lang-link transition-all title"
-        >
-          {{ locale.alias }}
-        </NuxtLink>
+        <LanguageSwitcher />
+        
         <!-- <button type="button" class="btn-signup ml-10">Newsletters Sign Up <i>&#8594;</i></button> -->
       </div>
     </div>
@@ -27,6 +21,7 @@
 </template>
 
 <script setup>
+import LanguageSwitcher from '~/components/LanguageSwitcher.vue'
 const { locales } = useI18n()
 const switchLocalePath = useSwitchLocalePath()
 </script>

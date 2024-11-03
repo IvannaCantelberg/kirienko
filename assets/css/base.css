@@ -114,6 +114,12 @@ html {
   scroll-behavior: smooth;
 }
 
+.icon-social {
+  height: 32px;
+  width: 32px;
+  color: var(--color-text-light);
+}
+
 .title {
   font-family:
       'Roboto',

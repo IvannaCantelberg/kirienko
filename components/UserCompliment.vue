@@ -11,7 +11,7 @@
         class="p-5 max-w-[95%] min-w-[310px] flex flex-col gap-3 rounded-lg"
       >
         <div class="title">{{ item.sender }}</div>
-        <p class="text-base 2xl:text-lg" v-html="item.message">  </p>
+        <p class="text-base 2xl:text-lg" v-html="item.message"></p>
         <div class="self-end text-secondary">{{ item.time }}</div>
       </div>
     </div>
