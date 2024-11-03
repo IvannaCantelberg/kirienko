@@ -1,40 +1,34 @@
 <template>
-    <NuxtLink
-          v-for="l in locales"
-          :key="l.code"
-          :to="switchLocalePath(l.code)"
-          class="lang-link transition-all title"
-        > 
-        <div class="flex gap-2 md:gap-4 items-center">
-            <img :src="`/icons/flag-${l.alias}.svg`"  class="size-6 xl:size-8" />
-            <span> {{ l.alias }}</span>
-        </div>
-       
-    </NuxtLink>
+  <NuxtLink
+    v-for="l in locales"
+    :key="l.code"
+    :to="switchLocalePath(l.code)"
+    class="lang-link transition-all title"
+  >
+    <div class="flex gap-2 items-center" :title="l.name">
+      <img :src="`/icons/flag-${l.alias}.svg`" :alt="`${l.name} icon`" class="size-6 xl:size-8" />
+      <span> {{ l.alias }}</span>
+    </div>
+  </NuxtLink>
 </template>
 <script lang="ts" setup>
-const { locales, locale  } = useI18n();
-const switchLocalePath = useSwitchLocalePath();
+const { locales, locale } = useI18n()
+const switchLocalePath = useSwitchLocalePath()
 
-const currentLocal = ref(locales.value[0]);
-// 
+const currentLocal = ref(locales.value[0])
+//
 const getCurrentLocal = () => {
-    return locales.value.find((l) => l.code === locale.value) ?? locales.value[0];
+  return locales.value.find((l) => l.code === locale.value) ?? locales.value[0]
 }
 
-
-onMounted( () => {
-    currentLocal.value = getCurrentLocal()
+onMounted(() => {
+  currentLocal.value = getCurrentLocal()
 })
 
-watch(locale, () => currentLocal.value = getCurrentLocal())
-
+watch(locale, () => (currentLocal.value = getCurrentLocal()))
 </script>
 
-
 <style scoped>
-
-
 .router-link-active.lang-link {
   color: var(--color-text-accent-1);
   border: 1px solid var(--color-background-accent-1);
@@ -50,8 +44,6 @@ a {
 .router-link-active.lang-link::before {
   content: none;
 }
-
-
 
 .lang-link {
   position: relative;
@@ -109,8 +101,4 @@ a {
 .lang-link:hover::after {
   transform: scaleY(1); /* Draw the left and right borders */
 }
-
-
-
-
 </style>

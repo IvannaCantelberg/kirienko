@@ -1,5 +1,5 @@
 <template>
-  <article id="case" class="w-full py-20 lg:py-40">
+  <article id="compliment" class="w-full py-20 lg:py-40">
     <ContentQuery :path="`/${locale}/case`" find="one">
       <template #default="{ data }">
         <!-- <pre>

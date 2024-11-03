@@ -1,7 +1,7 @@
 <template>
   <article class="my-40 mx-auto lg:max-w-screen-md xl:max-w-screen-lg 2xl:max-w-screen-xl">
     <el-timeline>
-        <el-timeline-item placement="top" icon="MoreFilled">
+      <el-timeline-item placement="top" icon="MoreFilled">
         <el-card>
           <div class="flex gap-5">
             <div
@@ -29,26 +29,32 @@
           </div>
           <div class="grid grid-cols-2 lg:grid-cols-3 xl:grid-cols-5 gap-5 p-10">
             <el-image
-                class="size-40"
-                :src="'/img/projects/with-love/461465162_10231767206550595_8866977005451923330_n.webp'"
-                :zoom-rate="1.2"
-                :max-scale="7"
-                :min-scale="0.2"
-                :preview-src-list="['/img/projects/with-love/461465162_10231767206550595_8866977005451923330_n.webp', '/img/projects/with-love/461437468_10231767206430592_4865544940456621400_n.webp']"
-                :initial-index="4"
-                fit="cover"
-                />
+              class="size-40"
+              :src="'/img/projects/with-love/461465162_10231767206550595_8866977005451923330_n.webp'"
+              :zoom-rate="1.2"
+              :max-scale="7"
+              :min-scale="0.2"
+              :preview-src-list="[
+                '/img/projects/with-love/461465162_10231767206550595_8866977005451923330_n.webp',
+                '/img/projects/with-love/461437468_10231767206430592_4865544940456621400_n.webp'
+              ]"
+              :initial-index="4"
+              fit="cover"
+            />
 
-                 <el-image
-                class="size-40"
-                :src="'/img/projects/with-love/461437468_10231767206430592_4865544940456621400_n.webp'"
-                :zoom-rate="1.2"
-                :max-scale="7"
-                :min-scale="0.2"
-                :preview-src-list="['/img/projects/with-love/461465162_10231767206550595_8866977005451923330_n.webp', '/img/projects/with-love/461437468_10231767206430592_4865544940456621400_n.webp']"
-                :initial-index="4"
-                fit="cover"
-                />
+            <el-image
+              class="size-40"
+              :src="'/img/projects/with-love/461437468_10231767206430592_4865544940456621400_n.webp'"
+              :zoom-rate="1.2"
+              :max-scale="7"
+              :min-scale="0.2"
+              :preview-src-list="[
+                '/img/projects/with-love/461465162_10231767206550595_8866977005451923330_n.webp',
+                '/img/projects/with-love/461437468_10231767206430592_4865544940456621400_n.webp'
+              ]"
+              :initial-index="4"
+              fit="cover"
+            />
             <!-- <img
               src="/img/projects/with-love/461465162_10231767206550595_8866977005451923330_n.webp"
               alt=""
@@ -81,16 +87,19 @@
             </div>
           </div>
           <div class="grid grid-cols-2 md:grid-cols-3 xl:grid-cols-5 gap-5 p-10">
-             <el-image
-                class="size-40"
-                :src="'/img/projects/with-love/rekionttrokkenhellend.webp'"
-                :zoom-rate="1.2"
-                :max-scale="7"
-                :min-scale="0.2"
-                :preview-src-list="['/img/projects/with-love/rekionttrokkenhellend.webp', '/img/projects/with-love/461437468_10231767206430592_4865544940456621400_n.webp']"
-                :initial-index="4"
-                fit="cover"
-                />
+            <el-image
+              class="size-40"
+              :src="'/img/projects/with-love/rekionttrokkenhellend.webp'"
+              :zoom-rate="1.2"
+              :max-scale="7"
+              :min-scale="0.2"
+              :preview-src-list="[
+                '/img/projects/with-love/rekionttrokkenhellend.webp',
+                '/img/projects/with-love/461437468_10231767206430592_4865544940456621400_n.webp'
+              ]"
+              :initial-index="4"
+              fit="cover"
+            />
             <img
               src="/img/projects/with-love/rekionttrokkenhellend.webp"
               alt=""
@@ -114,7 +123,6 @@
           </div>
         </el-card>
       </el-timeline-item>
-      
     </el-timeline>
   </article>
 </template>

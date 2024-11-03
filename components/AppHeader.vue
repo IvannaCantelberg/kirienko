@@ -2,7 +2,9 @@
   <header class="px-[5vw] xl:px-[15vw] py-6 bg-header text-white">
     <div class="flex gap-8 justify-between items-center text-2xl xl:text-xl">
       <div class="flex gap-8 items-center">
-        <img src="/logo.png" alt="Logo icon" class="size-16 xl:size-20">
+        <a href="/">
+          <img src="/logo.png" alt="Logo icon" class="size-16 xl:size-20" />
+        </a>
         <div class="hidden lg:flex gap-8 title">
           <slot />
         </div>
@@ -10,7 +12,6 @@
 
       <div class="flex gap-5 items-center">
         <LanguageSwitcher />
-        
       </div>
     </div>
   </header>
@@ -18,7 +19,6 @@
 
 <script setup>
 import LanguageSwitcher from '~/components/LanguageSwitcher.vue'
-
 </script>
 <style scoped>
 .bg-header {
@@ -35,9 +35,6 @@ import LanguageSwitcher from '~/components/LanguageSwitcher.vue'
 header {
   line-height: 1.5;
 }
-
-
-
 
 .btn-signup {
   background-color: var(--color-border-accent-1);
