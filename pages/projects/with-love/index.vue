@@ -40,6 +40,16 @@
 import ProjectTimeline from '~/components/with-love-project/ProjectTimeline.vue'
 import { useI18n } from 'vue-i18n'
 const { locale } = useI18n()
+
+useSeoMeta({
+  title: 'With Love - Textile art project',
+  ogTitle: 'With Love - Textile art project',
+  description: 'This is Ukrainian textile art project.',
+  ogDescription: 'This is my amazing site, let me tell you all about it.',
+  ogUrl: 'https://ukrainianartproject.com/',
+})
+
+
 </script>
 
 <style scoped>
