@@ -34,7 +34,7 @@
           <em>
             To reserve the Vitality canvas and/or to speak with it as a speaker contact me via
             <a href="mailto:tatajana.kirienko@gmail.com" class="text-lg text-accent-2 underline">
-              tatajana.kirienko@gmail.com
+              tatajanakirienko@gmail.com
             </a>
           </em>
         </p>
@@ -44,7 +44,7 @@
     <section class="flex flex-col items-center my-40">
       <div class="mx-10 lg:max-w-screen-md xl:max-w-screen-lg 2xl:max-w-screen-xl text-base">
         <!-- <FigureFrame class="frame" /> -->
-        <p>
+        <p class="text-justify">
           Війна почалася для мене з повідомлення о 4:30 ранку від Люди, швачки з прикордонної
           області України: "Вони бомбардують нас." З того першого ранку я почала блог "Голоси з
           України", де ділилася переживаннями п'яти жінок звідти. Моя особиста подорож до цього
@@ -69,11 +69,14 @@
         </p>
         <br />
         <br />
-        <div class="grid gap-10">
-          <div class="">
-            <h2 class="text-2xl text-center mb-5">Символізм "Сили Життя"</h2>
+        <div class="grid gap-5">
+          <div class="bg-white p-10">
+            <div>
+              <h2 class="text-5xl text-center mb-5">Символізм "Сили Життя"</h2>
+             
+            </div>
 
-            <p class="pl-10">
+            <p class="text-justify">
               Це вибух у темряві. Вицвілі життєві форми у вибуху є українською флорою, що
               представляє "втрачене" у вибуху. Глибиною коренів я показую, як глибоко наші коріння
               всередині нас, підживлені силою світла: Світло, Сила. Ви також могли б побачити жінку
@@ -83,9 +86,15 @@
               голова "вибухнула".
             </p>
           </div>
-          <div>
-            <h2 class="text-2xl mb-5">Лелеки</h2>
-            <p class="pl-10">
+          
+          <div class="bg-white p-10  grid grid-cols-1">
+            <div class="flex gap-5 items-center justify-end h-40">  
+              <h2 class="text-7xl">Лелеки</h2>                  
+              <img src="/img/projects/life-force/symbols/leleky.svg" alt="" class="h-full">     
+                          
+            </div>
+           
+            <p class="w-[80%] text-justify">
               Серед усього, що відбувалося, доля лелек мене тривожила. Щороку лелеки повертаються до
               України. Лелеки дуже віддані як одне одному, так і своїм гніздам. Тому лелека є
               українським символом вірності та сімейного щастя. Гніздо лелеки на вашому будинку - це
@@ -94,19 +103,27 @@
               феномен — блукаючі, самотні лелеки без гнізд і без партнерів. Вони йдуть і йдуть,
               полями, вздовж доріг.
             </p>
+            
           </div>
-          <div>
-            <h2 class="text-2xl mb-5">Фундаменти</h2>
-            <p class="pl-10">
+         <div class="bg-white p-10 grid grid-cols-1">
+            <div class="flex gap-5 items-center justify-start">                   
+              <img src="/img/projects/life-force/symbols/embroidery.svg" alt="" class="h-40">     
+              <h2 class="text-7xl">Фундаменти</h2>             
+            </div>
+            <p class="w-[80%] text-justify justify-self-end">
               Лелеки сидять на стародавніх фундаментах. Це представляє історію України, яка сягає
               корінням ще до християнства. Ці дуже міцні, старі фундаменти, старіші за історію
               Російської імперії, протистоять висловлюванням Путіна, наприклад, "Україна - це
               неіснуюча країна" або "Це просто Малоросія."
             </p>
           </div>
-          <div>
-            <h2 class="text-2xl mb-5">Сонце і місяць</h2>
-            <p class="pl-10">
+          <div class="bg-white p-10  grid grid-cols-1">
+            <div class="flex gap-5 items-center justify-end">     
+              <h2 class="text-7xl">Сонце і місяць</h2>                     
+              <img src="/img/projects/life-force/symbols/sun.svg" alt="" class="h-40">     
+                    
+            </div>
+            <p class="w-[80%] text-justify">
               Над лелеками сяє місяць, намальований так, як він зображений на стародавніх
               слов'янських амулетах, що представляє жіноче начало за стародавніми віруваннями
               природи. Противага, сонце, чоловіче начало, з'являється з іншого боку у вигляді
@@ -118,9 +135,12 @@
             </p>
           </div>
 
-          <div>
-            <h2 class="text-2xl mb-5">Схід сонця</h2>
-            <p class="pl-10">
+          <div class="bg-white p-10  grid grid-cols-1">
+            <div class="flex gap-10 items-center justify-start">                   
+              <img src="/img/projects/life-force/symbols/perun.svg" alt="" class="h-40 w-16">     
+              <h2 class="text-7xl text-center">Схід сонця</h2>             
+            </div>
+            <p class="w-[80%] text-justify justify-self-end">
               Серед усієї темряви я хотіла зобразити схід сонця, знак надії, бо справді: "Найтемніша
               година перед світанком." Це прислів'я означає, що найважче перед тим, як стане краще.
               Кольори сходу сонця були "перетворені" та перетворені на стрічки, як у традиційному
@@ -129,9 +149,12 @@
               бункері під час окупації Бучі.
             </p>
           </div>
-          <div>
-            <h2 class="text-2xl mb-5">Пов'язка на голові</h2>
-            <p class="pl-10">
+          <div class="bg-white p-10 grid grid-cols-1">
+            <div class="flex gap-5 items-center justify-end h-40">                   
+              <!-- <img src="/img/projects/life-force/symbols/" alt="" class="w-28">      -->
+              <h2 class="text-7xl">Пов'язка на голові</h2>             
+            </div>
+            <p class="w-[80%] text-justify">
               Пов'язка на голові вишита вручну з фольклорними українськими елементами в кольорах
               жалоби.
             </p>

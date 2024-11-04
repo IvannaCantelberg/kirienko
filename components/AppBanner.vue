@@ -1,9 +1,6 @@
 <template>
   <article class="flex relative">
-    <div
-      style="background-image: url('/img/ellipse.png')"
-      class="bg-image bg-cover absolute right-0 lg:size-1/2 2xl:size-full xl:visible invisible"
-    ></div>
+   
     <div
       style="
         background-image: url('/img/kirienko-profile1.png'),
@@ -16,12 +13,17 @@
             rgb(8 13 17) 100%
           );
       "
-      class="bg-profile-image bg-image px-2 lg:pr-[8%] size-full"
+      class="bg-profile-image bg-image px-2 lg:pr-[8%] size-full relative"
     >
-      <div class="text-white text-right flex flex-col items-end">
+
+     <div
+      style="background-image: url('/img/ellipse.png')"
+      class="bg-image bg-cover absolute top-0 right-0 lg:size-1/2 2xl:size-full xl:visible invisible "
+    ></div>
+      <div class="text-white text-right flex flex-col items-end z-0">
         <h2 class="text-xl lg:text-3xl mb-10">
           {{ $t('banner.1') }}
-          <a href="http://" class="text-3xl lg:text-5xl xl:text-6xl text-accent-2 underline pl-5">
+          <a href="https://tatjana-kirienko.art" target="_blank" title="tatjana-kirienko.art website" class="text-3xl lg:text-5xl xl:text-6xl text-accent-2 underline pl-5">
             {{ $t('banner.2') }} <i> <IconArrowRight class="inline xl:size-9" /> </i
           ></a>
         </h2>
@@ -30,7 +32,7 @@
         </h2>
       </div>
       <h3
-        class="text-white text-xl lg:text-2xl max-w-[550px] text-right ellipse-right"
+        class="text-white text-xl lg:text-2xl max-w-[550px] text-right ellipse-right z-0"
         v-html="$t('banner.4')"
       ></h3>
     </div>

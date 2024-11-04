@@ -29,7 +29,7 @@ const pictureLinks: string[] = []
 let images = ref([])
 
 onMounted(() => {
-  const glob: Record<string, any> = import.meta.glob('/public/img/projects/life-force/*', {
+  const glob: Record<string, any> = import.meta.glob('/public/img/projects/life-force/gallery/*', {
     import: 'default',
     eager: true // defaults to false
   })
