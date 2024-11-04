@@ -47,12 +47,11 @@ import { useI18n } from 'vue-i18n'
 const { locale } = useI18n()
 
 useSeoMeta({
-  title: 'My Amazing Site',
-  ogTitle: 'My Amazing Site',
-  description: 'This is my amazing site, let me tell you all about it.',
+  title: 'Ukrainian textile art projects',
+  ogTitle: 'Ukrainian textile art projects',
+  description: 'This is Ukrainian textile art projects site. Here you will find my <mark>Ukrainian art projects </mark> and details how you can participate with loving intention and creativity. Discover traditional styles like Petrykivka. modern interpretations, and featured Ukrainian artists. Dive into a world of vibrant patterns, history, and culture. ',
   ogDescription: 'This is my amazing site, let me tell you all about it.',
-  ogImage: 'https://example.com/image.png',
-  twitterCard: 'summary_large_image'
+  ogUrl: 'https://ukrainianartproject.com/',
 })
 </script>
 
