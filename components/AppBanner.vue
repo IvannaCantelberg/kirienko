@@ -3,7 +3,7 @@
    
     <div
       style="
-        background-image: url('/img/kirienko-profile1.png'),
+        background-image: url('/img/kirienko_profile.webp'),
           radial-gradient(
             circle,
             rgb(17 27 36) 0%,

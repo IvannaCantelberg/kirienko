@@ -3,23 +3,17 @@
     <el-carousel
       :interval="6000"
       type="card"
-      height="600px"
+      height="500px" 
       :cardScale="0.5"
       class="mb-20 relative"
+      
     >
       <el-carousel-item v-for="item in images" :key="item">
-        <div
-          :style="{ backgroundImage: `url(${item})` }"
-          class="bg-image bg-cover bg-no-repeat bg-center absolute right-0 size-full"
-        ></div>
+        <img :src="item" alt="" class="h-full">
+       
       </el-carousel-item>
     </el-carousel>
 
-    <!-- <el-carousel height="600px">
-       <el-carousel-item v-for="item in images" :key="item">
-         <div :style="{ backgroundImage: `url(${item})` }" class="bg-image bg-cover bg-no-repeat bg-center absolute  right-0 size-full "></div>
-        </el-carousel-item>
-    </el-carousel> -->
   </article>
 </template>
 

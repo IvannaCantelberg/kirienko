@@ -22,7 +22,7 @@
 
     <section class="relative">
       <div
-        style="background-image: url('/img/petrykivkadetail.png')"
+        style="background-image: url('/img/petrykivka_detail.webp')"
         class="bg-image bg-cover absolute size-full -z-10 filter opacity-10"
       ></div>
       <div class="container-space">
