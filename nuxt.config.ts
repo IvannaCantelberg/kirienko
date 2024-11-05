@@ -3,8 +3,9 @@ export default defineNuxtConfig({
   compatibilityDate: '2024-04-03',
   devtools: { enabled: true },
   modules: ['@nuxtjs/tailwindcss', '@nuxt/eslint', '@nuxtjs/i18n', '@nuxt/content', '@element-plus/nuxt', 'nuxt-og-image',], 
+  css: ['~/assets/css/base.less'],
   tailwindcss: {
-    cssPath: '~/assets/css/tailwind.css',
+    cssPath: '~/assets/css/tailwind.less',
   }, 
    i18n: {
      locales: [

@@ -28,7 +28,7 @@ onMounted(() => {
 watch(locale, () => (currentLocal.value = getCurrentLocal()))
 </script>
 
-<style scoped>
+<style scoped lang="less">
 .router-link-active.lang-link {
   color: var(--color-text-accent-1);
   border: 1px solid var(--color-background-accent-1);

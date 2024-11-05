@@ -42,7 +42,7 @@
 import IconArrowRight from '~/components/icons/IconArrowRight.vue'
 </script>
 
-<style>
+<style lang="less">
 .bg-image {
   background-repeat: no-repeat;
   background-position: center bottom;

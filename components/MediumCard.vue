@@ -42,7 +42,7 @@ const cleanContent = (htmlText: string): string => {
   return text.replace(/&lt;Vorige Volgende&gt;/g, '')
 }
 </script>
-<style scoped>
+<style scoped lang="less">
 .image {
   object-fit: fill;
   object-position: center;

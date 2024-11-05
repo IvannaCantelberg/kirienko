@@ -20,7 +20,7 @@
 <script setup>
 import LanguageSwitcher from '~/components/LanguageSwitcher.vue'
 </script>
-<style scoped>
+<style scoped lang="less">
 .bg-header {
   backdrop-filter: blur(10px);
   background-color: rgb(12 15 19 / 40%);

@@ -1,5 +1,5 @@
 <template>
-  <main>
+  <main class="root">
     <AppHeader>
       <ContentQuery :path="`/${locale}/header`" find="one">
         <template #default="{ data }">
@@ -8,15 +8,17 @@
         </template>
       </ContentQuery>
     </AppHeader>
-    <section class="mt-40">
+    
+<div class="grid grid-cols-1 lg:grid-cols-2 gap-5 mt-40">
+  <section class="">
       <LifeForceCarousel />
     </section>
-
-    <h1 class="title text-6xl text-center">Life Force</h1>
+  <div class="">
+      <h1 class="title text-center">Life Force</h1>
 
     <section class="flex flex-col items-center my-24">
-      <div class="mx-14 2xl:max-w-screen-xl text-base relative">
-        <FigureFrame class="frame" />
+      <div class="mx-14 text-base relative bg-white p-8">
+        <FigureFrame class="frame hidden sm:block" />
         <p>
           Full of Ukrainian symbols, ‘Life Force (is indestructible)’ is a textile artwork that
           expresses my feelings and understanding of the invasion of Ukraine. The canvas, made
@@ -28,7 +30,7 @@
           reminder of the ongoing struggle for freedom. I use the Life Force canvas as a speaker,
           talking about the war in Ukraine based on individual stories from the blog.
         </p>
-        <FigureFrame class="frame reversed" />
+        <FigureFrame class="frame reversed hidden sm:block" />
         <br />
         <p class="text-secondary">
           <em>
@@ -40,9 +42,12 @@
         </p>
       </div>
     </section>
+    </div>
+</div>
+    
 
     <section class="flex flex-col items-center my-40">
-      <div class="mx-10 lg:max-w-screen-md xl:max-w-screen-lg 2xl:max-w-screen-xl text-base">
+      <div class="mx-10 lg:max-w-screen-md xl:max-w-screen-lg 2xl:max-w-screen-xl">
         <!-- <FigureFrame class="frame" /> -->
         <p class="text-justify">
           Війна почалася для мене з повідомлення о 4:30 ранку від Люди, швачки з прикордонної
@@ -72,7 +77,7 @@
         <div class="grid gap-5">
           <div class="bg-white p-10">
             <div>
-              <h2 class="text-5xl text-center mb-5">Символізм "Сили Життя"</h2>
+              <h2 class="title  text-center mb-5">Символізм "Сили Життя"</h2>
              
             </div>
 
@@ -89,7 +94,7 @@
           
           <div class="bg-white p-10  grid grid-cols-1">
             <div class="flex gap-5 items-center justify-end h-40">  
-              <h2 class="text-7xl">Лелеки</h2>                  
+              <h2 class="title ">Лелеки</h2>                  
               <img src="/img/projects/life-force/symbols/leleky.svg" alt="" class="h-full">     
                           
             </div>
@@ -108,7 +113,7 @@
          <div class="bg-white p-10 grid grid-cols-1">
             <div class="flex gap-5 items-center justify-start">                   
               <img src="/img/projects/life-force/symbols/embroidery.svg" alt="" class="h-40">     
-              <h2 class="text-7xl">Фундаменти</h2>             
+              <h2 class="title ">Фундаменти</h2>             
             </div>
             <p class="w-[80%] text-justify justify-self-end">
               Лелеки сидять на стародавніх фундаментах. Це представляє історію України, яка сягає
@@ -119,7 +124,7 @@
           </div>
           <div class="bg-white p-10  grid grid-cols-1">
             <div class="flex gap-5 items-center justify-end">     
-              <h2 class="text-7xl">Сонце і місяць</h2>                     
+              <h2 class="title ">Сонце і місяць</h2>                     
               <img src="/img/projects/life-force/symbols/sun.svg" alt="" class="h-40">     
                     
             </div>
@@ -138,7 +143,7 @@
           <div class="bg-white p-10  grid grid-cols-1">
             <div class="flex gap-10 items-center justify-start">                   
               <img src="/img/projects/life-force/symbols/perun.svg" alt="" class="h-40 w-16">     
-              <h2 class="text-7xl text-center">Схід сонця</h2>             
+              <h2 class="title  text-center">Схід сонця</h2>             
             </div>
             <p class="w-[80%] text-justify justify-self-end">
               Серед усієї темряви я хотіла зобразити схід сонця, знак надії, бо справді: "Найтемніша
@@ -152,7 +157,7 @@
           <div class="bg-white p-10 grid grid-cols-1">
             <div class="flex gap-5 items-center justify-end h-40">                   
               <!-- <img src="/img/projects/life-force/symbols/" alt="" class="w-28">      -->
-              <h2 class="text-7xl">Пов'язка на голові</h2>             
+              <h2 class="title ">Пов'язка на голові</h2>             
             </div>
             <p class="w-[80%] text-justify">
               Пов'язка на голові вишита вручну з фольклорними українськими елементами в кольорах
@@ -191,7 +196,21 @@ import { useI18n } from 'vue-i18n'
 const { locale } = useI18n()
 </script>
 
-<style scoped>
+<style scoped lang="less">
+
+.root {
+  
+}
+
+.title {
+  font-size: min(8vw, 3em);
+  // font-size: (60 / 20) * 1em;
+}
+
+img.h-40 {
+  width: min(15vw, 10em);
+}
+
 .frame {
   stroke: var(--color-border-accent-2);
   position: absolute;
