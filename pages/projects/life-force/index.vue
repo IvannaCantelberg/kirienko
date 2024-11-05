@@ -9,7 +9,7 @@
       </ContentQuery>
     </AppHeader>
 
-    <div class="grid grid-cols-1  gap-5 mt-40 gallery-section">
+    <div class="grid grid-cols-1  gap-5 mt-40 gallery-section px-10 lg:px-0">
       <section class="">
         <LifeForceCarousel />
       </section>
@@ -17,8 +17,8 @@
         <h1 class="title text-center">Life Force</h1>
 
         <section class="flex flex-col items-center my-24">
-          <div class="mx-14 text-base relative bg-white p-8">
-            <FigureFrame class="frame hidden sm:block" />
+          <div class="md:mx-14 text-base relative ">
+            <FigureFrame class="frame hidden md:block" />
             <p>
               Full of Ukrainian symbols, ‘Life Force (is indestructible)’ is a textile artwork that
               expresses my feelings and understanding of the invasion of Ukraine. The canvas, made
@@ -31,7 +31,7 @@
               speaker, talking about the war in Ukraine based on individual 
               <a href="https://medium.com/@tatjanakirienko" target="_blank" rel="noopener noreferrer" class="text-accent-2 hover:underline">stories from the blog</a>.
             </p>
-            <FigureFrame class="frame reversed hidden sm:block" />
+            <FigureFrame class="frame reversed hidden md:block" />
             <br />
             <p class="text-secondary">
               <em>
@@ -50,7 +50,7 @@
     </div>
 
  
-    <section class="flex flex-col gap-4 lg:max-w-screen-md xl:max-w-screen-lg 2xl:max-w-screen-xl mx-auto">
+    <section class="flex flex-col gap-4 px-10 xl:px-0 xl:max-w-screen-lg 2xl:max-w-screen-xl mx-auto">
       <div :class="{'collapsed': isCollapsed}">
        <h2 class="title text-center mb-5">Iсторія створення</h2>
         <p class="text-justify">
@@ -195,7 +195,7 @@
         <a
           href="https://gofund.me/01c944a4"
           target="_blank"
-          class="bg-[#ABE1FF] btn-link  content-center px-10 text-lg hover:shadow-xl transition-all"
+          class="bg-[#ABE1FF] btn-link text-white stroke-white content-center px-10 text-lg hover:shadow-xl transition-all"
         >
           Go Fund
           <IconArrowRight />
@@ -248,7 +248,7 @@ img.h-40 {
 }
 
 .description {
-  // max-width: min(96%, ((1700, 20) * 1rem)); 
+  max-width: min(100%, (1400 / 20 ) * 1em); 
 }
 
 .frame {
