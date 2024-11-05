@@ -9,27 +9,25 @@
       </ContentQuery>
     </AppHeader>
     <section class="min-h-[85vh] relative mt-12">
-        <ContentQuery :path="`/${locale}/projects/with-love`" find="one">
-            <template #default="{ data }">  
+      <ContentQuery :path="`/${locale}/projects/with-love`" find="one">
+        <template #default="{ data }">
+          <div
+            :style="{ 'background-image': 'url(' + data['project_image_last_v'] + ')' }"
+            class="bg-image bg-cover bg-center absolute size-full"
+          >
+            <div
+              class="size-full bg-gray-500 bg-opacity-55 bg-blend-color-burn flex flex-col items-center justify-center"
+            >
+              <figure class="shadow-white shadow-2xl">
                 <div
-                    :style="{ 'background-image': 'url(' + data['project_image_last_v'] + ')' }"
-                    class="bg-image bg-cover bg-center absolute size-full"
-                >
-                    <div
-                    class="size-full bg-gray-500 bg-opacity-55 bg-blend-color-burn flex flex-col items-center justify-center"
-                    >
-                    <figure class="shadow-white shadow-2xl">
-                        <div
-                        class="relative bg-project-image bg-cover size-[320px] lg:size-[480px] xl:size-[600px]"
-                        :style="{ 'background-image': 'url(' + data['project_image_last_v'] + ')' }"
-                        ></div>
-                    </figure>
-                    </div>
-                </div>
-            </template>
-        </ContentQuery>
-
-      
+                  class="relative bg-project-image bg-cover size-[320px] lg:size-[480px] xl:size-[600px]"
+                  :style="{ 'background-image': 'url(' + data['project_image_last_v'] + ')' }"
+                ></div>
+              </figure>
+            </div>
+          </div>
+        </template>
+      </ContentQuery>
     </section>
     <section class="">
       <ProjectTimeline />
@@ -46,10 +44,8 @@ useSeoMeta({
   ogTitle: 'With Love - Textile art project',
   description: 'This is Ukrainian textile art project.',
   ogDescription: 'This is my amazing site, let me tell you all about it.',
-  ogUrl: 'https://ukrainianartproject.com/',
+  ogUrl: 'https://ukrainianartproject.com/'
 })
-
-
 </script>
 
 <style scoped>

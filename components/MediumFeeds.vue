@@ -14,7 +14,7 @@
         <a
           href="https://medium.com/@tatjanakirienko"
           target="_blank"
-          class="btn-link content-center hover:shadow-xl transition-all"
+          class="bg-white btn-link content-center hover:shadow-xl transition-all"
         >
           {{ data['readMore'] }}
           <IconArrowRight />

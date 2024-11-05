@@ -168,25 +168,8 @@ onMounted(() => {
 <style scoped lang="less">
 @color: #d41d1d;
 @width: 80%;
-.el-carousel__item h3 {
-  color: #475669;
-  opacity: 0.75;
-  /* line-height: 200px; */
-  margin: 0;
-  text-align: center;
-}
-
-.el-carousel__item:nth-child(2n) {
-  /* background-color: #99a9bf; */
-}
-
-.el-carousel__item:nth-child(2n + 1) {
-  /* background-color: #d3dce6; */
-}
 
 .gallery-container {
-    width: @width;
-    max-width: (1800 / 20) * 1em;
     font-size: min(1.3vw, 1em);
     gap: (30 / 20) * 1em;
 }
