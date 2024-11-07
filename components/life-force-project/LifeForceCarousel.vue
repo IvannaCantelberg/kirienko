@@ -143,41 +143,11 @@
         </picture>
       </div>
     </div>
-
-    <!-- <el-carousel
-      :interval="6000"
-      type="card"
-      height="500px" 
-      :cardScale="0.5"
-      class="mb-20 relative"
-      
-    >
-      <el-carousel-item v-for="item in images" :key="item">
-        <img :src="item" alt="" class="h-full">
-       
-      </el-carousel-item>
-    </el-carousel> -->
   </article>
 </template>
 
 <script lang="ts" setup>
-const pictureLinks: string[] = []
 
-let images = ref([])
-
-onMounted(() => {
-  const glob: Record<string, any> = import.meta.glob('/public/img/projects/life-force/gallery/*', {
-    import: 'default',
-    eager: true // defaults to false
-  })
-
-  Object.entries(glob).forEach((element: [string, any]) => {
-    const link: string = element[0]
-    pictureLinks.push(link.replace('/public', ''))
-  })
-  console.log(pictureLinks)
-  images.value = pictureLinks
-})
 </script>
 
 <style scoped lang="less">
@@ -197,19 +167,8 @@ onMounted(() => {
   position: relative;
   display: block;
 }
-
-// .gallery-container .row:nth-of-type(1) img:nth-last-of-type(1) {
-//     width: 400px/20em;
-//     height: 400/20em;
-// }
-
-// .gallery-container .row:nth-of-type(1) img:nth-last-of-type(2) {
-//     width: 400/20em;
-//     height: 400/20em;
-// }
-// .gallery-container .row:nth-of-type(1) img:nth-last-of-type(3) {
-//     width: 400/20em;
-//     height: 267/20em;
-// }
+/deep/  .el-image__preview {
+    cursor: zoom-in;
+}
 </style>
 2

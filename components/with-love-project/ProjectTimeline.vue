@@ -56,3 +56,9 @@ const handleRandomColor = () => {
   return colors[Math.floor(Math.random() * colors.length)]
 }
 </script>
+
+<style scoped>
+/deep/  .el-image__preview {
+    cursor: zoom-in;
+}
+</style>
