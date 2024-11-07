@@ -5,9 +5,10 @@
         <h1 class="title text-5xl lg:text-8xl text-center uppercase mb-5 lg:mb-10">
           {{ data['sectionTitle'] }}
         </h1>
-        <h3 class="text-base lg:text-lg xl:text-xl  lg:px-20 text-secondary text-justify">
-          {{ data['description'] }}
-        </h3>
+        <h3
+          class="text-base lg:text-lg xl:text-xl lg:px-20 text-secondary text-justify"
+          v-html="data['description']"
+        ></h3>
       </template>
       <template #not-found>
         <p>No data found.</p>

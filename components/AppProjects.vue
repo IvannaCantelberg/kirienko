@@ -8,9 +8,8 @@
           </h1>
           <h3
             class="text-secondary text-base lg:text-xl 2xl:text-2xl text-right xl:max-w-[950px] 2xl:max-w-[70%] self-end"
-          >
-            {{ data['description'] }}
-          </h3>
+            v-html="data['description']"
+          ></h3>
         </div>
         <article
           class="flex flex-col lg:flex-row gap-10 xl:gap-28 lg:justify-between items-center my-10 lg:my-28 mx-auto xl:max-w-screen-xl 2xl:max-w-screen-2xl"

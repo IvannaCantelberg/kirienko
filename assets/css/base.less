@@ -115,6 +115,16 @@ html {
   scroll-behavior: smooth;
 }
 
+@link_color: #ABE1FF;
+.link {
+  padding: 2px 4px;
+  border: 1px dashed;
+  background-color: fade(@link_color, 10%); 
+  &:hover {
+    background-color: fade(@link_color, 50%);
+  }
+}
+
 .icon-social {
   height: 32px;
   width: 32px;

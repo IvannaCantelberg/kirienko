@@ -1,6 +1,5 @@
 <template>
   <article class="flex relative">
-   
     <div
       style="
         background-image: url('/img/kirienko_profile.webp'),
@@ -15,15 +14,19 @@
       "
       class="bg-profile-image bg-image px-2 lg:pr-[8%] size-full relative"
     >
-
-     <div
-      style="background-image: url('/img/ellipse.png')"
-      class="bg-image bg-cover absolute top-0 right-0 lg:size-1/2 2xl:size-full xl:visible invisible "
-    ></div>
+      <div
+        style="background-image: url('/img/ellipse.png')"
+        class="bg-image bg-cover absolute top-0 right-0 lg:size-1/2 2xl:size-full xl:visible invisible"
+      ></div>
       <div class="text-white text-right flex flex-col items-end z-0">
         <h2 class="text-xl lg:text-3xl mb-10">
           {{ $t('banner.1') }}
-          <a href="https://tatjana-kirienko.art" target="_blank" title="tatjana-kirienko.art website" class="text-3xl lg:text-5xl xl:text-6xl text-accent-2 underline pl-5">
+          <a
+            href="https://tatjana-kirienko.art"
+            target="_blank"
+            title="tatjana-kirienko.art website"
+            class="text-3xl lg:text-5xl xl:text-6xl text-accent-2 underline pl-5"
+          >
             {{ $t('banner.2') }} <i> <IconArrowRight class="inline xl:size-9" /> </i
           ></a>
         </h2>

@@ -29,7 +29,15 @@
         </template>
       </ContentQuery>
     </section>
-    <section class="">
+    <section class="my-20 lg:my-20">
+      <ContentQuery :path="`/${locale}/projects/with-love`" find="one">
+        <template #default="{ data }">
+          <h1 class="title text-5xl text-center px-2">
+            {{ data['sectionTitle'] }}
+          </h1>
+        </template>
+      </ContentQuery>
+
       <ProjectTimeline />
     </section>
   </main>
@@ -43,25 +51,9 @@ useSeoMeta({
   title: 'With Love - Textile art project',
   ogTitle: 'With Love - Textile art project',
   description: 'This is Ukrainian textile art project.',
-  ogDescription: 'This is my amazing site, let me tell you all about it.',
+  ogDescription: 'This is Ukrainian textile art project',
   ogUrl: 'https://ukrainianartproject.com/'
 })
 </script>
 
-<style scoped>
-.el-carousel__item h3 {
-  color: #475669;
-  opacity: 0.75;
-  line-height: 200px;
-  margin: 0;
-  text-align: center;
-}
-
-.el-carousel__item:nth-child(2n) {
-  background-color: #99a9bf;
-}
-
-.el-carousel__item:nth-child(2n + 1) {
-  background-color: #d3dce6;
-}
-</style>
+<style scoped></style>
