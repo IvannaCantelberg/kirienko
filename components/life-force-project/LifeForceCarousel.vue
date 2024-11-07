@@ -146,9 +146,7 @@
   </article>
 </template>
 
-<script lang="ts" setup>
-
-</script>
+<script lang="ts" setup></script>
 
 <style scoped lang="less">
 @color: #d41d1d;
@@ -167,8 +165,8 @@
   position: relative;
   display: block;
 }
-/deep/  .el-image__preview {
-    cursor: zoom-in;
+/deep/ .el-image__preview {
+  cursor: zoom-in;
 }
 </style>
 2
