@@ -1,8 +1,8 @@
 <template>
-  <header class="px-2 md:px-4 lg:px-[5vw] xl:px-[15vw] py-6 bg-header text-white">
-    <div class="flex gap-2 lg:gap-8 justify-between items-center text-base lg:text-lg xl:text-xl">
+  <header class="px-2 md:px-4 lg:px-[5vw] xl:px-[15vw] py-4 lg:py-6 bg-header text-white">
+    <div class="flex gap-2 lg:gap-8 justify-between items-center text-sm md:text-base lg:text-lg xl:text-xl">
       <div class="flex gap-2 lg:gap-4 items-center">
-        <a href="/" class="size-12 xl:size-16">
+        <a href="/" class="size-8 md:size-12 xl:size-16">
           <img src="/logo.png" alt="Logo icon" class="w-full h-full" />
         </a>
         <ContentQuery :path="`/${locale}/projects`" find="one">
@@ -11,8 +11,8 @@
               <a href="#projects"
                 class="el-dropdown-link py-2 pr-1 pl-3 lang-link title text-white transition-all title flex flex-row items-center "
               >
-                <span  class="text-base lg:text-lg xl:text-xl">{{ data['sectionTitle'] }}</span>
-                <IconExpand class="size-6 xl:size-8" />
+                <span  class="text-sm md:text-base lg:text-lg xl:text-xl">{{ data['sectionTitle'] }}</span>
+                <IconExpand class="size-4 md:size-6 xl:size-8" />
               </a>
               <template #dropdown>
                 <el-dropdown-menu class="grid gap-2 nav-dropdown">
@@ -39,7 +39,7 @@
         <div class="hidden lg:flex gap-2 lg:gap-4 title">
           <slot />
         </div>
-        <button type="button" class="btn-signup text-base lg:text-lg xl:text-xl title">Register</button>
+        <button type="button" class="btn-signup text-sm md:text-base lg:text-lg xl:text-xl title">Register</button>
       </div>
 
      <LanguageSwitcher />

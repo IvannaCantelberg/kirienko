@@ -15,7 +15,7 @@
       <div class="">
         <ContentQuery :path="`/${locale}/projects/life-force`" find="one">
           <template #default="{ data }">
-            <h1 class="text-center text-4xl lg:text-6xl xl:text-7xl title">{{ data['sectionTitle'] }}</h1>
+            <h1 class="text-center text-6xl xl:text-7xl title">{{ data['sectionTitle'] }}</h1>
 
             <!-- <h1 class="title text-center">Life Force</h1> -->
 
