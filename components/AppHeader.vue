@@ -1,5 +1,5 @@
 <template>
-  <header class="px-[1vw] lg:px-[5vw] xl:px-[15vw] py-6 bg-header text-white">
+  <header class="px-2 md:px-4 lg:px-[5vw] xl:px-[15vw] py-6 bg-header text-white">
     <div class="flex gap-2 lg:gap-8 justify-between items-center text-base lg:text-lg xl:text-xl">
       <div class="flex gap-2 lg:gap-4 items-center">
         <a href="/" class="size-12 xl:size-16">

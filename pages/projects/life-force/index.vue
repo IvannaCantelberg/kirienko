@@ -1,5 +1,5 @@
 <template>
-  <section class="root py-40">
+  <section class="root pb-20 lg:pb-40">
     <AppHeader>
       <ContentQuery :path="`/${locale}/header`" find="one">
         <template #default="{ data }">
@@ -8,18 +8,18 @@
       </ContentQuery>
     </AppHeader>
 
-    <div class="grid grid-cols-1 gap-5 gallery-section px-10 lg:px-0">
+    <div class="grid grid-cols-1 gap-5 gallery-section px-4 lg:px-0">
       <section class="">
         <LifeForceCarousel />
       </section>
       <div class="">
         <ContentQuery :path="`/${locale}/projects/life-force`" find="one">
           <template #default="{ data }">
-            <h1 class="title text-center">{{ data['sectionTitle'] }}</h1>
+            <h1 class="text-center text-4xl lg:text-6xl xl:text-7xl title">{{ data['sectionTitle'] }}</h1>
 
             <!-- <h1 class="title text-center">Life Force</h1> -->
 
-            <section class="flex flex-col items-center my-24">
+            <section class="flex flex-col items-center my-10 lg:my-20">
               <div class="md:mx-14 text-base relative">
                 <FigureFrame class="frame hidden md:block" />
                 <p v-html="data['description']"></p>
@@ -34,7 +34,7 @@
     </div>
 
     <section
-      class="flex flex-col gap-4 px-10 xl:px-0 xl:max-w-screen-lg 2xl:max-w-screen-xl mx-auto"
+      class="flex flex-col gap-4 px-4 xl:px-0 xl:max-w-screen-lg 2xl:max-w-screen-xl mx-auto"
     >
       <ContentQuery :path="`/${locale}/projects/life-force`" find="one">
         <template #default="{ data }">
@@ -51,14 +51,14 @@
 
                       <template  v-if="(content['img'])">
 
-                        <h2 class="title" v-html="content['title']"></h2>
+                        <h2 class="title-size title " v-html="content['title']"></h2>
                         <picture class="size-40">
                           <img :src="content['img']" alt="" class="h-full" />
                         </picture>
                       </template>
                       <template  v-else>
                         <h2                      
-                          class="title text-center mb-5" v-html="content['title']"></h2>
+                          class="title-size title text-center mb-5" v-html="content['title']"></h2>
                       </template>
                     </div>
 
@@ -86,7 +86,7 @@
         <a
           href="https://gofund.me/01c944a4"
           target="_blank"
-          class="bg-[#ABE1FF] btn-link text-white stroke-white content-center px-10 text-lg hover:shadow-xl transition-all"
+          class="bg-[#ABE1FF] btn-link text-white stroke-white content-center px-10 mt-5 text-lg hover:shadow-xl transition-all"
         >
           Go Fund
           <IconArrowRight />
@@ -126,7 +126,7 @@ const handleContentVisisbility = () => {
   overflow: hidden;
 }
 
-.title {
+.title-size {
   font-size: min(8vw, 3em);
 }
 

@@ -1,5 +1,5 @@
 <template>
-  <div id="contact" class="text-white p-8 lg:p-16 2xl:p-28 pb-40">
+  <div id="contact" class="text-white p-4 lg:p-16 2xl:p-28 pb-20 lg:pb-40">
     <div class="grid grid-cols-1 lg:grid-cols-2 2xl:grid-cols-3 gap-10 md:gap-0">
       <ContentQuery :path="`/${locale}/contact`" find="one">
         <template #default="{ data }">
