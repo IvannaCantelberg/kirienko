@@ -1,19 +1,19 @@
 <template>
-  <header class="px-[5vw] xl:px-[15vw] py-6 bg-header text-white">
-    <div class="flex gap-8 justify-between items-center text-2xl xl:text-xl">
-      <div class="flex gap-8 items-center">
-        <a href="/">
-          <img src="/logo.png" alt="Logo icon" class="size-16 xl:size-16" />
+  <header class="px-[1vw] lg:px-[5vw] xl:px-[15vw] py-6 bg-header text-white">
+    <div class="flex gap-2 lg:gap-8 justify-between items-center text-base lg:text-lg xl:text-xl">
+      <div class="flex gap-3 lg:gap-8 items-center">
+        <a href="/" class="size-12 xl:size-16">
+          <img src="/logo.png" alt="Logo icon" class="w-full h-full" />
         </a>
         <ContentQuery :path="`/${locale}/projects`" find="one">
           <template #default="{ data }">
             <el-dropdown>
-              <span
-                class="el-dropdown-link nav-link title text-white transition-all title flex flex-row gap-2 items-center"
+              <a href="#projects"
+                class="el-dropdown-link p-2 lang-link title text-white transition-all title flex flex-row items-center "
               >
-                <a href="#compliment" class="text-2xl xl:text-xl">{{ data['sectionTitle'] }}</a>
+                <span  class="text-base lg:text-lg xl:text-xl">{{ data['sectionTitle'] }}</span>
                 <IconExpand class="size-6 xl:size-8" />
-              </span>
+              </a>
               <template #dropdown>
                 <el-dropdown-menu class="grid gap-2 nav-dropdown">
                   <NuxtLink
@@ -22,7 +22,7 @@
                     :to="`/${locale}/projects/${project['link']}`"
                     class="transition-all title lang-link p-2"
                   >
-                    <div class="text-2xl xl:text-xl">
+                    <div class="text-base lg:text-lg xl:text-xl">
                       <span>{{ project['title'] }}</span>
                     </div>
                   </NuxtLink>
@@ -36,14 +36,13 @@
           </template>
         </ContentQuery>
 
-        <div class="hidden lg:flex gap-8 title">
+        <div class="hidden lg:flex gap-2 lg:gap-8 title">
           <slot />
         </div>
+        <button type="button" class="btn-signup text-base lg:text-lg xl:text-xl title">Register</button>
       </div>
 
-      <div class="flex gap-5 items-center">
-        <LanguageSwitcher />
-      </div>
+     <LanguageSwitcher />
     </div>
   </header>
 </template>
@@ -54,6 +53,7 @@ import IconExpand from '~/components/icons/IconExpand.vue'
 const { locale } = useI18n()
 </script>
 <style scoped lang="less">
+
 .bg-header {
   backdrop-filter: blur(10px);
   background-color: rgb(12 15 19 / 40%);
@@ -72,11 +72,8 @@ header {
 .btn-signup {
   background-color: var(--color-border-accent-1);
   color: var(--color-text);
-  padding: 15px 20px;
-  border-radius: 20px;
+  padding: 8px 12px;
+  border-radius: 6px;
 }
 
-.nav-dropdown .nav-link:hover {
-  // background-color: var(--color-border-accent-1);
-}
 </style>

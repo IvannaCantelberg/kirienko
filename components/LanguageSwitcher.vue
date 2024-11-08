@@ -1,10 +1,10 @@
 <template>
-  <el-dropdown>
+  <el-dropdown class="outline-none">
     <span
-      class="el-dropdown-link lang-link text-white transition-all title flex flex-row gap-2 items-center"
+      class="el-dropdown-link lang-link p-2 text-white transition-all title flex flex-row gap-2 items-center"
     >
       <img :src="`/icons/flag-${currentLocal.alias}.svg`" class="size-6 xl:size-8" />
-      <span>{{ currentLocal.name }}</span>
+      <span class="text-base lg:text-lg xl:text-xl">{{ currentLocal.name }}</span>
       <IconExpand class="size-6 xl:size-8" />
     </span>
     <template #dropdown>
@@ -13,7 +13,7 @@
           v-for="l in locales"
           :key="l.code"
           :to="switchLocalePath(l.code)"
-          class="lang-link transition-all title"
+          class="lang-link p-2 transition-all title text-base lg:text-lg xl:text-xl"
         >
           <div class="flex gap-2 md:gap-4 items-center">
             <img :src="`/icons/flag-${l.alias}.svg`" class="size-6 xl:size-8" />
@@ -43,13 +43,6 @@ watch(locale, () => (currentLocal.value = getCurrentLocal()))
 </script>
 
 <style lang="less">
-/deep/ .el-dropdown {
-  outline: none;
-}
-
-/deep/ [tabindex] {
-  outline: none;
-}
 
 .el-dropdown-menu.languages-dropdown {
   padding: 0;
@@ -65,10 +58,8 @@ watch(locale, () => (currentLocal.value = getCurrentLocal()))
   border: 1px solid var(--color-background-accent-1);
 }
 
-.lang-link,
-a {
-  padding: 8px;
-  /* line-height: normal; */
+.lang-link {
+//   padding: 8px;
 }
 
 .router-link-active.lang-link::after,
@@ -79,7 +70,6 @@ a {
 .lang-link {
   position: relative;
   text-decoration: none;
-  font-size: 16px;
   //   border: 1px solid transparent; /* Initial transparent border */
   border-radius: 5px;
   transition: all 0.4s ease-out;

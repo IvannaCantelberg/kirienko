@@ -8,7 +8,7 @@
     >
       <div
         :class="{ 'bg-contrast': index % 2 === 0, 'bg-slate-100': index % 2 != 0 }"
-        class="p-5 max-w-[95%] min-w-[310px] flex flex-col gap-3"
+        class="p-5 max-w-[95%] min-w-[310px] flex flex-col gap-3 comment"
       >
         <div class="flex flex-row gap-3 items-center">
           <el-avatar
@@ -35,7 +35,25 @@ defineProps<{
 }>()
 </script>
 
-<style scoped>
+<style scoped lang="less">
+
+.comment {
+  position: relative;
+  &::before{
+    content: '';
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    position: absolute;
+    top: 4px;
+    left: -22px;
+    border-left: 12px solid transparent;
+    border-right: 12px solid transparent;
+    border-bottom: 12px solid var(--color-background-contrast-lighter);
+    transform: rotate(270deg);
+  }
+}
+
 .description {
   text-align: center;
   max-width: 70%;
