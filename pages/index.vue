@@ -3,9 +3,9 @@
     <AppHeader>
       <ContentQuery :path="`/${locale}/header`" find="one">
         <template #default="{ data }">
-          <a href="#compliment" class="p-2 lang-link">{{ data['compliment'] }}</a>
-          <a href="#blog" class="p-2 lang-link">{{ data['blog'] }}</a>
-          <a href="#contact" class="p-2 lang-link">{{ data['contact'] }}</a>
+          <a href="#compliment" class="py-2 px-3 lang-link">{{ data['compliment'] }}</a>
+          <a href="#blog" class="py-2 px-3 lang-link">{{ data['blog'] }}</a>
+          <a href="#contact" class="py-2 px-3 lang-link">{{ data['contact'] }}</a>
         </template>
       </ContentQuery>
     </AppHeader>

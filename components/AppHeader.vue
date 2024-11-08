@@ -1,7 +1,7 @@
 <template>
   <header class="px-[1vw] lg:px-[5vw] xl:px-[15vw] py-6 bg-header text-white">
     <div class="flex gap-2 lg:gap-8 justify-between items-center text-base lg:text-lg xl:text-xl">
-      <div class="flex gap-3 lg:gap-8 items-center">
+      <div class="flex gap-2 lg:gap-4 items-center">
         <a href="/" class="size-12 xl:size-16">
           <img src="/logo.png" alt="Logo icon" class="w-full h-full" />
         </a>
@@ -9,7 +9,7 @@
           <template #default="{ data }">
             <el-dropdown>
               <a href="#projects"
-                class="el-dropdown-link p-2 lang-link title text-white transition-all title flex flex-row items-center "
+                class="el-dropdown-link py-2 pr-1 pl-3 lang-link title text-white transition-all title flex flex-row items-center "
               >
                 <span  class="text-base lg:text-lg xl:text-xl">{{ data['sectionTitle'] }}</span>
                 <IconExpand class="size-6 xl:size-8" />
@@ -36,7 +36,7 @@
           </template>
         </ContentQuery>
 
-        <div class="hidden lg:flex gap-2 lg:gap-8 title">
+        <div class="hidden lg:flex gap-2 lg:gap-4 title">
           <slot />
         </div>
         <button type="button" class="btn-signup text-base lg:text-lg xl:text-xl title">Register</button>

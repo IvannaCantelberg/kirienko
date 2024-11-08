@@ -3,7 +3,7 @@
     <AppHeader>
       <ContentQuery :path="`/${locale}/header`" find="one">
         <template #default="{ data }">
-          <a href="#contact" class="nav-link">{{ data['contact'] }}</a>
+          <a href="#contact" class="py-2 px-3 lang-link">{{ data['contact'] }}</a>
         </template>
       </ContentQuery>
     </AppHeader>

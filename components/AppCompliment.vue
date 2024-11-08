@@ -8,7 +8,7 @@
             </pre> -->
 
         <div class="flex flex-col mb-10">
-          <h1 class="title text-5xl lg:text-6xl xl:text-7xl mb-10 uppercase">
+          <h1 class="title text-4xl lg:text-6xl xl:text-7xl mb-10 uppercase">
             {{ data['sectionTitle'] }}
           </h1>
 

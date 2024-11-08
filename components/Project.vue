@@ -1,7 +1,7 @@
 <template>
   <figure class="hover:shadow-xl transition-all relative w-full">
     <FigureFrame class="frame hidden xl:block" />
-    <NuxtLink :to="`projects/${link}`">
+    <NuxtLink :to="`/${locale}/projects/${link}`">
       <div
         class="relative overflow-hidden bg-project-image min-h-[320px] lg:min-h-[480px] xl:min-h-[600px]"
         :style="{ backgroundImage: `url(${image})` }"
@@ -24,6 +24,7 @@
 <script lang="ts" setup>
 import FigureFrame from '~/components/icons/FigureFrame.vue'
 import IconArrowRight from '~/components/icons/IconArrowRight.vue'
+const { locale } = useI18n()
 
 defineProps<{
   image: string
