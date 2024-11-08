@@ -15,7 +15,7 @@ export default defineNuxtConfig({
         name: 'English', 
         icon: 'en', 
         iso: 'en-US', 
-        isCatchallLocale: true,
+        // isCatchallLocale: true,
         file: 'en-US.json'
       },
       {
@@ -38,21 +38,8 @@ export default defineNuxtConfig({
     vueI18n: './i18n.config.ts',
     lazy: false,
     langDir: 'lang/',
-    defaultLocale: 'en', 
     compilation: {
       strictMessage: false,
     },
-  }, 
-  content: {
-    // Content module options, if needed
-    // For example, you can enable markdown rendering
-    markdown: {
-      remarkPlugins: [
-        // Add any remark plugins here
-      ],
-      rehypePlugins: [
-        // Add any rehype plugins here
-      ]
-    }
   }
 })

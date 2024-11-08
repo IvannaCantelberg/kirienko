@@ -3,7 +3,6 @@
     <AppHeader>
       <ContentQuery :path="`/${locale}/header`" find="one">
         <template #default="{ data }">
-          <a href="#projects" class="nav-link">{{ data['projects'] }}</a>
           <a href="#compliment" class="nav-link">{{ data['compliment'] }}</a>
           <a href="#blog" class="nav-link">{{ data['blog'] }}</a>
           <a href="#contact" class="nav-link">{{ data['contact'] }}</a>

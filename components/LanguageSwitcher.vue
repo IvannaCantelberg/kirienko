@@ -1,9 +1,11 @@
 <template>
   <el-dropdown>
-    <span class="el-dropdown-link lang-link text-white transition-all title flex flex-row gap-2 items-center">
-      <img :src="`/icons/flag-${currentLocal.icon}.svg`" class="size-6 xl:size-8" />
+    <span
+      class="el-dropdown-link lang-link text-white transition-all title flex flex-row gap-2 items-center"
+    >
+      <img :src="`/icons/flag-${currentLocal.alias}.svg`" class="size-6 xl:size-8" />
       <span>{{ currentLocal.name }}</span>
-      <IconExpand class="size-6 xl:size-8"/>
+      <IconExpand class="size-6 xl:size-8" />
     </span>
     <template #dropdown>
       <el-dropdown-menu class="languages-dropdown grid gap-2">
@@ -21,18 +23,6 @@
       </el-dropdown-menu>
     </template>
   </el-dropdown>
-
-  <!-- <NuxtLink
-    v-for="l in locales"
-    :key="l.code"
-    :to="switchLocalePath(l.code)"
-    class="lang-link transition-all title"
-  >
-    <div class="flex gap-2 items-center" :title="l.name">
-      <img :src="`/icons/flag-${l.alias}.svg`" :alt="`${l.name} icon`" class="size-6 xl:size-8" />
-      <span> {{ l.alias }}</span>
-    </div>
-  </NuxtLink> -->
 </template>
 <script lang="ts" setup>
 import IconExpand from '~/components/icons/IconExpand.vue'
@@ -52,29 +42,23 @@ onMounted(() => {
 watch(locale, () => (currentLocal.value = getCurrentLocal()))
 </script>
 
-<style scoped lang="less">
-
-:root {
-        --el-bg-color-overlay: var(--color-background-accent-1);
-}
-
+<style lang="less">
 /deep/ .el-dropdown {
-    outline: none;
+  outline: none;
 }
 
 /deep/ [tabindex] {
-    outline: none;
+  outline: none;
 }
 
 .el-dropdown-menu.languages-dropdown {
-    padding: 0;
-    border: none;
+  padding: 0;
+  border: none;
 }
 
-.el-dropdown-menu.languages-dropdown .lang-link{
-    border-radius: 0;
+.el-dropdown-menu.languages-dropdown .lang-link {
+  border-radius: 0;
 }
-
 
 .router-link-active.lang-link {
   color: var(--color-text-secondary);
@@ -96,7 +80,7 @@ a {
   position: relative;
   text-decoration: none;
   font-size: 16px;
-//   border: 1px solid transparent; /* Initial transparent border */
+  //   border: 1px solid transparent; /* Initial transparent border */
   border-radius: 5px;
   transition: all 0.4s ease-out;
 }

@@ -5,6 +5,37 @@
         <a href="/">
           <img src="/logo.png" alt="Logo icon" class="size-16 xl:size-16" />
         </a>
+        <ContentQuery :path="`/${locale}/projects`" find="one">
+          <template #default="{ data }">
+            <el-dropdown>
+              <span
+                class="el-dropdown-link nav-link title text-white transition-all title flex flex-row gap-2 items-center"
+              >
+                <a href="#compliment" class="text-2xl xl:text-xl">{{ data['sectionTitle'] }}</a>
+                <IconExpand class="size-6 xl:size-8" />
+              </span>
+              <template #dropdown>
+                <el-dropdown-menu class="grid gap-2 nav-dropdown">
+                  <NuxtLink
+                    v-for="(project, index) in data['projects']"
+                    :key="index"
+                    :to="`/${locale}/projects/${project['link']}`"
+                    class="transition-all title lang-link p-2"
+                  >
+                    <div class="text-2xl xl:text-xl">
+                      <span>{{ project['title'] }}</span>
+                    </div>
+                  </NuxtLink>
+                 
+                </el-dropdown-menu>
+              </template>
+            </el-dropdown>
+          </template>
+          <template #not-found>
+            <p>No project found.</p>
+          </template>
+        </ContentQuery>
+
         <div class="hidden lg:flex gap-8 title">
           <slot />
         </div>
@@ -19,6 +50,8 @@
 
 <script setup>
 import LanguageSwitcher from '~/components/LanguageSwitcher.vue'
+import IconExpand from '~/components/icons/IconExpand.vue'
+const { locale } = useI18n()
 </script>
 <style scoped lang="less">
 .bg-header {
@@ -41,5 +74,9 @@ header {
   color: var(--color-text);
   padding: 15px 20px;
   border-radius: 20px;
+}
+
+.nav-dropdown .nav-link:hover {
+  // background-color: var(--color-border-accent-1);
 }
 </style>
