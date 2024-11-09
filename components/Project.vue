@@ -6,7 +6,6 @@
         class="relative overflow-hidden bg-project-image min-h-[320px] lg:min-h-[480px] xl:min-h-[600px]"
         :style="{ backgroundImage: `url(${image})` }"
       >
-        
         <div class="text-base lg:text-xl 2xl:text-2xl text-white content p-4">
           <h3
             class="text-xl lg:text-3xl 2xl:text-5xl text-white stroke-white content-title underline"

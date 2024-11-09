@@ -39,7 +39,15 @@
         <div class="hidden lg:flex gap-2 lg:gap-4 title">
           <slot />
         </div>
-        <button type="button" class="btn-signup text-sm md:text-base lg:text-lg xl:text-xl title">Register</button>
+
+         <ContentQuery :path="`/${locale}/header`" find="one">
+          <template #default="{ data }">
+        <button type="button" class="btn-signup text-sm md:text-base lg:text-lg xl:text-xl title">{{ data['register'] }}</button>
+         </template>
+          <template #not-found>
+            <p>No project found.</p>
+          </template>
+        </ContentQuery>
       </div>
 
      <LanguageSwitcher />

@@ -36,10 +36,9 @@ defineProps<{
 </script>
 
 <style scoped lang="less">
-
 .comment {
   position: relative;
-  &::before{
+  &::before {
     content: '';
     display: inline-block;
     width: 20px;

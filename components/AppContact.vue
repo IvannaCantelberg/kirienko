@@ -7,7 +7,7 @@
             <h2 class="title text-6xl uppercase mb-10">{{ data.sectionTitle }}</h2>
             <h3 class="title text-4xl mb-4">{{ data['title_1'] }}</h3>
             <h3 class="title text-4xl mb-10">{{ data['title_2'] }}</h3>
-            <p class="text-xl max-w-[260px] mb-4">{{ data['note'] }}</p>
+            <p class="text-xl max-w-[400px] mb-4">{{ data['note'] }}</p>
           </div>
 
           <div class="grid gap-4 2xl:my-10 md:p-8">
