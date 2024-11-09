@@ -82,11 +82,8 @@ import IconSocialLinkedIn from '~/components/icons/IconSocialLinkedIn.vue'
 import IconLocation from '~/components/icons/IconLocation.vue'
 import IconEmail from '~/components/icons/IconEmail.vue'
 import { useI18n } from 'vue-i18n'
-
-import queryContent from '@nuxt/content'
 const { locale } = useI18n()
 
-// const { data } =   queryContent(locale.value, 'contact').findOne();
 </script>
 <style>
 .icon-social {
