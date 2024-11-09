@@ -33,7 +33,7 @@
       <div class="container-space">
         <AppBlog />
       </div>
-    </section>
+    </section>    
   </main>
 </template>
 <script setup lang="ts">

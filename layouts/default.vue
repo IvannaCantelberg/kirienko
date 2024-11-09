@@ -12,5 +12,8 @@
     <section class="bg-dark">
         <AppFooter />
     </section>
+    <el-backtop :right="50" :bottom="50" style="color: var(--el-text-color-primary)">
+        <string>&#x2191;</string>
+    </el-backtop>
  </section>
 </template>

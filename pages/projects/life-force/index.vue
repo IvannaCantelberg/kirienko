@@ -40,32 +40,35 @@
         <template #default="{ data }">
           <div :class="{ collapsed: isCollapsed }">
             <div class="grid gap-5">
-              <div 
-                  v-for="(content, index) in data['content']" 
-                  :key="index"
-                  class="grid grid-cols-1"
-                  >
-                    <div 
-                      :class="{'flex-row-reverse ': (index % 2 ) === 0, 'justify-center': !(content['img'])}"
-                      class="flex gap-5 items-center justify-end h-40" > 
+              <div
+                v-for="(content, index) in data['content']"
+                :key="index"
+                class="grid grid-cols-1"
+              >
+                <div
+                  :class="{
+                    'flex-row-reverse ': index % 2 === 0,
+                    'justify-center': !content['img']
+                  }"
+                  class="flex gap-5 items-center justify-end h-40"
+                >
+                  <template v-if="content['img']">
+                    <h2 class="title-size title" v-html="content['title']"></h2>
+                    <picture class="size-40">
+                      <img :src="content['img']" alt="" class="h-full" />
+                    </picture>
+                  </template>
+                  <template v-else>
+                    <h2 class="title-size title text-center mb-5" v-html="content['title']"></h2>
+                  </template>
+                </div>
 
-                      <template  v-if="(content['img'])">
-
-                        <h2 class="title-size title " v-html="content['title']"></h2>
-                        <picture class="size-40">
-                          <img :src="content['img']" alt="" class="h-full" />
-                        </picture>
-                      </template>
-                      <template  v-else>
-                        <h2                      
-                          class="title-size title text-center mb-5" v-html="content['title']"></h2>
-                      </template>
-                    </div>
-
-                    <p class="text-justify " :class="{'description': !!(content['img']), 'justify-self-end': (index % 2 ) === 0}" v-html="content['description']"> </p>   
-
+                <p
+                  class="text-justify"
+                  :class="{ description: !!content['img'], 'justify-self-end': index % 2 === 0 }"
+                  v-html="content['description']"
+                ></p>
               </div>
-
             </div>
           </div>
 
@@ -78,7 +81,7 @@
             ...Read {{ isCollapsed ? 'more' : 'less' }}
           </button>
 
-          <p class="text-secondary" v-html="data['donationText']"> </p>
+          <p class="text-secondary" v-html="data['donationText']"></p>
         </template>
       </ContentQuery>
 
