@@ -61,13 +61,13 @@ useSeoMeta({
   margin: auto;
 }
 
-@media (min-width: 1200px) and (max-width: 1600px) {
+@media (min-width: 800px) and (max-width: 1600px) {
   .container-space {
     max-width: calc(100% - 15vw);
   }
 }
 
-@media (max-width: 1199px) {
+@media (max-width: 799px) {
   .container-space {
     max-width: calc(100% - 10vw);
   }
