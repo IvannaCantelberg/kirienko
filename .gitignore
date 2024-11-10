@@ -8,12 +8,21 @@ pnpm-debug.log*
 lerna-debug.log*
 
 node_modules
-.nuxt
 .DS_Store
 dist
 dist-ssr
 coverage
 *.local
+
+# Nuxt dev/build outputs
+.output
+.data
+.nuxt
+.nitro
+.cache
+dist
+
+.env
 
 /cypress/videos/
 /cypress/screenshots/
