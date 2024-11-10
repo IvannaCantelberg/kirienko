@@ -1,7 +1,5 @@
 <template>
   <svg
-    width="inherit"
-    height="inherit"
     viewBox="0 0 30 30"
     fill="none"
     xmlns="http://www.w3.org/2000/svg"

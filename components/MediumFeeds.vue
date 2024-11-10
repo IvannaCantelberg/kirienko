@@ -31,7 +31,6 @@ const { locale } = useI18n()
 
 const { getFeeds } = useMedium()
 const feeds = await getFeeds()
-console.log(feeds)
 </script>
 
 <style scoped>

@@ -17,6 +17,7 @@
     "@nuxt/eslint": "^0.5.7",
     "@nuxtjs/i18n": "^8.5.3",
     "@nuxtjs/seo": "^2.0.0-rc.23",
+    "@nuxtjs/sitemap": "^6.1.5",
     "@nuxtjs/tailwindcss": "^6.12.1",
     "@tailwindcss/line-clamp": "^0.4.4",
     "element-plus": "^2.8.6",
