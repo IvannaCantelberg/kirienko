@@ -38,11 +38,4 @@ const feeds = await getFeeds()
   background-color: white;
 }
 
-.card /deep/ .arrow-icon {
-  visibility: hidden;
-}
-
-.card:hover /deep/ .arrow-icon {
-  visibility: visible;
-}
 </style>

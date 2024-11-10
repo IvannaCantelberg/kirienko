@@ -30,7 +30,7 @@ const getThumbnail = (el: string): string => {
   while ((match = imgSrcRegex.exec(el)) !== null) {
     imageSources.push(match[1])
   }
-  
+
   return imageSources[0]
 }
 
@@ -44,22 +44,10 @@ const cleanContent = (htmlText: string): string => {
 .image {
   object-fit: fill;
   object-position: center;
-  /* width: 200px; */
   height: 230px;
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
 }
 
-.img-style {
-  /* border: 2px solid #fff; */
-}
-
-.arrow-icon {
-  position: relative;
-  bottom: 50%;
-  left: 90%;
-
-  fill: var(--color-border-contrast);
-}
 </style>

@@ -6,8 +6,7 @@ export default defineNuxtConfig({
     name: 'Ukrainian art projects' 
   }, 
   
-  app: {
-    
+  app: {    
     head: {
       noscript: [
         {
@@ -50,6 +49,11 @@ export default defineNuxtConfig({
   css: ['~/assets/css/base.less'],
   tailwindcss: {
     cssPath: '~/assets/css/tailwind.less',
+    
+  }, 
+  sourcemap: {
+    client: true, 
+    server: true
   }, 
    i18n: {
      locales: [
@@ -58,7 +62,7 @@ export default defineNuxtConfig({
         alias: 'EN',
         name: 'English', 
         icon: 'en', 
-        iso: 'en-US', 
+        language: 'en-US', 
         // isCatchallLocale: true,
         file: 'en-US.json'
       },
@@ -67,7 +71,7 @@ export default defineNuxtConfig({
         alias: 'NL',
         name: 'Netherlands', 
         icon: 'nl', 
-        iso: 'nl-NL', 
+        language: 'nl-NL', 
         file: 'nl-NL.json'
       },
       {
@@ -75,7 +79,7 @@ export default defineNuxtConfig({
         alias: 'UA',
         name: 'Українська', 
         icon: 'ua', 
-        iso: 'ua-UA', 
+        language: 'ua-UA', 
         file: 'ua-UA.json'
       }
     ],
@@ -83,7 +87,7 @@ export default defineNuxtConfig({
     lazy: false,
     langDir: 'lang/',
     compilation: {
-      strictMessage: false,
+      strictMessage: false,      
     },
   }
 })

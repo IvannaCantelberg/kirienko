@@ -103,15 +103,15 @@ figure:hover .content {
   visibility: visible;
 }
 
-/deep/ .line-vertical,
-/deep/ .line-horizontal {
+:deep(.line-vertical),
+:deep(.line-horizontal) {
   stroke-dasharray: 100;
   stroke-dashoffset: 100;
 }
 
 /* On hover, animate the lines being drawn */
-figure:hover /deep/ .line-vertical,
-figure:hover /deep/ .line-horizontal {
+figure:hover :deep(.line-vertical),
+figure:hover:deep(.line-horizontal) {
   stroke-dashoffset: 0;
   transition:
     stroke-dashoffset 0.6s cubic-bezier(0.4, 0, 0.2, 1),

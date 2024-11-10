@@ -58,7 +58,7 @@ const handleRandomColor = () => {
 </script>
 
 <style scoped>
-/deep/ .el-image__preview {
+:deep(.el-image__preview) {
   cursor: zoom-in;
 }
 </style>

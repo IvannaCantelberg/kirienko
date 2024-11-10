@@ -165,8 +165,10 @@
   position: relative;
   display: block;
 }
-/deep/ .el-image__preview {
+
+:deep(.el-image__preview) {
   cursor: zoom-in;
 }
+
 </style>
-2
+
