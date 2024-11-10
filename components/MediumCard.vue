@@ -30,9 +30,7 @@ const getThumbnail = (el: string): string => {
   while ((match = imgSrcRegex.exec(el)) !== null) {
     imageSources.push(match[1])
   }
-
-  console.log(imageSources)
-
+  
   return imageSources[0]
 }
 

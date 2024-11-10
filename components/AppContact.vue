@@ -29,7 +29,7 @@
                 <h3 class="title text-3xl mb-2">{{ data['location'] }}</h3>
 
                 <a
-                  href="https://g.co/kgs/srHZJYq"
+                  href="https://maps.app.goo.gl/Saq2y9S6ZWQowNHE7"
                   target="_blank"
                   class="text-base md:text-lg"
                   title="Address of atelier"
