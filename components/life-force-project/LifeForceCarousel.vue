@@ -6,10 +6,8 @@
           <!-- <img src="/img/projects/life-force/gallery/1.webp" decoding="async" loading="lazy" alt="" srcset="" height="400" width="400"> -->
           <el-image
             class="absolute top-0 left-0 bottom-0 right-0 size-full"
-            decoding="async"
-            loading="lazy"
             width="400"
-            src="/img/projects/life-force/gallery/1.webp"
+            :src="optimizeGalleryPhoto('/img/projects/life-force/gallery/1.webp')"
             :zoom-rate="1.2"
             :max-scale="7"
             :min-scale="0.2"
@@ -21,9 +19,8 @@
           <!-- <img src="/img/projects/life-force/gallery/2.webp" decoding="async" loading="lazy" alt="" srcset="" width="400"> -->
           <el-image
             decoding="async"
-            loading="lazy"
             width="400"
-            src="/img/projects/life-force/gallery/2.webp"
+            :src="optimizeGalleryPhoto('/img/projects/life-force/gallery/2.webp')"
             :zoom-rate="1.2"
             :max-scale="7"
             :min-scale="0.2"
@@ -38,7 +35,7 @@
             decoding="async"
             loading="lazy"
             width="400"
-            src="/img/projects/life-force/gallery/3.webp"
+            :src="optimizeGalleryPhoto('/img/projects/life-force/gallery/3.webp')"
             :zoom-rate="1.2"
             :max-scale="7"
             :min-scale="0.2"
@@ -56,7 +53,7 @@
             decoding="async"
             loading="lazy"
             width="400"
-            src="/img/projects/life-force/gallery/4.webp"
+            :src="optimizeGalleryPhoto('/img/projects/life-force/gallery/4.webp')"
             :zoom-rate="1.2"
             :max-scale="7"
             :min-scale="0.2"
@@ -70,7 +67,7 @@
             decoding="async"
             loading="lazy"
             width="400"
-            src="/img/projects/life-force/gallery/5.webp"
+            :src="optimizeGalleryPhoto('/img/projects/life-force/gallery/5.webp')"
             :zoom-rate="1.2"
             :max-scale="7"
             :min-scale="0.2"
@@ -87,7 +84,7 @@
             decoding="async"
             loading="lazy"
             width="400"
-            src="/img/projects/life-force/gallery/6.webp"
+            :src="optimizeGalleryPhoto('/img/projects/life-force/gallery/6.webp')"
             :zoom-rate="1.2"
             :max-scale="7"
             :min-scale="0.2"
@@ -102,7 +99,7 @@
             decoding="async"
             loading="lazy"
             width="400"
-            src="/img/projects/life-force/gallery/7.webp"
+            :src="optimizeGalleryPhoto('/img/projects/life-force/gallery/7.webp')"
             :zoom-rate="1.2"
             :max-scale="7"
             :min-scale="0.2"
@@ -117,7 +114,7 @@
             decoding="async"
             loading="lazy"
             width="400"
-            src="/img/projects/life-force/gallery/8.webp"
+            :src="optimizeGalleryPhoto('/img/projects/life-force/gallery/8.webp')"
             :zoom-rate="1.2"
             :max-scale="7"
             :min-scale="0.2"
@@ -132,7 +129,7 @@
             decoding="async"
             loading="lazy"
             width="400"
-            src="/img/projects/life-force/gallery/9.webp"
+            :src="optimizeGalleryPhoto('/img/projects/life-force/gallery/9.webp')"
             :zoom-rate="1.2"
             :max-scale="7"
             :min-scale="0.2"
@@ -146,7 +143,26 @@
   </article>
 </template>
 
-<script lang="ts" setup></script>
+<script lang="ts" setup>
+const img = useImage()
+
+
+const optimizeGalleryPhoto = (imgUrl:string) => {
+        
+        const backgroundProjectImage = computed(() => {
+            const result = img(imgUrl, {
+                width: 500,
+                format: 'webp'                
+            }, {
+                densities: 'x1',
+            });
+        
+            return result;
+        });
+        return backgroundProjectImage.value;
+}
+
+</script>
 
 <style scoped lang="less">
 @color: #d41d1d;

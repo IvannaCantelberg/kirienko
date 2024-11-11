@@ -11,7 +11,7 @@
       <ContentQuery :path="`/${locale}/projects/with-love`" find="one">
         <template #default="{ data }">
           <div
-            :style="{ 'background-image': 'url(' + data['project_image_last_v'] + ')' }"
+            :style="{ 'background-image': 'url(' + optimizeImg(data['project_image_last_v']) + ')' }"
             class="bg-image bg-cover bg-center absolute size-full"
           >
             <div
@@ -20,7 +20,7 @@
               <figure class="shadow-white shadow-2xl">
                 <div
                   class="relative bg-project-image bg-cover size-[320px] lg:size-[480px] xl:size-[600px]"
-                  :style="{ 'background-image': 'url(' + data['project_image_last_v'] + ')' }"
+                  :style="{ 'background-image': 'url(' + optimizeImg(data['project_image_last_v']) + ')' }"
                 ></div>
               </figure>
             </div>
@@ -53,6 +53,26 @@ useSeoMeta({
   ogDescription: 'This is Ukrainian textile art project',
   ogUrl: 'https://ukrainianartproject.com/'
 })
+
+const img = useImage()
+
+
+const optimizeImg = (imgUrl:string) => {
+        
+        const backgroundProjectImage = computed(() => {
+            const result = img(imgUrl, {
+                sizes: 'xs:100vw sm:100vw lg:400px xl:600px',
+                format: 'webp'                
+            }, {
+                densities: 'x1'
+            });
+        
+            return result;
+        });
+        return backgroundProjectImage.value;
+}
+
+
 </script>
 
 <style scoped></style>

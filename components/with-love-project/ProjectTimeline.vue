@@ -16,7 +16,7 @@
             <el-card>
               <div class="flex gap-5 items-center">
                 <div
-                  :style="{ 'background-image': 'url(' + item['author_avatar'] + ')' }"
+                  :style="{ 'background-image': 'url(' + optimizeAuthorPhoto(item['author_avatar']) + ')' }"
                   class="bg-image bg-cover size-16 shadow-md border rounded-md"
                 ></div>
                 <h3 class="title text-secondary text-lg mb-2">{{ item['author'] }}</h3>
@@ -29,7 +29,7 @@
                     v-for="(img, imgIndex) in item['archive_images']"
                     :key="imgIndex"
                     class="size-24 lg:size-40"
-                    :src="img"
+                    :src="optimizeAuthorImages(img)"
                     :zoom-rate="1.2"
                     :max-scale="7"
                     :min-scale="0.2"
@@ -55,6 +55,44 @@ const colors = ['#ABE1FF', '#EDEDA6', '#bae79e', '#97c1f9']
 const handleRandomColor = () => {
   return colors[Math.floor(Math.random() * colors.length)]
 }
+
+const img = useImage()
+
+
+const optimizeAuthorPhoto = (imgUrl:string) => {
+        
+        const backgroundProjectImage = computed(() => {
+            const result = img(imgUrl, {
+                width: 64,
+                height: 64,
+                format: 'webp'                
+            }, {
+                densities: 'x1'
+            });
+        
+            return result;
+        });
+        return backgroundProjectImage.value;
+}
+
+const optimizeAuthorImages = (imgUrl:string) => {
+        
+        const backgroundProjectImage = computed(() => {
+            const result = img(imgUrl, {
+                width: 160,
+                height: 160,
+                format: 'webp'                
+            }, {
+                densities: 'x1'
+            });
+        
+            return result;
+        });
+        return backgroundProjectImage.value;
+}
+
+
+
 </script>
 
 <style scoped>

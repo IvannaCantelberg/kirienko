@@ -39,6 +39,7 @@ const cleanContent = (htmlText: string): string => {
 
   return text.replace(/&lt;Vorige Volgende&gt;/g, '')
 }
+
 </script>
 <style scoped lang="less">
 .image {

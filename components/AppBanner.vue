@@ -1,21 +1,11 @@
 <template>
   <article class="flex relative">
     <div
-      style="
-        background-image: url('/img/kirienko_profile.webp'),
-          radial-gradient(
-            circle,
-            rgb(17 27 36) 0%,
-            rgb(11 18 26) 50%,
-            rgb(11 18 26) 60%,
-            rgb(8 13 17) 85%,
-            rgb(8 13 17) 100%
-          );
-      "
+      :style="backgroundPhoto"
       class="bg-profile-image bg-image px-2 lg:pr-[8%] size-full relative"
     >
       <div
-        style="background-image: url('/img/ellipse.png')"
+        :style="backgroundEllipses"
         class="bg-image bg-cover absolute top-0 right-0 lg:size-1/2 2xl:size-full xl:visible invisible"
       ></div>
       <div class="text-white text-right flex flex-col items-end z-0">
@@ -42,7 +32,33 @@
   </article>
 </template>
 <script setup lang="ts">
-import IconArrowRight from '~/components/icons/IconArrowRight.vue'
+import IconArrowRight from '~/components/icons/IconArrowRight.vue'; 
+
+const img = useImage()
+const backgroundEllipses = computed(() => {
+  const imgUrl = img('/img/ellipse.png', { width: 100, height:100, format: 'webp' }, {densities: 'x1'})
+  return { 'backgroundImage': `url('${imgUrl}')` }
+});
+
+const backgroundPhoto = computed(() => {
+  const imgUrl = img('/img/kirienko_profile.png', {
+    sizes: 'xs:100vw sm:100vw md:600px lg:100vw xl:100vw',
+    format: 'webp'
+  }, {
+    densities: 'x1'
+  });
+
+
+  return { 'backgroundImage': `url('${imgUrl}'), radial-gradient(
+            circle,
+            rgb(17 27 36) 0%,
+            rgb(11 18 26) 50%,
+            rgb(11 18 26) 60%,
+            rgb(8 13 17) 85%,
+            rgb(8 13 17) 100%
+          )` }
+});
+
 </script>
 
 <style lang="less">

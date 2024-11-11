@@ -2,8 +2,8 @@
   <header class="px-2 md:px-4 lg:px-[5vw] xl:px-[15vw] py-4 lg:py-6 bg-header text-white">
     <div class="flex gap-2 lg:gap-8 justify-between items-center text-sm md:text-base lg:text-lg xl:text-xl">
       <div class="flex gap-2 lg:gap-4 items-center">
-        <a href="/" class="size-8 md:size-12 xl:size-16">
-          <img src="/logo.png" alt="Logo icon" class="w-full h-full" />
+        <a href="/">
+          <NuxtImg  src="/logo.png" alt="Logo icon" sizes="xs:32px md:48px xl:64px" format="webp" densities="x1"/>
         </a>
         <ContentQuery :path="`/${locale}/projects`" find="one">
           <template #default="{ data }">

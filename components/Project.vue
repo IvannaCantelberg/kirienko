@@ -26,11 +26,14 @@ import IconArrowRight from '~/components/icons/IconArrowRight.vue'
 const { locale } = useI18n()
 
 defineProps<{
-  image: string
+  image: ComputedRef<string>
   title: string
   link: string
   description: string
-}>()
+}>();
+
+
+
 </script>
 
 <style scoped>

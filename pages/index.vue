@@ -21,7 +21,7 @@
 
     <section class="relative">
       <div
-        style="background-image: url('/img/petrykivka_detail.webp')"
+        :style="backgroundPetrykivka"
         class="bg-image bg-cover absolute size-full -z-10 filter opacity-10"
       ></div>
       <div class="container-space">
@@ -52,7 +52,23 @@ useSeoMeta({
     'This is Ukrainian textile art projects site. Here you will find my Ukrainian art projects and details how you can participate with loving intention and creativity. Discover traditional styles like Petrykivka. modern interpretations, and featured Ukrainian artists. Dive into a world of vibrant patterns, history, and culture. ',
   ogDescription: 'This is my amazing site, let me tell you all about it.',
   ogUrl: 'https://ukrainianartproject.com/'
-})
+});
+
+const img = useImage()
+const backgroundPetrykivka= computed(() => {
+  const imgUrl = img('/img/petrykivka_detail.webp', {
+    width: 800, 
+    height: 800,
+    sizes: 'xs:100vw xl:800px',
+    format: 'webp'
+  }, {
+    densities: 'x1'
+  })
+  return { 'backgroundImage': `url('${imgUrl}')` }
+});
+
+
+
 </script>
 
 <style scoped>

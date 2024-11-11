@@ -45,7 +45,7 @@ export default defineNuxtConfig({
     
   }, 
   devtools: { enabled: true },
-  modules: ['@nuxtjs/tailwindcss', '@nuxt/eslint', '@nuxtjs/i18n', '@nuxt/content', '@element-plus/nuxt', 'nuxt-og-image'], 
+  modules: ['@nuxtjs/tailwindcss', '@nuxt/eslint', '@nuxtjs/i18n', '@nuxt/content', '@element-plus/nuxt', 'nuxt-og-image', '@nuxt/image'], 
   css: ['~/assets/css/base.less'],
   tailwindcss: {
     cssPath: '~/assets/css/tailwind.less',

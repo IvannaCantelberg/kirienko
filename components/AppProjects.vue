@@ -18,7 +18,7 @@
             v-for="(project, index) in data['projects']"
             :key="index"
             :link="project.link"
-            :image="project.image"
+            :image="optimizeImg(project.image)"
             :title="project.title"
             :description="project.description"
           />
@@ -34,6 +34,23 @@
 import Project from '~/components/Project.vue'
 import { useI18n } from 'vue-i18n'
 const { locale } = useI18n()
+const img = useImage()
+
+
+const optimizeImg = (imgUrl:string) => {
+        
+        const backgroundProjectImage = computed(() => {
+            const result = img(imgUrl, {
+                sizes: 'xs:100vw sm:100vw lg:400px xl:600px',
+                format: 'webp'                
+            }, {
+                densities: 'x1'
+            });
+        
+            return result;
+        });
+        return backgroundProjectImage.value;
+}
 </script>
 
 <style></style>
