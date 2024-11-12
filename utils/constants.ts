@@ -1,17 +1,17 @@
 export const ANALYTICS = {
     BUTTON: {
-        REGISTER: 'Register button'
+        REGISTER: 'Register_button'
     }, 
     LINK: {
-        REFERENCE_SITE: 'Kirienko main website',
-        REFERENCE_MEDIUM: 'Medium read more',
-        PROJECTS: '#projects anchor', 
+        REFERENCE_SITE: 'Kirienko_website',
+        REFERENCE_MEDIUM: 'Medium_read_more',
+        PROJECTS: '#projects_anchor', 
         LANGUAGE: 'language',
-        CREATOR: 'Developed by', 
-        CONTACT_EMAIL: 'Email link', 
-        ADDRESS_MAPS: 'Google Maps link', 
-        SOCIAL_INSTAGRAM: 'Instagram link', 
-        SOCIAL_FACEBOOK: 'Facebook link', 
-        SOCIAL_LINKEDIN: 'LinkedIn link'
+        CREATOR: 'Developed_by', 
+        CONTACT_EMAIL: 'Email_link', 
+        ADDRESS_MAPS: 'Google_Maps_link', 
+        SOCIAL_INSTAGRAM: 'Instagram_link', 
+        SOCIAL_FACEBOOK: 'Facebook_link', 
+        SOCIAL_LINKEDIN: 'LinkedIn_link'
     }
 }
