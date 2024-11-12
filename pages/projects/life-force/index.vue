@@ -1,5 +1,5 @@
 <template>
-  <section class="root pb-20 lg:pb-40">
+  <section class="root py-20 pt-28 lg:py-40">
     <AppHeader>
       <ContentQuery :path="`/${locale}/header`" find="one">
         <template #default="{ data }">
@@ -9,7 +9,7 @@
     </AppHeader>
 
     <div class="grid grid-cols-1 gap-5 gallery-section px-4 lg:px-0">
-      <section class="">
+      <section class="pb-10 xl:pb-20">
         <LifeForceCarousel />
       </section>
       <div class="">

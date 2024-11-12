@@ -1,5 +1,5 @@
 <template>
-  <article class="pb-20">
+  <article>
     <div class="gallery-container flex justify-center mx-auto">
       <div class="flex flex-col row">
         <picture class="relative">
