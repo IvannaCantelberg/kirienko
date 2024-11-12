@@ -9,6 +9,7 @@
           <template #default="{ data }">
             <el-dropdown>
               <a href="#projects"
+                @click="trackLinkClick(ANALYTICS.LINK.PROJECTS)"
                 class="el-dropdown-link py-2 pr-1 pl-3 lang-link title text-white transition-all title flex flex-row items-center "
               >
                 <span  class="text-sm md:text-base lg:text-lg xl:text-xl">{{ data['sectionTitle'] }}</span>
@@ -20,6 +21,7 @@
                     v-for="(project, index) in data['projects']"
                     :key="index"
                     :to="`/${locale}/projects/${project['link']}`"
+                    @click="trackLinkClick(project['link'])"
                     class="transition-all title lang-link p-2"
                   >
                     <div class="text-base lg:text-lg xl:text-xl">
@@ -42,7 +44,7 @@
 
          <ContentQuery :path="`/${locale}/header`" find="one">
           <template #default="{ data }">
-        <button type="button" class="btn-signup text-sm md:text-base lg:text-lg xl:text-xl title">{{ data['register'] }}</button>
+        <button type="button" @click="trackBtnClick(ANALYTICS.BUTTON.REGISTER)"  class="btn-signup text-sm md:text-base lg:text-lg xl:text-xl title">{{ data['register'] }}</button>
          </template>
           <template #not-found>
             <p>No project found.</p>
@@ -58,7 +60,11 @@
 <script setup>
 import LanguageSwitcher from '~/components/LanguageSwitcher.vue'
 import IconExpand from '~/components/icons/IconExpand.vue'
+import {ANALYTICS } from '~/utils/constants';
 const { locale } = useI18n()
+
+const { trackLinkClick, trackBtnClick } = useAnalytics();
+
 </script>
 <style scoped lang="less">
 

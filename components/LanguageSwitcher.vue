@@ -15,6 +15,7 @@
           v-for="l in locales"
           :key="l.code"
           :to="switchLocalePath(l.code)"
+          @click="trackLinkClick(`${ANALYTICS.LINK.LANGUAGE} - ${l.alias}`)"
           class="lang-link py-2 px-3 transition-all title text-base lg:text-lg xl:text-xl"
         >
           <div class="flex gap-2 md:gap-4 items-center">
@@ -28,8 +29,11 @@
 </template>
 <script lang="ts" setup>
 import IconExpand from '~/components/icons/IconExpand.vue'
+import {ANALYTICS } from '~/utils/constants';
 const { locales, locale } = useI18n()
+const { trackLinkClick } = useAnalytics();
 const switchLocalePath = useSwitchLocalePath()
+
 
 const currentLocal = ref(locales.value[0])
 //

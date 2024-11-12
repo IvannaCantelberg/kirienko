@@ -17,6 +17,7 @@
                 <h3 class="title text-3xl mb-2">{{ data['email'] }}</h3>
                 <a
                   href="mailto:tatajanakirienko@gmail.com"
+                  @click="trackLinkClick(ANALYTICS.LINK.CONTACT_EMAIL)"
                   class="text-base md:text-lg"
                   title="Click to write email"
                   >tatajanakirienko@gmail.com
@@ -30,6 +31,7 @@
 
                 <a
                   href="https://maps.app.goo.gl/Saq2y9S6ZWQowNHE7"
+                  @click="trackLinkClick(ANALYTICS.LINK.ADDRESS_MAPS)"
                   target="_blank"
                   class="text-base md:text-lg"
                   title="Address of atelier"
@@ -46,6 +48,7 @@
               <div class="flex gap-8 self-center align-middle">
                 <a
                   href="https://www.instagram.com/tatjana_kirienko_textile_art"
+                  @click="trackLinkClick(ANALYTICS.LINK.SOCIAL_INSTAGRAM)"
                   target="_blank"
                   class="icon-social hover:scale-125 transition-all"
                   title="Instagram"
@@ -54,6 +57,7 @@
                 </a>
                 <a
                   href="https://www.facebook.com/TatjanaKirienkoTextileArtist"
+                  @click="trackLinkClick(ANALYTICS.LINK.SOCIAL_FACEBOOK)"
                   target="_blank"
                   class="icon-social hover:scale-125 transition-all"
                   title="Facebook"
@@ -61,6 +65,7 @@
                 </a>
                 <a
                   href="https://www.linkedin.com/in/tatjana-kirienko-14ab0143"
+                    @click="trackLinkClick(ANALYTICS.LINK.SOCIAL_LINKEDIN)"
                   target="_blank"
                   class="icon-social hover:scale-125 transition-all"
                   title="LinkedIn"
@@ -81,8 +86,10 @@ import IconSocialFacebook from '~/components/icons/IconSocialFacebook.vue'
 import IconSocialLinkedIn from '~/components/icons/IconSocialLinkedIn.vue'
 import IconLocation from '~/components/icons/IconLocation.vue'
 import IconEmail from '~/components/icons/IconEmail.vue'
+import {ANALYTICS } from '~/utils/constants';
 import { useI18n } from 'vue-i18n'
 const { locale } = useI18n()
+const { trackLinkClick } = useAnalytics();
 
 </script>
 <style>
@@ -97,13 +104,13 @@ const { locale } = useI18n()
 .icon-contact {
   width: 32px;
   height: 32px;
-  fill: var(--color-text-light);
+  /* fill: var(--color-text-light); */
 
   align-content: center;
   padding: 10px;
   border-radius: 5px;
   width: 56px;
   height: 56px;
-  border: 1px solid var(--color-text-accent-1);
+  /* border: 1px solid var(--color-text-accent-1); */
 }
 </style>

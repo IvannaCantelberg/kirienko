@@ -1,5 +1,8 @@
 <template>
-  <a :href="article.link" target="_blank">
+  <a  
+    :href="article.link" 
+    @click="trackLinkClick(`Blog Article ${article.title}`)"
+    target="_blank">
     <figure class="grid grid-row-2 gap-8">
       <div
         :style="{ backgroundImage: `url(${getThumbnail(article.content)})` }"
@@ -17,6 +20,7 @@
 </template>
 <script lang="ts" setup>
 import type { IMediumArticle } from '~/types/medium'
+const { trackLinkClick } = useAnalytics();
 
 defineProps<{
   article: IMediumArticle

@@ -13,6 +13,7 @@
       <template #default="{ data }">
         <a
           href="https://medium.com/@tatjanakirienko"
+          @click="trackLinkClick(ANALYTICS.LINK.REFERENCE_MEDIUM)"
           target="_blank"
           class="bg-white btn-link stroke-black content-center hover:shadow-xl transition-all"
         >
@@ -26,8 +27,11 @@
 <script setup lang="ts">
 import MediumCard from '~/components/MediumCard.vue'
 import IconArrowRight from '~/components/icons/IconArrowRight.vue'
+import {ANALYTICS } from '~/utils/constants';
 import { useI18n } from 'vue-i18n'
+const { trackLinkClick } = useAnalytics();
 const { locale } = useI18n()
+
 
 const { getFeeds } = useMedium()
 const feeds = await getFeeds()

@@ -13,6 +13,7 @@
           {{ $t('banner.1') }}
           <a
             href="https://tatjana-kirienko.art"
+            @click="trackLinkClick(ANALYTICS.LINK.REFERENCE_SITE)"
             target="_blank"
             title="tatjana-kirienko.art website"
             class="text-3xl lg:text-5xl xl:text-6xl text-accent-2 underline pl-5"
@@ -33,6 +34,8 @@
 </template>
 <script setup lang="ts">
 import IconArrowRight from '~/components/icons/IconArrowRight.vue'; 
+import {ANALYTICS } from '~/utils/constants';
+const { trackLinkClick } = useAnalytics();
 
 const img = useImage()
 const backgroundEllipses = computed(() => {
