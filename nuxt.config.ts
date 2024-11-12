@@ -63,7 +63,7 @@ export default defineNuxtConfig({
         name: 'English', 
         icon: 'en', 
         language: 'en-US', 
-        // isCatchallLocale: true,
+        isCatchallLocale: true,
         file: 'en-US.json'
       },
       {
