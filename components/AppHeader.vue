@@ -3,7 +3,7 @@
     <div class="flex gap-2 lg:gap-8 justify-between items-center text-sm md:text-base lg:text-lg xl:text-xl">
       <div class="flex gap-2 lg:gap-4 items-center">
         <a href="/">
-          <NuxtImg  src="/logo.png" alt="Logo icon" sizes="xs:32px md:48px xl:64px" format="webp"/>
+          <NuxtImg  src="/logo.png" alt="Logo icon" width="64" sizes="xs:32px md:48px xl:64px" class="size-8 xl:size-16" format="webp"/>
         </a>
         <ContentQuery :path="`/${locale}/projects`" find="one">
           <template #default="{ data }">

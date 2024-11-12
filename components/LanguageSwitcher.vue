@@ -3,7 +3,7 @@
     <span
       class="el-dropdown-link lang-link py-2 pr-1 pl-3 text-white transition-all title flex flex-row gap-2 items-center"
     >
-      <NuxtImg :src="`/icons/flag-${currentLocal.alias}.svg`" sizes="xs:24px xl:32px" />
+      <NuxtImg :src="`/icons/flag-${currentLocal.alias}.svg`" width="32"  sizes="xs:24px xl:32px" class="size-6 xl:size-8"/>
       <span class="text-sm sm:text-base lg:text-lg xl:text-xl flex flex-row items-center">
         <span>{{ currentLocal.name }}</span>
         <IconExpand class="size-4 md:size-6 xl:size-8" />
@@ -19,7 +19,7 @@
           class="lang-link py-2 px-3 transition-all title text-base lg:text-lg xl:text-xl"
         >
           <div class="flex gap-2 md:gap-4 items-center">
-            <NuxtImg :src="`/icons/flag-${l.alias}.svg`" sizes="xs:24px xl:32px" />
+            <NuxtImg :src="`/icons/flag-${l.alias}.svg`" sizes="xs:24px xl:32px" class="size-6 xl:size-8"/>
             <span> {{ l.name }}</span>
           </div>
         </NuxtLink>
