@@ -1,0 +1,6 @@
+{
+    "plugins": ["eslint-plugin-vue", "@typescript-eslint"],
+    "rules": {  }, 
+    "ecmaFeatures": {
+    }
+}

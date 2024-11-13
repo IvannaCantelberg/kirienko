@@ -31,6 +31,8 @@
   "devDependencies": {
     "@element-plus/nuxt": "^1.0.10",
     "@types/gtag.js": "^0.0.20",
+    "@typescript-eslint/eslint-plugin": "^8.14.0",
+    "eslint-config-prettier": "^9.1.0",
     "less": "^4.2.0",
     "less-loader": "^12.2.0",
     "prettier": "3.3.3",
