@@ -82,15 +82,15 @@
 		content: '';
 		position: relative;
 		display: block;
-		background-image: url(/img/project-content.png);
+		background-image: url(/img/Rectangle_18.png);
 		background-image: linear-gradient(
-			180deg,
-			#abe1ff00,
-			#abe1ffa3,
-			#6ecbffa6,
-			#7cc5efd1,
-			#00a4ff
-		);
+				180deg,
+				#abe1ff00,
+				rgb(104 165 231 / 70%),
+				rgb(71 149 233),
+				rgb(32 123 219),
+				#0073f1
+			);
 		width: 100%;
 		height: 250px;
 

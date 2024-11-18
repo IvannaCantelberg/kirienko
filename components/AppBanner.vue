@@ -1,12 +1,15 @@
 <template>
-	<article class="flex relative">
+	<article class="relative">
 		<div
 			:style="backgroundPhoto"
-			class="bg-profile-image bg-image px-2 lg:pr-[8%] size-full relative">
-			<div
+			class="bg-profile-image bg-cover size-full absolute top-0 right-0 left-0">
+			<!-- <div
 				:style="backgroundEllipses"
-				class="bg-image bg-cover absolute top-0 right-0 lg:size-1/2 2xl:size-full xl:visible invisible"></div>
-			<div class="text-white text-right flex flex-col items-end z-0">
+				class="bg-image bg-cover absolute top-0 right-0 lg:size-1/2 2xl:size-full"></div> -->
+			
+		</div>
+		<div class="banner-container relative px-3 lg:px-[10%]">
+			<div class="text-white stroke-white text-right flex flex-col items-end z-0">
 				<h2 class="text-xl lg:text-3xl mb-10">
 					{{ $t('banner.1') }}
 					<a
@@ -14,7 +17,7 @@
 						@click="trackLinkClick(ANALYTICS.LINK.REFERENCE_SITE)"
 						target="_blank"
 						title="tatjana-kirienko.art website"
-						class="text-3xl lg:text-5xl xl:text-6xl text-accent-2 underline pl-5">
+						class="text-3xl lg:text-4xl xl:text-5xl underline pl-5">
 						{{ $t('banner.2') }} <i> <IconArrowRight class="inline xl:size-9" /> </i
 					></a>
 				</h2>
@@ -23,7 +26,7 @@
 				</h2>
 			</div>
 			<h3
-				class="text-white text-xl lg:text-2xl max-w-[550px] text-right ellipse-right z-0"
+				class="text-white text-xl lg:text-2xl  self-end max-w-[550px] text-justify z-0"
 				v-html="$t('banner.4')"></h3>
 		</div>
 	</article>
@@ -45,7 +48,7 @@
 
 	const backgroundPhoto = computed(() => {
 		const imgUrl = img(
-			'/img/kirienko_profile.png',
+			'/img/1.png',
 			{
 				sizes: 'xs:100vw sm:100vw md:600px lg:100vw xl:100vw',
 				format: 'webp'
@@ -56,14 +59,7 @@
 		)
 
 		return {
-			backgroundImage: `url('${imgUrl}'), radial-gradient(
-            circle,
-            rgb(17 27 36) 0%,
-            rgb(11 18 26) 50%,
-            rgb(11 18 26) 60%,
-            rgb(8 13 17) 85%,
-            rgb(8 13 17) 100%
-          )`
+			backgroundImage: `url('${imgUrl}')`
 		}
 	})
 </script>
@@ -81,13 +77,24 @@
 	}
 
 	.bg-profile-image {
-		width: 100vw;
-		max-height: calc(100vh);
+		// width: 100vw;
+		// max-height: calc(100vh);
+		// display: flex;
+		// flex-direction: column;
+		// align-items: end;
+		// min-height: 920px;
+		// justify-content: space-evenly;
+		background-position: center left;
+		background-repeat: no-repeat;
+	}
+
+	.banner-container {
+		    height: 100vh;
 		display: flex;
 		flex-direction: column;
-		align-items: end;
-		min-height: 920px;
 		justify-content: space-evenly;
+		background-image: linear-gradient(113deg, rgb(109 127 137 / 80%),  rgb(2 29 59 / 80%))
+		
 	}
 
 	.text-accent-2 {
