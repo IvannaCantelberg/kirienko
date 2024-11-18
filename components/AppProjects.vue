@@ -7,7 +7,7 @@
 						{{ data['sectionTitle'] }}
 					</h1>
 					<h3
-						class="text-secondary text-base lg:text-xl 2xl:text-2xl text-right xl:max-w-[950px] 2xl:max-w-[70%] self-end"
+						class="text-secondary text-base lg:text-xl text-justify xl:max-w-[80%] self-end"
 						v-html="data['description']"></h3>
 				</div>
 				<article

@@ -8,7 +8,7 @@
 					</h1>
 
 					<h3
-						class="text-secondary text-base lg:text-xl 2xl:text-2xl text-right max-w-[900px] 2xl:max-w-[70%] self-end">
+						class="text-secondary text-base lg:text-xl text-justify max-w-[900px]  self-end">
 						{{ data['description'] }}
 					</h3>
 				</div>

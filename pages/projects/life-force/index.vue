@@ -91,7 +91,7 @@
 				<a
 					href="https://gofund.me/01c944a4"
 					target="_blank"
-					class="bg-[#ABE1FF] btn-link text-white stroke-white content-center px-10 mt-5 text-lg hover:shadow-xl transition-all">
+					class="bg-[#0073F1] btn-link text-white stroke-white content-center px-10 mt-5 text-lg hover:shadow-xl transition-all">
 					Go Fund
 					<IconArrowRight />
 				</a>

@@ -4,17 +4,17 @@
 			<ContentQuery :path="`/${locale}/contact`" find="one">
 				<template #default="{ data }">
 					<div>
-						<h2 class="title text-6xl uppercase mb-10">{{ data.sectionTitle }}</h2>
-						<h3 class="title text-4xl mb-4">{{ data['title_1'] }}</h3>
-						<h3 class="title text-4xl mb-10">{{ data['title_2'] }}</h3>
-						<p class="text-xl max-w-[400px] mb-4">{{ data['note'] }}</p>
+						<h2 class="title text-4xl lg:text-6xl uppercase mb-10">{{ data.sectionTitle }}</h2>
+						<h3 class="title text-2xl lg:text-4xl mb-4">{{ data['title_1'] }}</h3>
+						<h3 class="title text-2xl lg:text-4xl mb-10">{{ data['title_2'] }}</h3>
+						<p class="text-base lg:text-xl max-w-[400px] mb-4">{{ data['note'] }}</p>
 					</div>
 
 					<div class="grid gap-4 2xl:my-10 md:p-8">
 						<div class="flex gap-4 md:gap-8 items-center">
-							<i class="icon-contact"><IconEmail /></i>
+							<i class="icon-contact  size-6 lg:size-9"><IconEmail /></i>
 							<div>
-								<h3 class="title text-3xl mb-2">{{ data['email'] }}</h3>
+								<h3 class="title text-2xl lg:text-3xl mb-2">{{ data['email'] }}</h3>
 								<a
 									href="mailto:tatajanakirienko@gmail.com"
 									@click="trackLinkClick(ANALYTICS.LINK.CONTACT_EMAIL)"
@@ -25,9 +25,9 @@
 							</div>
 						</div>
 						<div class="flex gap-4 md:gap-8 items-center">
-							<i class="icon-contact"><IconLocation /></i>
+							<i class="icon-contact size-6 lg:size-9"><IconLocation /></i>
 							<div>
-								<h3 class="title text-3xl mb-2">{{ data['location'] }}</h3>
+								<h3 class="title text-2xl lg:text-3xl mb-2">{{ data['location'] }}</h3>
 
 								<a
 									href="https://maps.app.goo.gl/Saq2y9S6ZWQowNHE7"
@@ -43,7 +43,7 @@
 
 					<div class="2xl:my-10 md:p-8 lg:col-start-2 2xl:col-start-3">
 						<div class="grid h-full">
-							<h3 class="title text-3xl mb-4">{{ data['follow'] }}</h3>
+							<h3 class="title text-2xl lg:text-3xl mb-4">{{ data['follow'] }}</h3>
 							<div class="flex gap-8 self-center align-middle">
 								<a
 									href="https://www.instagram.com/tatjana_kirienko_textile_art"
@@ -99,15 +99,15 @@
 	}
 
 	.icon-contact {
-		width: 32px;
-		height: 32px;
+		/* width: 32px;
+		height: 32px; */
 		/* fill: var(--color-text-light); */
 
 		align-content: center;
-		padding: 10px;
+		/* padding: 10px; */
 		border-radius: 5px;
-		width: 56px;
-		height: 56px;
+		/* width: 56px;
+		height: 56px; */
 		/* border: 1px solid var(--color-text-accent-1); */
 	}
 </style>

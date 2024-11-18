@@ -51,12 +51,12 @@
 
 				<ContentQuery :path="`/${locale}/header`" find="one">
 					<template #default="{ data }">
-						<button
-							type="button"
-							@click="trackBtnClick(ANALYTICS.BUTTON.REGISTER)"
+						<a href="https://docs.google.com/forms/d/e/1FAIpQLScLlplQ8IOnMomsIBMxKj-Lr-3essax-VaWaMusNK_BR9rkeg/viewform?usp=sf_link"
+							target="_blank"
+							@click="trackLinkClick(ANALYTICS.BUTTON.REGISTER)"
 							class="btn-signup text-sm md:text-base lg:text-lg xl:text-xl title">
 							{{ data['register'] }}
-						</button>
+						</a>
 					</template>
 					<template #not-found>
 						<p>No project found.</p>
