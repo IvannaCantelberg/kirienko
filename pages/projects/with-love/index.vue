@@ -86,23 +86,3 @@
 		return backgroundProjectImage.value
 	}
 </script>
-
-<style scoped>
-.frame {
-		stroke: var(--color-border-accent-2);
-		position: absolute;
-		top: -50px;
-		left: -50px;
-		transform: rotate(0);
-		transition: transform 150ms cubic-bezier(0.4, 0, 0.2, 1);
-	}
-
-	.frame.reversed {
-		position: absolute;
-		right: -50px;
-		bottom: -50px;
-		top: initial;
-		left: inherit;
-		transform: rotate(180deg);
-	}
-</style>

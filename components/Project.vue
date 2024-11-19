@@ -48,14 +48,12 @@
 		padding: 8px;
 		background-color: var(--color-background-accent-2);
 		display: inline-block;
-		/* text-shadow: #000 0 2px 3px; */
 		transition: 0.6s 1.6s cubic-bezier(0.215, 0.61, 0.355, 1);
 		transition-property: transform;
 	}
 
 	figure:hover {
 		cursor: pointer;
-		/* filter: grayscale(0); */
 		transform: scale(1.15);
 		z-index: 2;
 	}
@@ -66,7 +64,6 @@
 
 		transition: 0.6s 1.6s cubic-bezier(0.215, 0.61, 0.355, 1);
 		transition-property: translateY;
-		/* transform: translateY(100%); */
 	}
 
 	figure:hover .content {
@@ -74,7 +71,6 @@
 	}
 
 	figure:hover .content-title {
-		/* transform: translateY(0); */
 		position: relative;
 	}
 
@@ -124,24 +120,6 @@
 		transition:
 			stroke-dashoffset 0.6s cubic-bezier(0.4, 0, 0.2, 1),
 			stroke 150ms cubic-bezier(0.4, 0, 0.2, 1);
-	}
-
-	.frame {
-		stroke: var(--color-border-accent-2);
-		position: absolute;
-		top: -50px;
-		left: -50px;
-		transform: rotate(0);
-		transition: transform 150ms cubic-bezier(0.4, 0, 0.2, 1);
-	}
-
-	.frame.reversed {
-		position: absolute;
-		right: -50px;
-		bottom: -50px;
-		top: initial;
-		left: inherit;
-		transform: rotate(180deg);
 	}
 
 	.bg-project-image {
