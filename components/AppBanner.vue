@@ -1,13 +1,12 @@
 <template>
 	<article class="relative">
-		<div
-			:style="backgroundPhoto"
-			class="bg-profile-image bg-cover size-full absolute top-0 right-0 left-0">
-			<!-- <div
-				:style="backgroundEllipses"
-				class="bg-image bg-cover absolute top-0 right-0 lg:size-1/2 2xl:size-full"></div> -->
-			
-		</div>
+		<NuxtImg 
+			src="/img/1.png"
+			preload  		
+			format="webp" 
+			densities="x1"
+			sizes="xs:100vw sm:100vw md:600px lg:100vw xl:100vw"
+			class="bg-profile-image bg-cover size-full absolute top-0 right-0 left-0" />
 		<div class="banner-container relative px-3 lg:px-[10%]">
 			<div class="text-white stroke-white text-right flex flex-col items-end z-0">
 				<h2 class="text-xl lg:text-3xl mb-10">
@@ -35,33 +34,6 @@
 	import IconArrowRight from '~/components/icons/IconArrowRight.vue'
 	import { ANALYTICS } from '~/utils/constants'
 	const { trackLinkClick } = useAnalytics()
-
-	const img = useImage()
-	const backgroundEllipses = computed(() => {
-		const imgUrl = img(
-			'/img/ellipse.png',
-			{ width: 100, height: 100, format: 'webp' },
-			{ densities: 'x1' }
-		)
-		return { backgroundImage: `url('${imgUrl}')` }
-	})
-
-	const backgroundPhoto = computed(() => {
-		const imgUrl = img(
-			'/img/1.png',
-			{
-				sizes: 'xs:100vw sm:100vw md:600px lg:100vw xl:100vw',
-				format: 'webp'
-			},
-			{
-				densities: 'x1'
-			}
-		)
-
-		return {
-			backgroundImage: `url('${imgUrl}')`
-		}
-	})
 </script>
 
 <style lang="less">
@@ -77,15 +49,10 @@
 	}
 
 	.bg-profile-image {
-		// width: 100vw;
-		// max-height: calc(100vh);
-		// display: flex;
-		// flex-direction: column;
-		// align-items: end;
-		// min-height: 920px;
-		// justify-content: space-evenly;
 		background-position: center left;
 		background-repeat: no-repeat;
+		object-fit: cover;
+   		object-position: right;
 	}
 
 	.banner-container {
