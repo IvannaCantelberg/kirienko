@@ -37,8 +37,6 @@
 					<h1 class="title text-5xl text-center px-2  my-20">
 						{{ data['sectionTitle'] }}
 					</h1>
-					<!-- <p class="text-base text-justify px-2" v-html="data['description']"></p> -->
-					
 					<div class="mx-10 md:mx-14 lg:mx-8 relative">
 						<FigureFrame class="frame hidden md:block" />
 						<p class="text-base text-justify" v-html="data['description']"></p>
