@@ -31,21 +31,30 @@
 				</template>
 			</ContentQuery>
 		</section>
-		<section class="my-20 lg:my-20">
+		<section class="my-20  mx-auto lg:max-w-screen-md xl:max-w-screen-lg 2xl:max-w-screen-xl">
 			<ContentQuery :path="`/${locale}/projects/with-love`" find="one">
 				<template #default="{ data }">
-					<h1 class="title text-5xl text-center px-2">
+					<h1 class="title text-5xl text-center px-2  my-20">
 						{{ data['sectionTitle'] }}
 					</h1>
+					<!-- <p class="text-base text-justify px-2" v-html="data['description']"></p> -->
+					
+					<div class="mx-10 md:mx-14 lg:mx-8 relative">
+						<FigureFrame class="frame hidden md:block" />
+						<p class="text-base text-justify" v-html="data['description']"></p>
+						<FigureFrame class="frame reversed hidden md:block" />
+					</div>
+
 				</template>
 			</ContentQuery>
 
-			<ProjectTimeline />
+			<ProjectTimeline class="my-20 px-5 lg:px-0 " />
 		</section>
 	</main>
 </template>
 <script lang="ts" setup>
 	import ProjectTimeline from '~/components/with-love-project/ProjectTimeline.vue'
+	import FigureFrame from '~/components/icons/FigureFrame.vue'
 	import { useI18n } from 'vue-i18n'
 	const { locale } = useI18n()
 
@@ -78,4 +87,22 @@
 	}
 </script>
 
-<style scoped></style>
+<style scoped>
+.frame {
+		stroke: var(--color-border-accent-2);
+		position: absolute;
+		top: -50px;
+		left: -50px;
+		transform: rotate(0);
+		transition: transform 150ms cubic-bezier(0.4, 0, 0.2, 1);
+	}
+
+	.frame.reversed {
+		position: absolute;
+		right: -50px;
+		bottom: -50px;
+		top: initial;
+		left: inherit;
+		transform: rotate(180deg);
+	}
+</style>

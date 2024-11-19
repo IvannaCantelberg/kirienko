@@ -1,6 +1,5 @@
 <template>
-	<article
-		class="my-20 px-5 lg:px-0 mx-auto lg:max-w-screen-md xl:max-w-screen-lg 2xl:max-w-screen-xl">
+	<article>
 		<el-timeline>
 			<ContentQuery :path="`/${locale}/projects/with-love`" find="one">
 				<template #default="{ data }">
@@ -26,7 +25,7 @@
 								</h3>
 							</div>
 
-							<div class="grid grid-cols-1 gap-10 px-2 lg:px-10 py-5">
+							<div class="grid grid-cols-1 gap-10 py-5">
 								<p class="text-base" v-html="item['description']"></p>
 								<div class="grid grid-cols-2 lg:grid-cols-3 xl:grid-cols-5 gap-5">
 									<el-image
@@ -38,7 +37,7 @@
 										:max-scale="7"
 										:min-scale="0.2"
 										:preview-src-list="item['archive_images']"
-										:initial-index="4"
+										:initial-index="imgIndex"
 										fit="fill" />
 								</div>
 							</div>

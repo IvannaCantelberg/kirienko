@@ -75,7 +75,7 @@
 	import { ANALYTICS } from '~/utils/constants'
 	const { locale } = useI18n()
 
-	const { trackLinkClick, trackBtnClick } = useAnalytics()
+	const { trackLinkClick } = useAnalytics()
 </script>
 <style scoped lang="less">
 	.bg-header {
