@@ -11,7 +11,8 @@
 						:zoom-rate="1.2"
 						:max-scale="7"
 						:min-scale="0.2"
-						:preview-src-list="['/img/projects/life-force/gallery/1.webp']"
+						:preview-src-list="imageFiles"
+						:initial-index="0"
 						fit="fill" />
 				</picture>
 				<picture>
@@ -23,7 +24,8 @@
 						:zoom-rate="1.2"
 						:max-scale="7"
 						:min-scale="0.2"
-						:preview-src-list="['/img/projects/life-force/gallery/2.webp']"
+						:preview-src-list="imageFiles"
+						:initial-index="1"
 						fit="fill"
 						class="absolute top-0 left-0 bottom-0 right-0 size-full" />
 				</picture>
@@ -37,7 +39,8 @@
 						:zoom-rate="1.2"
 						:max-scale="7"
 						:min-scale="0.2"
-						:preview-src-list="['/img/projects/life-force/gallery/3.webp']"
+						:preview-src-list="imageFiles"
+						:initial-index="2"
 						fit="fill"
 						class="absolute top-0 left-0 bottom-0 right-0 size-full" />
 				</picture>
@@ -54,7 +57,8 @@
 						:zoom-rate="1.2"
 						:max-scale="7"
 						:min-scale="0.2"
-						:preview-src-list="['/img/projects/life-force/gallery/4.webp']"
+						:preview-src-list="imageFiles"
+						:initial-index="3"
 						fit="fill" />
 				</picture>
 				<picture>
@@ -67,7 +71,8 @@
 						:zoom-rate="1.2"
 						:max-scale="7"
 						:min-scale="0.2"
-						:preview-src-list="['/img/projects/life-force/gallery/5.webp']"
+						:preview-src-list="imageFiles"
+						:initial-index="4"
 						fit="fill"
 						class="absolute top-0 left-0 bottom-0 right-0 size-full" />
 				</picture>
@@ -83,7 +88,8 @@
 						:zoom-rate="1.2"
 						:max-scale="7"
 						:min-scale="0.2"
-						:preview-src-list="['/img/projects/life-force/gallery/6.webp']"
+						:preview-src-list="imageFiles"
+						:initial-index="5"
 						fit="fill"
 						class="absolute top-0 left-0 bottom-0 right-0 size-full" />
 				</picture>
@@ -97,7 +103,8 @@
 						:zoom-rate="1.2"
 						:max-scale="7"
 						:min-scale="0.2"
-						:preview-src-list="['/img/projects/life-force/gallery/7.webp']"
+						:preview-src-list="imageFiles"
+						:initial-index="6"
 						fit="fill"
 						class="absolute top-0 left-0 bottom-0 right-0 size-full" />
 				</picture>
@@ -111,7 +118,8 @@
 						:zoom-rate="1.2"
 						:max-scale="7"
 						:min-scale="0.2"
-						:preview-src-list="['/img/projects/life-force/gallery/8.webp']"
+						:preview-src-list="imageFiles"
+						:initial-index="7"
 						fit="fill"
 						class="absolute top-0 left-0 bottom-0 right-0 size-full" />
 				</picture>
@@ -125,7 +133,8 @@
 						:zoom-rate="1.2"
 						:max-scale="7"
 						:min-scale="0.2"
-						:preview-src-list="['/img/projects/life-force/gallery/9.webp']"
+						:preview-src-list="imageFiles"
+						:initial-index="8"
 						fit="fill"
 						class="absolute top-0 left-0 bottom-0 right-0 size-full" />
 				</picture>
@@ -154,6 +163,20 @@
 		})
 		return backgroundProjectImage.value
 	}
+
+	const imageFiles = [
+		'/img/projects/life-force/gallery/1.webp', 
+		'/img/projects/life-force/gallery/2.webp', 
+		'/img/projects/life-force/gallery/3.webp', 
+		'/img/projects/life-force/gallery/4.webp',
+		'/img/projects/life-force/gallery/5.webp',
+		'/img/projects/life-force/gallery/6.webp',
+		'/img/projects/life-force/gallery/7.webp',
+		'/img/projects/life-force/gallery/8.webp',
+		'/img/projects/life-force/gallery/9.webp'
+	]
+
+
 </script>
 
 <style scoped lang="less">
